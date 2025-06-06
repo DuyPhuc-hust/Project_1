@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ đồ vị trí hiện tại</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00d0ff;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        #map {
+            width: 100%;
+            height: 100vh;
+            overflow: visible;
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-right: 320px;
+            box-sizing: border-box;
+        }
+        #stats-panel {
+            width: 300px;
+            height: 100vh;
+            padding: 10px;
+            background-color: #fff;
+            border-left: 1px solid #ccc;
+            overflow-y: auto;
+            font: 14px/1.5 Verdana, Arial, Helvetica, sans-serif;
+            color: black;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #stats-panel h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+        #stats-panel ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #stats-panel li {
+            margin-bottom: 5px;
+        }
+        .simplemaps_popup {
+            position: absolute;
+            background: white;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+            font: 12px/1.5 Verdana, Arial, Helvetica, sans-serif;
+            z-index: 1000;
+            pointer-events: none;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="stats-panel">
+        <h3>Thống kê người dùng</h3>
+        <div id="stats-content"></div>
+    </div>
+
+    <script src="mapinfo.js"></script>
+    <script src="data.js"></script>
+    <script src="vn.js"></script>
+
+    <script>
+        var simplemaps = {
+            states: {},
+            locations: [
+                {
+                    id: "0",
+                    name: "Hà Nội",
+                    lat: 21.028167,
+                    lng: 105.854152,
+                    x: 495.3,
+                    y: 199.8
+                }
+            ]
+        };
+
+        const provinces = [
+            { code: "VN01", name: "Lai Châu" }, { code: "VN02", name: "Lào Cai" }, { code: "VN03", name: "Hà Giang" },
+            { code: "VN04", name: "Cao Bằng" }, { code: "VN05", name: "Sơn La" }, { code: "VN06", name: "Yên Bái" },
+            { code: "VN07", name: "Tuyên Quang" }, { code: "VN09", name: "Lạng Sơn" }, { code: "VN13", name: "Quảng Ninh" },
+            { code: "VN14", name: "Hòa Bình" }, { code: "VN18", name: "Ninh Bình" }, { code: "VN20", name: "Thái Bình" },
+            { code: "VN21", name: "Thanh Hóa" }, { code: "VN22", name: "Nghệ An" }, { code: "VN23", name: "Hà Tĩnh" },
+            { code: "VN24", name: "Quảng Bình" }, { code: "VN25", name: "Quảng Trị" }, { code: "VN26", name: "Huế" },
+            { code: "VN27", name: "Quảng Nam" }, { code: "VN28", name: "Kon Tum" }, { code: "VN29", name: "Quảng Ngãi" },
+            { code: "VN30", name: "Gia Lai" }, { code: "VN31", name: "Bình Định" }, { code: "VN32", name: "Phú Yên" },
+            { code: "VN33", name: "Đắk Lắk" }, { code: "VN34", name: "Khánh Hòa" }, { code: "VN35", name: "Lâm Đồng" },
+            { code: "VN36", name: "Ninh Thuận" }, { code: "VN37", name: "Tây Ninh" }, { code: "VN39", name: "Đông Nam Bộ" },
+            { code: "VN40", name: "Bình Thuận" }, { code: "VN41", name: "Long An" }, { code: "VN43", name: "Bà Rịa - Vũng Tàu" },
+            { code: "VN44", name: "An Giang" }, { code: "VN45", name: "Đồng Tháp" }, { code: "VN46", name: "Tiền Giang" },
+            { code: "VN47", name: "Kiên Giang" }, { code: "VN49", name: "Vĩnh Long" }, { code: "VN50", name: "Bến Tre" },
+            { code: "VN51", name: "Trà Vinh" }, { code: "VN52", name: "Sóc Trăng" }, { code: "VN53", name: "Đông Bắc" },
+            { code: "VN54", name: "Bắc Giang" }, { code: "VN55", name: "Bạc Liêu" }, { code: "VN56", name: "Bắc Ninh" },
+            { code: "VN57", name: "Bình Dương" }, { code: "VN58", name: "Bình Phước" }, { code: "VN59", name: "Cà Mau" },
+            { code: "VN61", name: "Hải Dương" }, { code: "VN63", name: "Hà Nam" }, { code: "VN66", name: "Đồng Bằng Sông Hồng" },
+            { code: "VN67", name: "Nam Định" }, { code: "VN68", name: "Phú Thọ" }, { code: "VN69", name: "Thái Nguyên" },
+            { code: "VN70", name: "Vĩnh Phúc" }, { code: "VN71", name: "Điện Biên" }, { code: "VN72", name: "Đắk Nông" },
+            { code: "VN73", name: "Hậu Giang" }, { code: "VNCT", name: "Cần Thơ" }, { code: "VNDN", name: "Đà Nẵng" },
+            { code: "VNHN", name: "Hà Nội" }, { code: "VNHP", name: "Hải Phòng" }, { code: "VNSG", name: "Thành phố Hồ Chí Minh" },
+            { code: "VN_HS", name: "Quần đảo Hoàng Sa" }, { code: "VN_TS", name: "Quần đảo Trường Sa" }, { code: "VN_INSET_BOX", name: "" }
+        ];
+
+        // Ánh xạ huyện về tỉnh (dựa trên tập dữ liệu)
+        const districtToProvince = {
+    "A Lưới": "Huế",
+    "An Biên": "Kiên Giang",
+    "An Dương": "Hải Phòng",
+    "An Khê": "Gia Lai",
+    "An Lão": "Hải Phòng",
+    "An Lão": "Bình Định",
+    "An Minh": "Kiên Giang",
+    "An Nhơn": "Bình Định",
+    "An Phú": "An Giang",
+    "Ân Thi": "Hưng Yên",
+    "Anh Sơn": "Nghệ An",
+    "Ayun Pa": "Gia Lai",
+    "Ba Bể": "Bắc Kạn",
+    "Ba Chẽ": "Quảng Ninh",
+    "Ba Đình": "Hà Nội",
+    "Ba Đồn": "Quảng Bình",
+    "Bà Rịa": "Bà Rịa – Vũng Tàu",
+    "Bá Thước": "Thanh Hóa",
+    "Ba Tơ": "Quảng Ngãi",
+    "Ba Tri": "Bến Tre",
+    "Ba Vì": "Hà Nội",
+    "Bác Ái": "Ninh Thuận",
+    "Bắc Bình": "Bình Thuận",
+    "Bắc Giang": "Bắc Giang",
+    "Bắc Hà": "Lào Cai",
+    "Bắc Kạn": "Bắc Kạn",
+    "Bạc Liêu": "Bạc Liêu",
+    "Bắc Mê": "Hà Giang",
+    "Bắc Ninh": "Bắc Ninh",
+    "Bắc Quang": "Hà Giang",
+    "Bắc Sơn": "Lạng Sơn",
+    "Bắc Tân Uyên": "Bình Dương",
+    "Bắc Trà My": "Quảng Nam",
+    "Bắc Từ Liêm": "Hà Nội",
+    "Bắc Yên": "Sơn La",
+    "Bạch Long Vĩ": "Hải Phòng",
+    "Bạch Thông": "Bắc Kạn",
+    "Bảo Lạc": "Cao Bằng",
+    "Bảo Lâm": "Cao Bằng",
+    "Bảo Lâm": "Lâm Đồng",
+    "Bảo Lộc": "Lâm Đồng",
+    "Bảo Thắng": "Lào Cai",
+    "Bảo Yên": "Lào Cai",
+    "Bát Xát": "Lào Cai",
+    "Bàu Bàng": "Bình Dương",
+    "Bến Cát": "Bình Dương",
+    "Bến Cầu": "Tây Ninh",
+    "Bến Lức": "Long An",
+    "Bến Tre": "Bến Tre",
+    "Biên Hòa": "Đồng Nai",
+    "Bỉm Sơn": "Thanh Hóa",
+    "Bình Chánh": "Thành phố Hồ Chí Minh",
+    "Bình Đại": "Bến Tre",
+    "Bình Gia": "Lạng Sơn",
+    "Bình Giang": "Hải Dương",
+    "Bình Liêu": "Quảng Ninh",
+    "Bình Long": "Bình Phước",
+    "Bình Lục": "Hà Nam",
+    "Bình Minh": "Vĩnh Long",
+    "Bình Sơn": "Quảng Ngãi",
+    "Bình Tân": "Thành phố Hồ Chí Minh",
+    "Bình Tân": "Vĩnh Long",
+    "Bình Thạnh": "Thành phố Hồ Chí Minh",
+    "Bình Thủy": "Cần Thơ",
+    "Bình Xuyên": "Vĩnh Phúc",
+    "Bố Trạch": "Quảng Bình",
+    "Bù Đăng": "Bình Phước",
+    "Bù Đốp": "Bình Phước",
+    "Bù Gia Mập": "Bình Phước",
+    "Buôn Đôn": "Đắk Lắk",
+    "Buôn Hồ": "Đắk Lắk",
+    "Buôn Ma Thuột": "Đắk Lắk",
+    "Cà Mau": "Cà Mau",
+    "Cái Bè": "Tiền Giang",
+    "Cai Lậy": "Tiền Giang",
+    "Cái Nước": "Cà Mau",
+    "Cái Răng": "Cần Thơ",
+    "Cẩm Giàng": "Hải Dương",
+    "Cẩm Khê": "Phú Thọ",
+    "Cam Lâm": "Khánh Hòa",
+    "Cẩm Lệ": "Đà Nẵng",
+    "Cam Lộ": "Quảng Trị",
+    "Cẩm Mỹ": "Đồng Nai",
+    "Cẩm Phả": "Quảng Ninh",
+    "Cam Ranh": "Khánh Hòa",
+    "Cẩm Thủy": "Thanh Hóa",
+    "Cẩm Xuyên": "Hà Tĩnh",
+    "Cần Đước": "Long An",
+    "Cần Giờ": "Thành phố Hồ Chí Minh",
+    "Cần Giuộc": "Long An",
+    "Can Lộc": "Hà Tĩnh",
+    "Càng Long": "Trà Vinh",
+    "Cao Bằng": "Cao Bằng",
+    "Cao Lãnh": "Đồng Tháp",
+    "Cao Lộc": "Lạng Sơn",
+    "Cao Phong": "Hòa Bình",
+    "Cát Hải": "Hải Phòng",
+    "Cầu Giấy": "Hà Nội",
+    "Cầu Kè": "Trà Vinh",
+    "Cầu Ngang": "Trà Vinh",
+    "Châu Đốc": "An Giang",
+    "Châu Đức": "Bà Rịa – Vũng Tàu",
+    "Châu Phú": "An Giang",
+    "Châu Thành": "An Giang",
+    "Châu Thành": "Bến Tre",
+    "Châu Thành": "Đồng Tháp",
+    "Châu Thành": "Hậu Giang",
+    "Châu Thành": "Kiên Giang",
+    "Châu Thành": "Long An",
+    "Châu Thành": "Sóc Trăng",
+    "Châu Thành": "Tây Ninh",
+    "Châu Thành": "Tiền Giang",
+    "Châu Thành": "Trà Vinh",
+    "Châu Thành A": "Hậu Giang",
+    "Chi Lăng": "Lạng Sơn",
+    "Chí Linh": "Hải Dương",
+    "Chiêm Hóa": "Tuyên Quang",
+    "Chợ Đồn": "Bắc Kạn",
+    "Chợ Gạo": "Tiền Giang",
+    "Chợ Lách": "Bến Tre",
+    "Chợ Mới": "An Giang",
+    "Chợ Mới": "Bắc Kạn",
+    "Chơn Thành": "Bình Phước",
+    "Chũ": "Bắc Giang",
+    "Chư Păh": "Gia Lai",
+    "Chư Prông": "Gia Lai",
+    "Chư Pưh": "Gia Lai",
+    "Chư Sê": "Gia Lai",
+    "Chương Mỹ": "Hà Nội",
+    "Cờ Đỏ": "Cần Thơ",
+    "Cô Tô": "Quảng Ninh",
+    "Cồn Cỏ": "Quảng Trị",
+    "Con Cuông": "Nghệ An",
+    "Côn Đảo": "Bà Rịa – Vũng Tàu",
+    "Củ Chi": "Thành phố Hồ Chí Minh",
+    "Cư Jút": "Đắk Nông",
+    "Cư Kuin": "Đắk Lắk",
+    "Cù Lao Dung": "Sóc Trăng",
+    "Cư M'gar": "Đắk Lắk",
+    "Đà Bắc": "Hòa Bình",
+    "Đạ Huoai": "Lâm Đồng",
+    "Đakrông": "Quảng Trị",
+    "Đà Lạt": "Lâm Đồng",
+    "Đại Lộc": "Quảng Nam",
+    "Đại Từ": "Thái Nguyên",
+    "Đak Đoa": "Gia Lai",
+    "Đăk Glei": "Kon Tum",
+    "Đắk Glong": "Đắk Nông",
+    "Đăk Hà": "Kon Tum",
+    "Đắk Mil": "Đắk Nông",
+    "Đak Pơ": "Gia Lai",
+    "Đắk R'lấp": "Đắk Nông",
+    "Đắk Song": "Đắk Nông",
+    "Đăk Tô": "Kon Tum",
+    "Đầm Dơi": "Cà Mau",
+    "Đầm Hà": "Quảng Ninh",
+    "Đam Rông": "Lâm Đồng",
+    "Đan Phượng": "Hà Nội",
+    "Dầu Tiếng": "Bình Dương",
+    "Dĩ An": "Bình Dương",
+    "Di Linh": "Lâm Đồng",
+    "Điện Bàn": "Quảng Nam",
+    "Điện Biên": "Điện Biên",
+    "Điện Biên Đông": "Điện Biên",
+    "Điện Biên Phủ": "Điện Biên",
+    "Diễn Châu": "Nghệ An",
+    "Diên Khánh": "Khánh Hòa",
+    "Định Hóa": "Thái Nguyên",
+    "Đình Lập": "Lạng Sơn",
+    "Định Quán": "Đồng Nai",
+    "Đô Lương": "Nghệ An",
+    "Đồ Sơn": "Hải Phòng",
+    "Đoan Hùng": "Phú Thọ",
+    "Đơn Dương": "Lâm Đồng",
+    "Đông Anh": "Hà Nội",
+    "Đống Đa": "Hà Nội",
+    "Đông Giang": "Quảng Nam",
+    "Đông Hà": "Quảng Trị",
+    "Đông Hải": "Bạc Liêu",
+    "Đông Hòa": "Phú Yên",
+    "Đồng Hới": "Quảng Bình",
+    "Đông Hưng": "Thái Bình",
+    "Đồng Hỷ": "Thái Nguyên",
+    "Đồng Phú": "Bình Phước",
+    "Đông Triều": "Quảng Ninh",
+    "Đồng Văn": "Hà Giang",
+    "Đồng Xoài": "Bình Phước",
+    "Đồng Xuân": "Phú Yên",
+    "Đức Cơ": "Gia Lai",
+    "Đức Hòa": "Long An",
+    "Đức Huệ": "Long An",
+    "Đức Linh": "Bình Thuận",
+    "Đức Phổ": "Quảng Ngãi",
+    "Đức Thọ": "Hà Tĩnh",
+    "Đức Trọng": "Lâm Đồng",
+    "Dương Kinh": "Hải Phòng",
+    "Dương Minh Châu": "Tây Ninh",
+    "Duy Tiên": "Hà Nam",
+    "Duy Xuyên": "Quảng Nam",
+    "Duyên Hải": "Trà Vinh",
+    "Ea H'leo": "Đắk Lắk",
+    "Ea Kar": "Đắk Lắk",
+    "Ea Súp": "Đắk Lắk",
+    "Gia Bình": "Bắc Ninh",
+    "Gia Lâm": "Hà Nội",
+    "Gia Lộc": "Hải Dương",
+    "Gia Nghĩa": "Đắk Nông",
+    "Giá Rai": "Bạc Liêu",
+    "Gia Viễn": "Ninh Bình",
+    "Giang Thành": "Kiên Giang",
+    "Giao Thủy": "Nam Định",
+    "Gio Linh": "Quảng Trị",
+    "Giồng Riềng": "Kiên Giang",
+    "Giồng Trôm": "Bến Tre",
+    "Gò Công": "Tiền Giang",
+    "Gò Công Đông": "Tiền Giang",
+    "Gò Công Tây": "Tiền Giang",
+    "Gò Dầu": "Tây Ninh",
+    "Gò Quao": "Kiên Giang",
+    "Gò Vấp": "Thành phố Hồ Chí Minh",
+    "Hà Đông": "Hà Nội",
+    "Hà Giang": "Hà Giang",
+    "Hạ Hòa": "Phú Thọ",
+    "Hạ Lang": "Cao Bằng",
+    "Hạ Long": "Quảng Ninh",
+    "Hà Quảng": "Cao Bằng",
+    "Hà Tiên": "Kiên Giang",
+    "Hà Tĩnh": "Hà Tĩnh",
+    "Hà Trung": "Thanh Hóa",
+    "Hải An": "Hải Phòng",
+    "Hai Bà Trưng": "Hà Nội",
+    "Hải Châu": "Đà Nẵng",
+    "Hải Dương": "Hải Dương",
+    "Hải Hà": "Quảng Ninh",
+    "Hải Hậu": "Nam Định",
+    "Hải Lăng": "Quảng Trị",
+    "Hàm Tân": "Bình Thuận",
+    "Hàm Thuận Bắc": "Bình Thuận",
+    "Hàm Thuận Nam": "Bình Thuận",
+    "Hàm Yên": "Tuyên Quang",
+    "Hậu Lộc": "Thanh Hóa",
+    "Hiệp Đức": "Quảng Nam",
+    "Hiệp Hòa": "Bắc Giang",
+    "Hòa An": "Cao Bằng",
+    "Hòa Bình": "Hòa Bình",
+    "Hòa Bình": "Bạc Liêu",
+    "Hoa Lư": "Ninh Bình",
+    "Hòa Thành": "Tây Ninh",
+    "Hòa Vang": "Đà Nẵng",
+    "Hoài Ân": "Bình Định",
+    "Hoài Đức": "Hà Nội",
+    "Hoài Nhơn": "Bình Định",
+    "Hoàn Kiếm": "Hà Nội",
+    "Hoằng Hóa": "Thanh Hóa",
+    "Hoàng Mai": "Hà Nội",
+    "Hoàng Mai": "Nghệ An",
+    "Hoàng Sa": "Đà Nẵng",
+    "Hoàng Su Phì": "Hà Giang",
+    "Hóc Môn": "Thành phố Hồ Chí Minh",
+    "Hội An": "Quảng Nam",
+    "Hòn Đất": "Kiên Giang",
+    "Hớn Quản": "Bình Phước",
+    "Hồng Bàng": "Hải Phòng",
+    "Hồng Dân": "Bạc Liêu",
+    "Hồng Lĩnh": "Hà Tĩnh",
+    "Hồng Ngự": "Đồng Tháp",
+    "Hưng Hà": "Thái Bình",
+    "Hưng Nguyên": "Nghệ An",
+    "Hưng Yên": "Hưng Yên",
+    "Hướng Hóa": "Quảng Trị",
+    "Hương Khê": "Hà Tĩnh",
+    "Hương Sơn": "Hà Tĩnh",
+    "Hương Thủy": "Huế",
+    "Hương Trà": "Huế",
+    "Hữu Lũng": "Lạng Sơn",
+    "Ia Grai": "Gia Lai",
+    "Ia H'Drai": "Kon Tum",
+    "Ia Pa": "Gia Lai",
+    "Kbang": "Gia Lai",
+    "Kế Sách": "Sóc Trăng",
+    "Khánh Sơn": "Khánh Hòa",
+    "Khánh Vĩnh": "Khánh Hòa",
+    "Khoái Châu": "Hưng Yên",
+    "Kiến An": "Hải Phòng",
+    "Kiên Hải": "Kiên Giang",
+    "Kiên Lương": "Kiên Giang",
+    "Kiến Thụy": "Hải Phòng",
+    "Kiến Tường": "Long An",
+    "Kiến Xương": "Thái Bình",
+    "Kim Bảng": "Hà Nam",
+    "Kim Bôi": "Hòa Bình",
+    "Kim Động": "Hưng Yên",
+    "Kim Sơn": "Ninh Bình",
+    "Kim Thành": "Hải Dương",
+    "Kinh Môn": "Hải Dương",
+    "Kon Plông": "Kon Tum",
+    "Kon Rẫy": "Kon Tum",
+    "Kon Tum": "Kon Tum",
+    "Kông Chro": "Gia Lai",
+    "Krông Ana": "Đắk Lắk",
+    "Krông Bông": "Đắk Lắk",
+    "Krông Búk": "Đắk Lắk",
+    "Krông Năng": "Đắk Lắk",
+    "Krông Nô": "Đắk Nông",
+    "Krông Pa": "Gia Lai",
+    "Krông Pắc": "Đắk Lắk",
+    "Kỳ Anh": "Hà Tĩnh",
+    "Kỳ Sơn": "Nghệ An",
+    "La Gi": "Bình Thuận",
+    "Lạc Dương": "Lâm Đồng",
+    "Lạc Sơn": "Hòa Bình",
+    "Lạc Thủy": "Hòa Bình",
+    "Lai Châu": "Lai Châu",
+    "Lai Vung": "Đồng Tháp",
+    "Lắk": "Đắk Lắk",
+    "Lâm Bình": "Tuyên Quang",
+    "Lâm Hà": "Lâm Đồng",
+    "Lâm Thao": "Phú Thọ",
+    "Lang Chánh": "Thanh Hóa",
+    "Lạng Giang": "Bắc Giang",
+    "Lạng Sơn": "Lạng Sơn",
+    "Lào Cai": "Lào Cai",
+    "Lập Thạch": "Vĩnh Phúc",
+    "Lấp Vò": "Đồng Tháp",
+    "Lê Chân": "Hải Phòng",
+    "Lệ Thủy": "Quảng Bình",
+    "Liên Chiểu": "Đà Nẵng",
+    "Lộc Bình": "Lạng Sơn",
+    "Lộc Ninh": "Bình Phước",
+    "Long Biên": "Hà Nội",
+    "Long Đất": "Bà Rịa – Vũng Tàu",
+    "Long Hồ": "Vĩnh Long",
+    "Long Khánh": "Đồng Nai",
+    "Long Mỹ": "Hậu Giang",
+    "Long Phú": "Sóc Trăng",
+    "Long Thành": "Đồng Nai",
+    "Long Xuyên": "An Giang",
+    "Lục Nam": "Bắc Giang",
+    "Lục Ngạn": "Bắc Giang",
+    "Lục Yên": "Yên Bái",
+    "Lương Sơn": "Hòa Bình",
+    "Lương Tài": "Bắc Ninh",
+    "Lý Nhân": "Hà Nam",
+    "Lý Sơn": "Quảng Ngãi",
+    "M'Drắk": "Đắk Lắk",
+    "Mai Châu": "Hòa Bình",
+    "Mai Sơn": "Sơn La",
+    "Mang Thít": "Vĩnh Long",
+    "Mang Yang": "Gia Lai",
+    "Mê Linh": "Hà Nội",
+    "Mèo Vạc": "Hà Giang",
+    "Minh Hóa": "Quảng Bình",
+    "Minh Long": "Quảng Ngãi",
+    "Mỏ Cày Bắc": "Bến Tre",
+    "Mỏ Cày Nam": "Bến Tre",
+    "Mộ Đức": "Quảng Ngãi",
+    "Mộc Châu": "Sơn La",
+    "Mộc Hóa": "Long An",
+    "Móng Cái": "Quảng Ninh",
+    "Mù Cang Chải": "Yên Bái",
+    "Mường Ảng": "Điện Biên",
+    "Mường Chà": "Điện Biên",
+    "Mường Khương": "Lào Cai",
+    "Mường La": "Sơn La",
+    "Mường Lát": "Thanh Hóa",
+    "Mường Lay": "Điện Biên",
+    "Mường Nhé": "Điện Biên",
+    "Mường Tè": "Lai Châu",
+    "Mỹ Đức": "Hà Nội",
+    "Mỹ Hào": "Hưng Yên",
+    "Mỹ Tho": "Tiền Giang",
+    "Mỹ Tú": "Sóc Trăng",
+    "Mỹ Xuyên": "Sóc Trăng",
+    "Na Hang": "Tuyên Quang",
+    "Na Rì": "Bắc Kạn",
+    "Năm Căn": "Cà Mau",
+    "Nam Đàn": "Nghệ An",
+    "Nam Định": "Nam Định",
+    "Nam Giang": "Quảng Nam",
+    "Nậm Nhùn": "Lai Châu",
+    "Nậm Pồ": "Điện Biên",
+    "Nam Sách": "Hải Dương",
+    "Nam Trà My": "Quảng Nam",
+    "Nam Trực": "Nam Định",
+    "Nam Từ Liêm": "Hà Nội",
+    "Ngã Bảy": "Hậu Giang",
+    "Ngã Năm": "Sóc Trăng",
+    "Nga Sơn": "Thanh Hóa",
+    "Ngân Sơn": "Bắc Kạn",
+    "Nghi Lộc": "Nghệ An",
+    "Nghi Sơn": "Thanh Hóa",
+    "Nghi Xuân": "Hà Tĩnh",
+    "Nghĩa Đàn": "Nghệ An",
+    "Nghĩa Hành": "Quảng Ngãi",
+    "Nghĩa Hưng": "Nam Định",
+    "Nghĩa Lộ": "Yên Bái",
+    "Ngô Quyền": "Hải Phòng",
+    "Ngọc Hiển": "Cà Mau",
+    "Ngọc Hồi": "Kon Tum",
+    "Ngọc Lặc": "Thanh Hóa",
+    "Ngũ Hành Sơn": "Đà Nẵng",
+    "Nguyên Bình": "Cao Bằng",
+    "Nhà Bè": "Thành phố Hồ Chí Minh",
+    "Nha Trang": "Khánh Hòa",
+    "Nho Quan": "Ninh Bình",
+    "Nhơn Trạch": "Đồng Nai",
+    "Như Thanh": "Thanh Hóa",
+    "Như Xuân": "Thanh Hóa",
+    "Ninh Giang": "Hải Dương",
+    "Ninh Hải": "Ninh Thuận",
+    "Ninh Hòa": "Khánh Hòa",
+    "Ninh Kiều": "Cần Thơ",
+    "Ninh Phước": "Ninh Thuận",
+    "Ninh Sơn": "Ninh Thuận",
+    "Nông Cống": "Thanh Hóa",
+    "Núi Thành": "Quảng Nam",
+    "Ô Môn": "Cần Thơ",
+    "Pác Nặm": "Bắc Kạn",
+    "Phan Rang – Tháp Chàm": "Ninh Thuận",
+    "Phan Thiết": "Bình Thuận",
+    "Phổ Yên": "Thái Nguyên",
+    "Phong Điền": "Cần Thơ",
+    "Phong Điền": "Huế",
+    "Phong Thổ": "Lai Châu",
+    "Phú Bình": "Thái Nguyên",
+    "Phù Cát": "Bình Định",
+    "Phù Cừ": "Hưng Yên",
+    "Phú Giáo": "Bình Dương",
+    "Phú Hòa": "Phú Yên",
+    "Phú Lộc": "Huế",
+    "Phú Lương": "Thái Nguyên",
+    "Phủ Lý": "Hà Nam",
+    "Phú Mỹ": "Bà Rịa – Vũng Tàu",
+    "Phù Mỹ": "Bình Định",
+    "Phú Nhuận": "Thành phố Hồ Chí Minh",
+    "Phú Ninh": "Quảng Nam",
+    "Phù Ninh": "Phú Thọ",
+    "Phú Quốc": "Kiên Giang",
+    "Phú Quý": "Bình Thuận",
+    "Phú Riềng": "Bình Phước",
+    "Phú Tân": "An Giang",
+    "Phú Tân": "Cà Mau",
+    "Phú Thiện": "Gia Lai",
+    "Phú Thọ": "Phú Thọ",
+    "Phú Vang": "Huế",
+    "Phú Vĩnh": "Huế",
+    "Phú Xuyên": "Hà Nội",
+    "Phù Yên": "Sơn La",
+    "Phúc Thọ": "Hà Nội",
+    "Phúc Yên": "Vĩnh Phúc",
+    "Phụng Hiệp": "Hậu Giang",
+    "Phước Long": "Bình Phước",
+    "Phước Long": "Bạc Liêu",
+    "Phước Sơn": "Quảng Nam",
+    "Pleiku": "Gia Lai",
+    "Quận 1": "Thành phố Hồ Chí Minh",
+    "Quận 3": "Thành phố Hồ Chí Minh",
+    "Quận 4": "Thành phố Hồ Chí Minh",
+    "Quận 5": "Thành phố Hồ Chí Minh",
+    "Quận 6": "Thành phố Hồ Chí Minh",
+    "Quận 7": "Thành phố Hồ Chí Minh",
+    "Quận 8": "Thành phố Hồ Chí Minh",
+    "Quận 10": "Thành phố Hồ Chí Minh",
+    "Quận 11": "Thành phố Hồ Chí Minh",
+    "Quận 12": "Thành phố Hồ Chí Minh",
+    "Quản Bạ": "Hà Giang",
+    "Quan Hóa": "Thanh Hóa",
+    "Quan Sơn": "Thanh Hóa",
+    "Quang Bình": "Hà Giang",
+    "Quảng Điền": "Huế",
+    "Quảng Hòa": "Cao Bằng",
+    "Quảng Ngãi": "Quảng Ngãi",
+    "Quảng Ninh": "Quảng Bình",
+    "Quảng Trạch": "Quảng Bình",
+    "Quảng Trị": "Quảng Trị",
+    "Quảng Xương": "Thanh Hóa",
+    "Quảng Yên": "Quảng Ninh",
+    "Quế Phong": "Nghệ An",
+    "Quế Sơn": "Quảng Nam",
+    "Quế Võ": "Bắc Ninh",
+    "Quốc Oai": "Hà Nội",
+    "Quỳ Châu": "Nghệ An",
+    "Quỳ Hợp": "Nghệ An",
+    "Quy Nhơn": "Bình Định",
+    "Quỳnh Lưu": "Nghệ An",
+    "Quỳnh Nhai": "Sơn La",
+    "Quỳnh Phụ": "Thái Bình",
+    "Rạch Giá": "Kiên Giang",
+    "Sa Đéc": "Đồng Tháp",
+    "Sa Pa": "Lào Cai",
+    "Sa Thầy": "Kon Tum",
+    "Sầm Sơn": "Thanh Hóa",
+    "Si Ma Cai": "Lào Cai",
+    "Sìn Hồ": "Lai Châu",
+    "Sóc Sơn": "Hà Nội",
+    "Sóc Trăng": "Sóc Trăng",
+    "Sơn Động": "Bắc Giang",
+    "Sơn Dương": "Tuyên Quang",
+    "Sơn Hà": "Quảng Ngãi",
+    "Sơn Hòa": "Phú Yên",
+    "Sơn La": "Sơn La",
+    "Sơn Tây": "Hà Nội",
+    "Sơn Tây": "Quảng Ngãi",
+    "Sơn Tịnh": "Quảng Ngãi",
+    "Sơn Trà": "Đà Nẵng",
+    "Sông Cầu": "Phú Yên",
+    "Sông Công": "Thái Nguyên",
+    "Sông Hinh": "Phú Yên",
+    "Sông Lô": "Vĩnh Phúc",
+    "Sông Mã": "Sơn La",
+    "Sốp Cộp": "Sơn La",
+    "Tam Bình": "Vĩnh Long",
+    "Tam Đảo": "Vĩnh Phúc",
+    "Tam Điệp": "Ninh Bình",
+    "Tam Dương": "Vĩnh Phúc",
+    "Tam Đường": "Lai Châu",
+    "Tam Kỳ": "Quảng Nam",
+    "Tam Nông": "Đồng Tháp",
+    "Tam Nông": "Phú Thọ",
+    "Tân An": "Long An",
+    "Tân Biên": "Tây Ninh",
+    "Tân Bình": "Thành phố Hồ Chí Minh",
+    "Tân Châu": "An Giang",
+    "Tân Châu": "Tây Ninh",
+    "Tân Hiệp": "Kiên Giang",
+    "Tân Hồng": "Đồng Tháp",
+    "Tân Hưng": "Long An",
+    "Tân Kỳ": "Nghệ An",
+    "Tân Lạc": "Hòa Bình",
+    "Tân Phú": "Thành phố Hồ Chí Minh",
+    "Tân Phú": "Đồng Nai",
+    "Tân Phú Đông": "Tiền Giang",
+    "Tân Phước": "Tiền Giang",
+    "Tân Sơn": "Phú Thọ",
+    "Tân Thạnh": "Long An",
+    "Tân Trụ": "Long An",
+    "Tân Uyên": "Bình Dương",
+    "Tân Uyên": "Lai Châu",
+    "Tân Yên": "Bắc Giang",
+    "Tánh Linh": "Bình Thuận",
+    "Tây Giang": "Quảng Nam",
+    "Tây Hồ": "Hà Nội",
+    "Tây Hòa": "Phú Yên",
+    "Tây Ninh": "Tây Ninh",
+    "Tây Sơn": "Bình Định",
+    "Thạch An": "Cao Bằng",
+    "Thạch Hà": "Hà Tĩnh",
+    "Thạch Thành": "Thanh Hóa",
+    "Thạch Thất": "Hà Nội",
+    "Thái Bình": "Thái Bình",
+    "Thái Hòa": "Nghệ An",
+    "Thái Nguyên": "Thái Nguyên",
+    "Thái Thụy": "Thái Bình",
+    "Than Uyên": "Lai Châu",
+    "Thăng Bình": "Quảng Nam",
+    "Thanh Ba": "Phú Thọ",
+    "Thanh Bình": "Đồng Tháp",
+    "Thanh Chương": "Nghệ An",
+    "Thanh Hà": "Hải Dương",
+    "Thanh Hóa": "Thanh Hóa",
+    "Thạnh Hóa": "Long An",
+    "Thanh Khê": "Đà Nẵng",
+    "Thanh Liêm": "Hà Nam",
+    "Thanh Miện": "Hải Dương",
+    "Thanh Oai": "Hà Nội",
+    "Thạnh Phú": "Bến Tre",
+    "Thanh Sơn": "Phú Thọ",
+    "Thanh Thủy": "Phú Thọ",
+    "Thanh Trì": "Hà Nội",
+    "Thạnh Trị": "Sóc Trăng",
+    "Thanh Xuân": "Hà Nội",
+    "Tháp Mười": "Đồng Tháp",
+    "Thiệu Hóa": "Thanh Hóa",
+    "Thọ Xuân": "Thanh Hóa",
+    "Thoại Sơn": "An Giang",
+    "Thới Bình": "Cà Mau",
+    "Thới Lai": "Cần Thơ",
+    "Thống Nhất": "Đồng Nai",
+    "Thốt Nốt": "Cần Thơ",
+    "Thủ Dầu Một": "Bình Dương",
+    "Thủ Đức": "Thành phố Hồ Chí Minh",
+    "Thủ Thừa": "Long An",
+    "Thuận An": "Bình Dương",
+    "Thuận Bắc": "Ninh Thuận",
+    "Thuận Châu": "Sơn La",
+    "Thuận Hóa": "Huế",
+    "Thuận Nam": "Ninh Thuận",
+    "Thuận Thành": "Bắc Ninh",
+    "Thường Tín": "Hà Nội",
+    "Thường Xuân": "Thanh Hóa",
+    "Thủy Nguyên": "Hải Phòng",
+    "Tiên Du": "Bắc Ninh",
+    "Tiền Hải": "Thái Bình",
+    "Tiên Lãng": "Hải Phòng",
+    "Tiên Lữ": "Hưng Yên",
+    "Tiên Phước": "Quảng Nam",
+    "Tiên Yên": "Quảng Ninh",
+    "Tiểu Cần": "Trà Vinh",
+    "Tịnh Biên": "An Giang",
+    "Trà Bồng": "Quảng Ngãi",
+    "Trà Cú": "Trà Vinh",
+    "Trà Ôn": "Vĩnh Long",
+    "Trà Vinh": "Trà Vinh",
+    "Trạm Tấu": "Yên Bái",
+    "Trần Đề": "Sóc Trăng",
+    "Trần Văn Thời": "Cà Mau",
+    "Trấn Yên": "Yên Bái",
+    "Trảng Bàng": "Tây Ninh",
+    "Trảng Bom": "Đồng Nai",
+    "Tràng Định": "Lạng Sơn",
+    "Tri Tôn": "An Giang",
+    "Triệu Phong": "Quảng Trị",
+    "Triệu Sơn": "Thanh Hóa",
+    "Trực Ninh": "Nam Định",
+    "Trùng Khánh": "Cao Bằng",
+    "Trường Sa": "Khánh Hòa",
+    "Tứ Kỳ": "Hải Dương",
+    "Tu Mơ Rông": "Kon Tum",
+    "Tư Nghĩa": "Quảng Ngãi",
+    "Từ Sơn": "Bắc Ninh",
+    "Tủa Chùa": "Điện Biên",
+    "Tuần Giáo": "Điện Biên",
+    "Tương Dương": "Nghệ An",
+    "Tuy An": "Phú Yên",
+    "Tuy Đức": "Đắk Nông",
+    "Tuy Hòa": "Phú Yên",
+    "Tuy Phong": "Bình Thuận",
+    "Tuy Phước": "Bình Định",
+    "Tuyên Hóa": "Quảng Bình",
+    "Tuyên Quang": "Tuyên Quang",
+    "U Minh Thượng": "Kiên Giang",
+    "U Minh": "Cà Mau",
+    "Ứng Hòa": "Hà Nội",
+    "Uông Bí": "Quảng Ninh",
+    "Văn Bàn": "Lào Cai",
+    "Vân Canh": "Bình Định",
+    "Văn Chấn": "Yên Bái",
+    "Vân Đồn": "Quảng Ninh",
+    "Văn Giang": "Hưng Yên",
+    "Vân Hồ": "Sơn La",
+    "Văn Lâm": "Hưng Yên",
+    "Văn Lãng": "Lạng Sơn",
+    "Vạn Ninh": "Khánh Hòa",
+    "Văn Quan": "Lạng Sơn",
+    "Văn Yên": "Yên Bái",
+    "Vị Thanh": "Hậu Giang",
+    "Vị Thủy": "Hậu Giang",
+    "Vị Xuyên": "Hà Giang",
+    "Việt Trì": "Phú Thọ",
+    "Việt Yên": "Bắc Giang",
+    "Vĩnh Bảo": "Hải Phòng",
+    "Vĩnh Châu": "Sóc Trăng",
+    "Vĩnh Cửu": "Đồng Nai",
+    "Vĩnh Hưng": "Long An",
+    "Vĩnh Linh": "Quảng Trị",
+    "Vĩnh Lộc": "Thanh Hóa",
+    "Vĩnh Lợi": "Bạc Liêu",
+    "Vĩnh Long": "Vĩnh Long",
+    "Vĩnh Thạnh": "Cần Thơ",
+    "Vĩnh Thạnh": "Bình Định",
+    "Vĩnh Thuận": "Kiên Giang",
+    "Vĩnh Tường": "Vĩnh Phúc",
+    "Vĩnh Yên": "Vĩnh Phúc",
+    "Vinh": "Nghệ An",
+    "Võ Nhai": "Thái Nguyên",
+    "Vụ Bản": "Nam Định",
+    "Vũ Quang": "Hà Tĩnh",
+    "Vũ Thư": "Thái Bình",
+    "Vũng Liêm": "Vĩnh Long",
+    "Vũng Tàu": "Bà Rịa – Vũng Tàu",
+    "Xín Mần": "Hà Giang",
+    "Xuân Lộc": "Đồng Nai",
+    "Xuân Trường": "Nam Định",
+    "Xuyên Mộc": "Bà Rịa – Vũng Tàu",
+    "Ý Yên": "Nam Định",
+    "Yên Bái": "Yên Bái",
+    "Yên Bình": "Yên Bái",
+    "Yên Châu": "Sơn La",
+    "Yên Định": "Thanh Hóa",
+    "Yên Lập": "Phú Thọ",
+    "Yên Khánh": "Ninh Bình",
+    "Yên Lạc": "Hưng Yên",
+    "Yên Lập": "Phú Thọ",
+    "Yên Minh": "Hà Giang",
+    "Yên Mô": "Ninh Bình",
+    "Yên Mỹ": "Hưng Yên",
+    "Yên Phong": "Bắc Ninh",
+    "Yên Sơn": "Tuyên Quang",
+    "Yên Thành": "Nghệ An",
+    "Yên Thế": "Bắc Giang",
+    "Yên Thủy": "Hòa Bình"
+};
+
+        const stateBbox = simplemaps_countrymap_mapinfo.state_bbox_array;
+
+        // Tính tổng số người dùng duy nhất
+        const allUsers = new Set();
+        function countTotalUsers(node) {
+            if (node.username) {
+                allUsers.add(node.username);
+            }
+            if (node.children) {
+                node.children.forEach(child => countTotalUsers(child));
+            }
+        }
+        countTotalUsers(jsonData.tree_data);
+        const totalUsers = allUsers.size;
+
+        // Xử lý dữ liệu người dùng, phân loại người dùng ở Việt Nam và nước ngoài
+        const usersByProvince = {};
+        const usersAbroad = new Set();
+        const identifiedUsersSet = new Set();
+        const usersWithLocation = new Set();
+        const processedUsers = new Set();
+
+        function traverseTree(node) {
+            if (!node || !node.username || processedUsers.has(node.username)) {
+                console.log(`Bỏ qua nút: ${node?.id || "không xác định"} (username: ${node?.username || "không có"})`);
+                return;
+            }
+            console.log(`Xử lý nút: ${node.id}, username: ${node.username}`);
+            processedUsers.add(node.username);
+            if (node.about_info?.about?.content?.general) {
+                const aboutItems = node.about_info.about.content.general;
+                // Làm sạch chuỗi và tìm "Sống tại"
+                const livingAt = aboutItems.find(item => item.replace(/\n/g, "").trim().startsWith("Sống tại"));
+                if (livingAt) {
+                    console.log(`Tìm thấy vị trí cho ${node.username}: ${livingAt}`);
+                    usersWithLocation.add(node.username);
+                    const place = livingAt.replace(/Sống tại\s*\n?/, "").trim();
+                    const parts = place.split(",").map(part => part.trim());
+                    let locationName = parts[parts.length - 1];
+                    if (locationName === "Vietnam") {
+                        locationName = parts[parts.length - 2] || "";
+                    }
+                    let province = provinces.find(p => p.name === locationName);
+                    // Kiểm tra ánh xạ huyện-tỉnh
+                    if (!province) {
+                        const mappedProvince = districtToProvince[locationName];
+                        if (mappedProvince) {
+                            province = provinces.find(p => p.name === mappedProvince);
+                        }
+                    }
+                    // Kiểm tra phần trước nếu có
+                    if (!province && parts.length > 1) {
+                        province = provinces.find(p => p.name === parts[parts.length - 2]);
+                        if (!province) {
+                            const mappedProvince = districtToProvince[parts[parts.length - 2]];
+                            if (mappedProvince) {
+                                province = provinces.find(p => p.name === mappedProvince);
+                            }
+                        }
+                    }
+                    if (province) {
+                        console.log(`Ánh xạ tới tỉnh: ${province.name} (${province.code})`);
+                        if (!usersByProvince[province.code]) usersByProvince[province.code] = new Set();
+                        usersByProvince[province.code].add(node.username);
+                        identifiedUsersSet.add(node.username);
+                    } else {
+                        console.log(`Đánh dấu ở nước ngoài: ${place}`);
+                        usersAbroad.add(node.username);
+                    }
+                } else {
+                    console.log(`Không có "Sống tại" cho ${node.username}`);
+                }
+            } else {
+                console.log(`Không có about_info cho ${node.username}`);
+            }
+            if (node.children) {
+                node.children.forEach(child => traverseTree(child));
+            }
+        }
+        traverseTree(jsonData.tree_data);
+
+        // Tạo danh sách người dùng không xác định
+        const unidentifiedUsersSet = new Set([...allUsers].filter(id => !usersWithLocation.has(id)));
+
+        // Log để kiểm tra
+        console.log("Users by Province:", usersByProvince);
+        console.log("Users Abroad:", Array.from(usersAbroad));
+        console.log("Unidentified Users:", Array.from(unidentifiedUsersSet));
+
+        // Chuyển Set thành mảng để dễ xử lý
+        for (const stateCode in usersByProvince) {
+            usersByProvince[stateCode] = Array.from(usersByProvince[stateCode]);
+        }
+
+        // Khởi tạo đầy đủ state_specific cho tất cả tỉnh
+        provinces.forEach(prov => {
+            if (!simplemaps_countrymap_mapdata.state_specific[prov.code]) {
+                console.warn(`Khởi tạo state_specific cho ${prov.code}`);
+                simplemaps_countrymap_mapdata.state_specific[prov.code] = {
+                    name: prov.name,
+                    description: "Không có thông tin",
+                    color: "#D3D3D3"
+                };
+            } else {
+                if (!simplemaps_countrymap_mapdata.state_specific[prov.code].description || simplemaps_countrymap_mapdata.state_specific[prov.code].description.trim() === "") {
+                    simplemaps_countrymap_mapdata.state_specific[prov.code].description = "Không có thông tin";
+                }
+            }
+        });
+
+        // Cập nhật cấu hình bản đồ
+        for (const stateCode in usersByProvince) {
+            const users = usersByProvince[stateCode].filter(user => user);
+            simplemaps_countrymap_mapdata.state_specific[stateCode].color = "#ebe834";
+            simplemaps_countrymap_mapdata.state_specific[stateCode].description = users.length > 0 ? `Người dùng: ${users.join(", ")}` : "Không có thông tin";
+        }
+
+        // Tính số người dùng không xác định
+        const usersWithLocationCount = usersWithLocation.size;
+        const identifiedUsersCount = identifiedUsersSet.size;
+        const usersAbroadCount = usersAbroad.size;
+        const unidentifiedUsers = totalUsers - usersWithLocationCount;
+
+        // Hiển thị thống kê
+        const statsContent = document.getElementById("stats-content");
+        let statsHTML = "<ul>";
+        for (const stateCode in usersByProvince) {
+            const provinceName = provinces.find(p => p.code === stateCode).name;
+            const userCount = usersByProvince[stateCode].length;
+            statsHTML += `<li>${provinceName}: ${userCount} người dùng</li>`;
+        }
+        statsHTML += `<li>Ở nước ngoài: ${usersAbroadCount} người dùng${usersAbroadCount > 0 ? ` (${Array.from(usersAbroad).join(", ")})` : ""}</li>`;
+        statsHTML += `<li>Không xác định: ${unidentifiedUsers} người dùng${unidentifiedUsers > 0 ? ` (${Array.from(unidentifiedUsersSet).join(", ")})` : ""}</li>`;
+        statsHTML += "</ul>";
+        statsContent.innerHTML = statsHTML;
+
+        // Cập nhật legend
+        simplemaps_countrymap_mapdata.legend.entries = [
+            { name: "Có người dùng", color: "#ebe834" },
+            { name: "Không có người dùng", color: "#D3D3D3" }
+        ];
+
+        const provincePaths = simplemaps_countrymap_mapinfo.paths;
+
+        provinces.forEach((prov) => {
+            const bbox = stateBbox[prov.code];
+            if (bbox) {
+                const { x, y, x2, y2, cx, cy } = bbox;
+                simplemaps.states[prov.code] = {
+                    name: prov.name,
+                    path: provincePaths[prov.code] || `M${x},${y} L${x2},${y} L${x2},${y2} L${x},${y2} Z`,
+                    centroid: [cx, cy]
+                };
+            } else {
+                console.warn(`Không có bbox cho tỉnh ${prov.code}`);
+            }
+        });
+
+        function simplemaps_countrymap() {
+            const mapDiv = document.getElementById(simplemaps_countrymap_mapdata.main_settings.div);
+            if (!mapDiv) {
+                console.error("Không tìm thấy div #map");
+                return;
+            }
+
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.setAttribute("width", "100%");
+            svg.setAttribute("height", "1000");
+            const initialViewBox = { x: 0, y: 0, width: 1000, height: 1000 };
+            svg.setAttribute("viewBox", `${initialViewBox.x} ${initialViewBox.y} ${initialViewBox.width} ${initialViewBox.height}`);
+            mapDiv.appendChild(svg);
+
+            let isDragging = false;
+            let startX, startY;
+            let viewBox = { ...initialViewBox };
+
+            // Sự kiện kéo bản đồ
+            svg.addEventListener("mousedown", function(e) {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+
+            svg.addEventListener("mousemove", function(e) {
+                if (!isDragging) return;
+                const dx = (e.clientX - startX) * (viewBox.width / svg.clientWidth);
+                const dy = (e.clientY - startY) * (viewBox.height / svg.clientHeight);
+                viewBox.x -= dx;
+                viewBox.y -= dy;
+                svg.setAttribute("viewBox", `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+
+            svg.addEventListener("mouseup", function() {
+                isDragging = false;
+            });
+            svg.addEventListener("mouseleave", function() {
+                isDragging = false;
+            });
+
+            // Sự kiện lăn chuột để phóng to/thu nhỏ
+            svg.addEventListener("wheel", function(e) {
+                e.preventDefault();
+                const zoomFactor = 0.1;
+                const minWidth = 200;
+                const maxWidth = 2000;
+                const oldWidth = viewBox.width;
+                const oldHeight = viewBox.height;
+                let newWidth = oldWidth;
+                let newHeight = oldHeight;
+
+                if (e.deltaY < 0) {
+                    newWidth = oldWidth * (1 - zoomFactor);
+                    newHeight = oldHeight * (1 - zoomFactor);
+                } else {
+                    newWidth = oldWidth * (1 + zoomFactor);
+                    newHeight = oldHeight * (1 + zoomFactor);
+                }
+
+                if (newWidth < minWidth) {
+                    newWidth = minWidth;
+                    newHeight = minWidth * (initialViewBox.height / initialViewBox.width);
+                }
+                if (newWidth > maxWidth) {
+                    newWidth = maxWidth;
+                    newHeight = maxWidth * (initialViewBox.height / initialViewBox.width);
+                }
+
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                const rect = svg.getBoundingClientRect();
+                const mouseSvgX = ((mouseX - rect.left) / rect.width) * oldWidth + viewBox.x;
+                const mouseSvgY = ((mouseY - rect.top) / rect.height) * oldHeight + viewBox.y;
+                const newMouseSvgX = ((mouseX - rect.left) / rect.width) * newWidth + viewBox.x;
+                const newMouseSvgY = ((mouseY - rect.top) / rect.height) * newHeight + viewBox.y;
+
+                viewBox.x += (mouseSvgX - newMouseSvgX);
+                viewBox.y += (mouseSvgY - newMouseSvgY);
+                viewBox.width = newWidth;
+                viewBox.height = newHeight;
+
+                svg.setAttribute("viewBox", `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
+            });
+
+            for (const stateCode in simplemaps.states) {
+                const state = simplemaps.states[stateCode];
+                const stateConfig = simplemaps_countrymap_mapdata.state_specific[stateCode] || {};
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path.setAttribute("d", state.path);
+                path.setAttribute("fill", stateConfig.color || "#D3D3D3");
+                path.setAttribute("stroke", simplemaps_countrymap_mapdata.main_settings.border_color);
+                path.setAttribute("stroke-width", simplemaps_countrymap_mapdata.main_settings.border_size);
+
+                path.addEventListener("mouseover", function(e) {
+                    this.setAttribute("fill", stateConfig.hover_color || "#A9A9A9");
+                    const popup = document.createElement("div");
+                    popup.className = "simplemaps_popup";
+                    popup.style.position = "absolute";
+                    popup.style.background = simplemaps_countrymap_mapdata.main_settings.popup_color;
+                    popup.style.opacity = simplemaps_countrymap_mapdata.main_settings.popup_opacity;
+                    popup.style.padding = "5px";
+                    popup.style.borderRadius = simplemaps_countrymap_mapdata.main_settings.popup_corners + "px";
+                    popup.style.font = simplemaps_countrymap_mapdata.main_settings.popup_font;
+                    const description = (stateConfig.description && stateConfig.description.trim() !== "" && stateConfig.description !== "Không có thông tin") ? stateConfig.description : "Không có thông tin";
+                    popup.innerHTML = description;
+                    popup.style.left = e.pageX + 30 + "px";
+                    popup.style.top = e.pageY + 10 + "px";
+                    document.body.appendChild(popup);
+                });
+
+                path.addEventListener("mouseout", function() {
+                    this.setAttribute("fill", stateConfig.color || "#D3D3D3");
+                    const popups = document.getElementsByClassName("simplemaps_popup");
+                    while (popups[0]) popups[0].parentNode.removeChild(popups[0]);
+                });
+
+                svg.appendChild(path);
+
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", state.centroid[0]);
+                text.setAttribute("y", state.centroid[1]);
+                text.setAttribute("text-anchor", "middle");
+                text.setAttribute("font-size", "10px");
+                text.setAttribute("fill", simplemaps_countrymap_mapdata.main_settings.label_color);
+                text.textContent = state.name;
+                svg.appendChild(text);
+            }
+
+            simplemaps.locations.forEach(loc => {
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                circle.setAttribute("cx", loc.x);
+                circle.setAttribute("cy", loc.y);
+                circle.setAttribute("r", simplemaps_countrymap_mapdata.main_settings.location_size / 5);
+                circle.setAttribute("fill", simplemaps_countrymap_mapdata.main_settings.location_color);
+                circle.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_opacity);
+                circle.setAttribute("stroke", simplemaps_countrymap_mapdata.main_settings.location_border_color);
+                circle.setAttribute("stroke-width", simplemaps_countrymap_mapdata.main_settings.location_border);
+
+                circle.addEventListener("mouseover", function(e) {
+                    this.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_hover_opacity);
+                    const popup = document.createElement("div");
+                    popup.className = "simplemaps_popup";
+                    popup.style.position = "absolute";
+                    popup.style.background = simplemaps_countrymap_mapdata.main_settings.popup_color;
+                    popup.style.opacity = simplemaps_countrymap_mapdata.main_settings.popup_opacity;
+                    popup.style.padding = "5px";
+                    popup.style.borderRadius = simplemaps_countrymap_mapdata.main_settings.popup_corners + "px";
+                    popup.style.font = simplemaps_countrymap_mapdata.main_settings.popup_font;
+                    popup.innerHTML = loc.description || loc.name;
+                    popup.style.left = e.pageX + 30 + "px";
+                    popup.style.top = e.pageY + 10 + "px";
+                    document.body.appendChild(popup);
+                });
+
+                circle.addEventListener("mouseout", function() {
+                    this.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_opacity);
+                    const popups = document.getElementsByClassName("simplemaps_popup");
+                    while (popups[0]) popups[0].parentNode.removeChild(popups[0]);
+                });
+
+                svg.appendChild(circle);
+            });
+
+            const legend = simplemaps_countrymap_mapdata.legend.entries;
+            let yOffset = 20;
+            legend.forEach(entry => {
+                const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+                const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                rect.setAttribute("x", "20");
+                rect.setAttribute("y", yOffset.toString());
+                rect.setAttribute("width", "15");
+                rect.setAttribute("height", "15");
+                rect.setAttribute("fill", entry.color);
+                group.appendChild(rect);
+
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", "40");
+                text.setAttribute("y", (yOffset + 12).toString());
+                text.setAttribute("font-size", "12px");
+                text.textContent = entry.name;
+                group.appendChild(text);
+
+                svg.appendChild(group);
+                yOffset += 20;
+            });
+        }
+
+        simplemaps_countrymap();
+    </script>
+</body>
+</html>

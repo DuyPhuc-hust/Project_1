@@ -1,0 +1,1720 @@
+2025-05-23 22:09:20,633 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF75E51CF45+75717]
+	GetHandleVerifier [0x00007FF75E51CFA0+75808]
+	(No symbol) [0x00007FF75E2E8DCC]
+	(No symbol) [0x00007FF75E3A4256]
+	(No symbol) [0x00007FF75E36737A]
+	(No symbol) [0x00007FF75E38F39C]
+	(No symbol) [0x00007FF75E367153]
+	(No symbol) [0x00007FF75E330421]
+	(No symbol) [0x00007FF75E3311B3]
+	GetHandleVerifier [0x00007FF75E81D71D+3223453]
+	GetHandleVerifier [0x00007FF75E817CC2+3200322]
+	GetHandleVerifier [0x00007FF75E835AF3+3322739]
+	GetHandleVerifier [0x00007FF75E536A1A+180890]
+	GetHandleVerifier [0x00007FF75E53E11F+211359]
+	GetHandleVerifier [0x00007FF75E525294+109332]
+	GetHandleVerifier [0x00007FF75E525442+109762]
+	GetHandleVerifier [0x00007FF75E50BA59+4825]
+	BaseThreadInitThunk [0x00007FFF12807374+20]
+	RtlUserThreadStart [0x00007FFF1329CC91+33]
+
+2025-05-23 22:09:20,662 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF75E51CF45+75717]
+	GetHandleVerifier [0x00007FF75E51CFA0+75808]
+	(No symbol) [0x00007FF75E2E8DCC]
+	(No symbol) [0x00007FF75E3A4256]
+	(No symbol) [0x00007FF75E36737A]
+	(No symbol) [0x00007FF75E38F39C]
+	(No symbol) [0x00007FF75E367153]
+	(No symbol) [0x00007FF75E330421]
+	(No symbol) [0x00007FF75E3311B3]
+	GetHandleVerifier [0x00007FF75E81D71D+3223453]
+	GetHandleVerifier [0x00007FF75E817CC2+3200322]
+	GetHandleVerifier [0x00007FF75E835AF3+3322739]
+	GetHandleVerifier [0x00007FF75E536A1A+180890]
+	GetHandleVerifier [0x00007FF75E53E11F+211359]
+	GetHandleVerifier [0x00007FF75E525294+109332]
+	GetHandleVerifier [0x00007FF75E525442+109762]
+	GetHandleVerifier [0x00007FF75E50BA59+4825]
+	BaseThreadInitThunk [0x00007FFF12807374+20]
+	RtlUserThreadStart [0x00007FFF1329CC91+33]
+
+2025-05-23 22:09:20,690 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF75E51CF45+75717]
+	GetHandleVerifier [0x00007FF75E51CFA0+75808]
+	(No symbol) [0x00007FF75E2E8DCC]
+	(No symbol) [0x00007FF75E3A4256]
+	(No symbol) [0x00007FF75E36737A]
+	(No symbol) [0x00007FF75E38F39C]
+	(No symbol) [0x00007FF75E367153]
+	(No symbol) [0x00007FF75E330421]
+	(No symbol) [0x00007FF75E3311B3]
+	GetHandleVerifier [0x00007FF75E81D71D+3223453]
+	GetHandleVerifier [0x00007FF75E817CC2+3200322]
+	GetHandleVerifier [0x00007FF75E835AF3+3322739]
+	GetHandleVerifier [0x00007FF75E536A1A+180890]
+	GetHandleVerifier [0x00007FF75E53E11F+211359]
+	GetHandleVerifier [0x00007FF75E525294+109332]
+	GetHandleVerifier [0x00007FF75E525442+109762]
+	GetHandleVerifier [0x00007FF75E50BA59+4825]
+	BaseThreadInitThunk [0x00007FFF12807374+20]
+	RtlUserThreadStart [0x00007FFF1329CC91+33]
+
+2025-05-23 22:09:20,719 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF75E51CF45+75717]
+	GetHandleVerifier [0x00007FF75E51CFA0+75808]
+	(No symbol) [0x00007FF75E2E8DCC]
+	(No symbol) [0x00007FF75E3A4256]
+	(No symbol) [0x00007FF75E36737A]
+	(No symbol) [0x00007FF75E38F39C]
+	(No symbol) [0x00007FF75E367153]
+	(No symbol) [0x00007FF75E330421]
+	(No symbol) [0x00007FF75E3311B3]
+	GetHandleVerifier [0x00007FF75E81D71D+3223453]
+	GetHandleVerifier [0x00007FF75E817CC2+3200322]
+	GetHandleVerifier [0x00007FF75E835AF3+3322739]
+	GetHandleVerifier [0x00007FF75E536A1A+180890]
+	GetHandleVerifier [0x00007FF75E53E11F+211359]
+	GetHandleVerifier [0x00007FF75E525294+109332]
+	GetHandleVerifier [0x00007FF75E525442+109762]
+	GetHandleVerifier [0x00007FF75E50BA59+4825]
+	BaseThreadInitThunk [0x00007FFF12807374+20]
+	RtlUserThreadStart [0x00007FFF1329CC91+33]
+
+2025-05-23 22:09:20,740 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF75E51CF45+75717]
+	GetHandleVerifier [0x00007FF75E51CFA0+75808]
+	(No symbol) [0x00007FF75E2E8DCC]
+	(No symbol) [0x00007FF75E3A4256]
+	(No symbol) [0x00007FF75E36737A]
+	(No symbol) [0x00007FF75E38F39C]
+	(No symbol) [0x00007FF75E367153]
+	(No symbol) [0x00007FF75E330421]
+	(No symbol) [0x00007FF75E3311B3]
+	GetHandleVerifier [0x00007FF75E81D71D+3223453]
+	GetHandleVerifier [0x00007FF75E817CC2+3200322]
+	GetHandleVerifier [0x00007FF75E835AF3+3322739]
+	GetHandleVerifier [0x00007FF75E536A1A+180890]
+	GetHandleVerifier [0x00007FF75E53E11F+211359]
+	GetHandleVerifier [0x00007FF75E525294+109332]
+	GetHandleVerifier [0x00007FF75E525442+109762]
+	GetHandleVerifier [0x00007FF75E50BA59+4825]
+	BaseThreadInitThunk [0x00007FFF12807374+20]
+	RtlUserThreadStart [0x00007FFF1329CC91+33]
+
+2025-05-23 22:09:20,765 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF75E51CF45+75717]
+	GetHandleVerifier [0x00007FF75E51CFA0+75808]
+	(No symbol) [0x00007FF75E2E8DCC]
+	(No symbol) [0x00007FF75E3A4256]
+	(No symbol) [0x00007FF75E36737A]
+	(No symbol) [0x00007FF75E38F39C]
+	(No symbol) [0x00007FF75E367153]
+	(No symbol) [0x00007FF75E330421]
+	(No symbol) [0x00007FF75E3311B3]
+	GetHandleVerifier [0x00007FF75E81D71D+3223453]
+	GetHandleVerifier [0x00007FF75E817CC2+3200322]
+	GetHandleVerifier [0x00007FF75E835AF3+3322739]
+	GetHandleVerifier [0x00007FF75E536A1A+180890]
+	GetHandleVerifier [0x00007FF75E53E11F+211359]
+	GetHandleVerifier [0x00007FF75E525294+109332]
+	GetHandleVerifier [0x00007FF75E525442+109762]
+	GetHandleVerifier [0x00007FF75E50BA59+4825]
+	BaseThreadInitThunk [0x00007FFF12807374+20]
+	RtlUserThreadStart [0x00007FFF1329CC91+33]
+
+2025-05-23 22:09:20,788 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF75E51CF45+75717]
+	GetHandleVerifier [0x00007FF75E51CFA0+75808]
+	(No symbol) [0x00007FF75E2E8DCC]
+	(No symbol) [0x00007FF75E3A4256]
+	(No symbol) [0x00007FF75E36737A]
+	(No symbol) [0x00007FF75E38F39C]
+	(No symbol) [0x00007FF75E367153]
+	(No symbol) [0x00007FF75E330421]
+	(No symbol) [0x00007FF75E3311B3]
+	GetHandleVerifier [0x00007FF75E81D71D+3223453]
+	GetHandleVerifier [0x00007FF75E817CC2+3200322]
+	GetHandleVerifier [0x00007FF75E835AF3+3322739]
+	GetHandleVerifier [0x00007FF75E536A1A+180890]
+	GetHandleVerifier [0x00007FF75E53E11F+211359]
+	GetHandleVerifier [0x00007FF75E525294+109332]
+	GetHandleVerifier [0x00007FF75E525442+109762]
+	GetHandleVerifier [0x00007FF75E50BA59+4825]
+	BaseThreadInitThunk [0x00007FFF12807374+20]
+	RtlUserThreadStart [0x00007FFF1329CC91+33]
+
+2025-05-23 22:09:20,811 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF75E51CF45+75717]
+	GetHandleVerifier [0x00007FF75E51CFA0+75808]
+	(No symbol) [0x00007FF75E2E8DCC]
+	(No symbol) [0x00007FF75E3A4256]
+	(No symbol) [0x00007FF75E36737A]
+	(No symbol) [0x00007FF75E38F39C]
+	(No symbol) [0x00007FF75E367153]
+	(No symbol) [0x00007FF75E330421]
+	(No symbol) [0x00007FF75E3311B3]
+	GetHandleVerifier [0x00007FF75E81D71D+3223453]
+	GetHandleVerifier [0x00007FF75E817CC2+3200322]
+	GetHandleVerifier [0x00007FF75E835AF3+3322739]
+	GetHandleVerifier [0x00007FF75E536A1A+180890]
+	GetHandleVerifier [0x00007FF75E53E11F+211359]
+	GetHandleVerifier [0x00007FF75E525294+109332]
+	GetHandleVerifier [0x00007FF75E525442+109762]
+	GetHandleVerifier [0x00007FF75E50BA59+4825]
+	BaseThreadInitThunk [0x00007FFF12807374+20]
+	RtlUserThreadStart [0x00007FFF1329CC91+33]
+
+2025-05-24 17:23:23,114 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104be03e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104bd86a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104715fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010475d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010479e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001047513f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104ba4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104ba7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104b85dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000104ba834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104b77664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000104bc82b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000104bc843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000104bd82f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 17:23:33,672 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104be03e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104bd86a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104715fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010475d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010479e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001047513f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104ba4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104ba7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104b85dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000104ba834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104b77664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000104bc82b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000104bc843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000104bd82f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 17:23:52,765 - ERROR - An Error occurred while adding security code: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104be03e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104bd86a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104715fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010475d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010479e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001047513f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104ba4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104ba7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104b85dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000104ba834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104b77664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000104bc82b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000104bc843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000104bd82f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 17:24:03,061 - ERROR - An Error occurred while saving browser: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104be03e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104bd86a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104715fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x000000010475d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010479e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001047513f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104ba4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104ba7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104b85dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000104ba834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104b77664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000104bc82b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000104bc843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000104bd82f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 17:25:05,539 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001054043e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053fc6a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104f39fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104f811bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000104fc2044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104f753f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001053c8804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001053cbad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001053a9dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001053cc34c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x000000010539b664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053ec2b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001053ec43c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053fc2f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 17:29:38,097 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001026343e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x000000010262c6a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102169fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001021b11bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x00000001021f2044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001021a53f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001025f8804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001025fbad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001025d9dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001025fc34c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001025cb664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x000000010261c2b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010261c43c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x000000010262c2f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 17:29:48,440 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001026343e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x000000010262c6a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102169fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001021b11bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x00000001021f2044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001021a53f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001025f8804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001025fbad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001025d9dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001025fc34c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001025cb664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x000000010261c2b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010261c43c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x000000010262c2f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 17:29:52,943 - ERROR - An Error occurred while adding security code: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001026343e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x000000010262c6a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102169fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001021b11bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x00000001021f2044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001021a53f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001025f8804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001025fbad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001025d9dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001025fc34c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001025cb664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x000000010261c2b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010261c43c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x000000010262c2f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 17:30:03,218 - ERROR - An Error occurred while saving browser: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001026343e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x000000010262c6a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102169fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001021b11bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x00000001021f2044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001021a53f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001025f8804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001025fbad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001025d9dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001025fc34c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001025cb664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x000000010261c2b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010261c43c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x000000010262c2f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 20:53:15,578 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010550c3e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001055046a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000105041fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001050891bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x00000001050ca044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x000000010507d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001054d0804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001054d3ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001054b1dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001054d434c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001054a3664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001054f42b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001054f443c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001055042f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 20:53:26,131 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010550c3e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001055046a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000105041fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001050891bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x00000001050ca044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x000000010507d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001054d0804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001054d3ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001054b1dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001054d434c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001054a3664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001054f42b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001054f443c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001055042f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 20:53:52,087 - ERROR - An Error occurred while saving browser: Message: 
+Stacktrace:
+0   chromedriver                        0x000000010550c3e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001055046a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000105041fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001050891bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x00000001050ca044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x000000010507d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001054d0804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001054d3ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001054b1dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001054d434c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001054a3664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001054f42b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001054f443c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001055042f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 20:57:07,995 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050e03e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001050d86a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104c15fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104c5d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000104c9e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104c513f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001050a4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001050a7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000105085dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001050a834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000105077664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001050c82b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001050c843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001050d82f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 20:57:18,220 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001050e03e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001050d86a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104c15fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104c5d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000104c9e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104c513f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001050a4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001050a7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000105085dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001050a834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000105077664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001050c82b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001050c843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001050d82f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 20:57:33,827 - ERROR - An Error occurred while saving browser: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001050e03e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001050d86a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104c15fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104c5d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000104c9e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104c513f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001050a4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001050a7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000105085dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001050a834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000105077664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001050c82b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001050c843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001050d82f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 21:01:30,420 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001031dc3e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001031d46a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102d11fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000102d591bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000102d9a044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000102d4d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001031a0804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001031a3ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000103181dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001031a434c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000103173664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001031c42b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001031c443c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001031d42f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 21:01:40,988 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001031dc3e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001031d46a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102d11fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000102d591bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000102d9a044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000102d4d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001031a0804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001031a3ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000103181dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001031a434c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000103173664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001031c42b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001031c443c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001031d42f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 21:01:56,703 - ERROR - An Error occurred while saving browser: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001031dc3e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001031d46a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102d11fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000102d591bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000102d9a044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000102d4d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001031a0804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001031a3ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000103181dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001031a434c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000103173664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001031c42b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001031c443c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001031d42f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 21:03:16,657 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x000000010549c3e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001054946a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104fd1fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001050191bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010505a044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x000000010500d3f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000105460804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000105463ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000105441dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x000000010546434c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000105433664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001054842b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010548443c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001054942f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 21:08:28,101 - ERROR - An Error occurred while loading cookies: invalid load key, '\xef'.
+2025-05-24 21:08:36,403 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100a583e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100a506a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x000000010058dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001005d51bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000100616044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001005c93f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000100a1c804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000100a1fad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001009fddd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000100a2034c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001009ef664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000100a402b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000100a4043c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000100a502f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 21:10:44,583 - ERROR - An Error occurred while loading cookies: invalid load key, '\xef'.
+2025-05-24 21:10:52,950 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001026083e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001026006a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x000000010213dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001021851bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x00000001021c6044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001021793f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001025cc804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001025cfad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001025addd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001025d034c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x000000010259f664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001025f02b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001025f043c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001026002f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 21:12:32,421 - ERROR - An Error occurred while loading cookies: invalid load key, '\xef'.
+2025-05-24 21:12:40,718 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001032483e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001032406a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102d7dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000102dc51bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000102e06044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000102db93f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x000000010320c804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x000000010320fad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001031eddd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x000000010321034c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001031df664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001032302b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010323043c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001032402f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:10:42,491 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000102c483e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000102c406a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x000000010277dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001027c51bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000102806044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001027b93f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000102c0c804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000102c0fad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000102beddd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000102c1034c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000102bdf664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000102c302b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000102c3043c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000102c402f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:10:53,014 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102c483e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000102c406a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x000000010277dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001027c51bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000102806044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001027b93f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000102c0c804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000102c0fad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000102beddd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000102c1034c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000102bdf664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000102c302b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000102c3043c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000102c402f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:11:02,500 - ERROR - An Error occurred while saving browser: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x0000000102c483e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000102c406a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x000000010277dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000102758798 chromedriver + 133016
+4   chromedriver                        0x00000001027ed048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000102805b50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x00000001027b93f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x0000000102c0c804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000102c0fad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000102beddd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000102c1034c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000102bdf664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x0000000102c302b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000102c3043c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x0000000102c402f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:11:02,503 - ERROR - An Error occurred while saving cookies: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x0000000102c483e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000102c406a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x000000010277dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000102758798 chromedriver + 133016
+4   chromedriver                        0x00000001027ed048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000102805b50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x00000001027b93f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x0000000102c0c804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000102c0fad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000102beddd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000102c1034c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000102bdf664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x0000000102c302b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000102c3043c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x0000000102c402f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:12:27,351 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104f303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104f286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104a65fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104aad1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000104aee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104aa13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104ef4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104ef7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104ed5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000104ef834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104ec7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000104f182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000104f1843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000104f282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:12:37,812 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000104f303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104f286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104a65fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104aad1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000104aee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104aa13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104ef4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104ef7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104ed5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000104ef834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104ec7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000104f182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000104f1843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000104f282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:13:10,063 - ERROR - An Error occurred while adding security code: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x0000000104f303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104f286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104a65fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104a40798 chromedriver + 133016
+4   chromedriver                        0x0000000104ad5048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000104aedb50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x0000000104aa13f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x0000000104ef4804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000104ef7ad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000104ed5dd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000104ef834c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000104ec7664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x0000000104f182b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000104f1843c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x0000000104f282f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:13:10,066 - ERROR - An Error occurred while saving browser: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x0000000104f303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104f286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104a65fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104a40798 chromedriver + 133016
+4   chromedriver                        0x0000000104ad5048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000104aedb50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x0000000104aa13f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x0000000104ef4804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000104ef7ad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000104ed5dd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000104ef834c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000104ec7664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x0000000104f182b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000104f1843c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x0000000104f282f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:13:10,068 - ERROR - An Error occurred while saving cookies: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x0000000104f303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104f286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104a65fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104a40798 chromedriver + 133016
+4   chromedriver                        0x0000000104ad5048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000104aedb50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x0000000104aa13f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x0000000104ef4804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000104ef7ad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000104ed5dd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000104ef834c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000104ec7664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x0000000104f182b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000104f1843c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x0000000104f282f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:13:54,436 - ERROR - An Error occurred while loading cookies: invalid load key, '\xef'.
+2025-05-24 22:14:02,729 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001011f03e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001011e86a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000100d25fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000100d6d1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000100dae044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000100d613f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001011b4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001011b7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000101195dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001011b834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000101187664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001011d82b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001011d843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001011e82f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:32:12,342 - ERROR - An Error occurred while loading cookies: invalid load key, '\xef'.
+2025-05-24 22:32:20,641 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050d83e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001050d06a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104c0dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104c551bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000104c96044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104c493f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x000000010509c804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x000000010509fad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x000000010507ddd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001050a034c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x000000010506f664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001050c02b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001050c043c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001050d02f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:32:46,741 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001049803e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001049786a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x00000001044b5fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001044fd1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010453e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001044f13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104944804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104947ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104925dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x000000010494834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104917664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001049682b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010496843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001049782f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:32:57,374 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x00000001049803e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001049786a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x00000001044b5fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001044fd1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010453e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001044f13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104944804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104947ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104925dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x000000010494834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104917664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001049682b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010496843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001049782f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:33:09,286 - ERROR - An Error occurred while adding security code: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001049803e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001049786a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x00000001044b5fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001044fd1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010453e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001044f13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104944804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104947ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104925dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x000000010494834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104917664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001049682b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010496843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001049782f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:33:09,298 - ERROR - An Error occurred while saving browser: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit']"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001049803e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001049786a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x00000001044b5fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001044fd1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x000000010453e044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001044f13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000104944804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000104947ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000104925dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x000000010494834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000104917664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001049682b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010496843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001049782f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-24 22:45:28,297 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000100f543e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100f4c6a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000100a89fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000100ad11bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000100b12044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000100ac53f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000100f18804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x0000000100f1bad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000100ef9dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x0000000100f1c34c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x0000000100eeb664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x0000000100f3c2b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x0000000100f3c43c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x0000000100f4c2f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,279 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,283 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,287 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,292 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,296 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,301 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,304 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,309 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:16,312 - ERROR - An Error occurred adding cookies Message: invalid cookie domain
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65e30 cxxbridge1$string$len + 89744
+3   chromedriver                        0x0000000104efd410 cxxbridge1$string$len + 709744
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-05-31 01:17:25,044 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001053303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001053286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e65fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104ead1bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000104eee044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x0000000104ea13f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x00000001052f4804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x00000001052f7ad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x00000001052d5dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x00000001052f834c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x00000001052c7664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001053182b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x000000010531843c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001053282f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-01 21:37:23,299 - ERROR - Error occurred while scrolling: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x00000001052e83e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001052e06a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104e1dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104df8798 chromedriver + 133016
+4   chromedriver                        0x0000000104e8d048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000104ea5b50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x0000000104e593f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x00000001052ac804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x00000001052afad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x000000010528ddd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x00000001052b034c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x000000010527f664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x00000001052d02b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x00000001052d043c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x00000001052e02f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-01 21:46:31,277 - ERROR - An error occurred: 'NoneType' object has no attribute 'is_displayed'
+2025-06-01 21:50:49,654 - ERROR - Error extracting check-in posts: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x0000000100d083e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000100d006a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x000000010083dfbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000100818798 chromedriver + 133016
+4   chromedriver                        0x00000001008ad048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x00000001008c5b50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x00000001008793f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x0000000100ccc804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000100ccfad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000100caddd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000100cd034c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000100c9f664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x0000000100cf02b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000100cf043c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x0000000100d002f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-01 21:50:49,660 - ERROR - An error occurred: SaveJSON.__init__() got an unexpected keyword argument 'output_folder'
+2025-06-01 21:54:23,812 - ERROR - Error extracting check-in posts: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x0000000102b303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000102b286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102665fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000102640798 chromedriver + 133016
+4   chromedriver                        0x00000001026d5048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x00000001026edb50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x00000001026a13f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x0000000102af4804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000102af7ad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000102ad5dd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000102af834c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000102ac7664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x0000000102b182b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000102b1843c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x0000000102b282f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-01 21:54:23,819 - ERROR - An error occurred: SaveJSON.__init__() got an unexpected keyword argument 'output_folder'
+2025-06-01 22:02:05,905 - ERROR - Error extracting check-in posts: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x0000000104c303e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x0000000104c286a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000104765fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000104740798 chromedriver + 133016
+4   chromedriver                        0x00000001047d5048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x00000001047edb50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x00000001047a13f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x0000000104bf4804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x0000000104bf7ad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x0000000104bd5dd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x0000000104bf834c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x0000000104bc7664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x0000000104c182b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x0000000104c1843c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x0000000104c282f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-01 22:02:05,911 - ERROR - An error occurred: SaveJSON.__init__() got an unexpected keyword argument 'output_folder'
+2025-06-01 22:13:12,600 - ERROR - Error occurred while scrolling: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+0   chromedriver                        0x000000010132c3e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001013246a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000100e61fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x0000000100e3c798 chromedriver + 133016
+4   chromedriver                        0x0000000100ed1048 cxxbridge1$string$len + 544936
+5   chromedriver                        0x0000000100ee9b50 cxxbridge1$string$len + 646064
+6   chromedriver                        0x0000000100e9d3f8 cxxbridge1$string$len + 332888
+7   chromedriver                        0x00000001012f0804 cxxbridge1$str$ptr + 2585200
+8   chromedriver                        0x00000001012f3ad4 cxxbridge1$str$ptr + 2598208
+9   chromedriver                        0x00000001012d1dd8 cxxbridge1$str$ptr + 2459716
+10  chromedriver                        0x00000001012f434c cxxbridge1$str$ptr + 2600376
+11  chromedriver                        0x00000001012c3664 cxxbridge1$str$ptr + 2400464
+12  chromedriver                        0x00000001013142b0 cxxbridge1$str$ptr + 2731292
+13  chromedriver                        0x000000010131443c cxxbridge1$str$ptr + 2731688
+14  chromedriver                        0x00000001013242f4 cxxbridge1$str$ptr + 2796896
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-01 22:13:12,603 - ERROR - An error occurred: SaveJSON.__init__() got an unexpected keyword argument 'output_folder'
+2025-06-01 22:22:55,647 - ERROR - Error extracting check-in posts: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@role='main']//div[contains(@class, 'x1yztbdb')]"}
+  (Session info: chrome=136.0.7103.114); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001026d43e0 cxxbridge1$str$ptr + 2829900
+1   chromedriver                        0x00000001026cc6a8 cxxbridge1$str$ptr + 2797844
+2   chromedriver                        0x0000000102209fbc cxxbridge1$string$len + 90140
+3   chromedriver                        0x00000001022511bc cxxbridge1$string$len + 381468
+4   chromedriver                        0x0000000102292044 cxxbridge1$string$len + 647332
+5   chromedriver                        0x00000001022453f8 cxxbridge1$string$len + 332888
+6   chromedriver                        0x0000000102698804 cxxbridge1$str$ptr + 2585200
+7   chromedriver                        0x000000010269bad4 cxxbridge1$str$ptr + 2598208
+8   chromedriver                        0x0000000102679dd8 cxxbridge1$str$ptr + 2459716
+9   chromedriver                        0x000000010269c34c cxxbridge1$str$ptr + 2600376
+10  chromedriver                        0x000000010266b664 cxxbridge1$str$ptr + 2400464
+11  chromedriver                        0x00000001026bc2b0 cxxbridge1$str$ptr + 2731292
+12  chromedriver                        0x00000001026bc43c cxxbridge1$str$ptr + 2731688
+13  chromedriver                        0x00000001026cc2f4 cxxbridge1$str$ptr + 2796896
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-01 22:22:55,654 - ERROR - An error occurred: SaveJSON.__init__() got an unexpected keyword argument 'output_folder'
+2025-06-01 22:41:40,073 - ERROR - An error occurred: create_post() got an unexpected keyword argument 'metadata'
+2025-06-05 18:00:08,454 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104622654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010461a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x000000010416e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x00000001041b57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x00000001041f6de8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x00000001041a99c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x00000001045e6278 cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x00000001045e950c cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x00000001045c7a64 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x00000001045e9d94 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x00000001045b8d58 cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x0000000104609d60 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x0000000104609eec cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x000000010461a514 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 18:15:17,898 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104546654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010453e8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104092714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x00000001040d97c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x000000010411ade8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x00000001040cd9c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x000000010450a278 cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x000000010450d50c cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x00000001044eba64 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x000000010450dd94 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x00000001044dcd58 cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x000000010452dd60 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x000000010452deec cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x000000010453e514 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 18:24:10,566 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x00000001050da654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x00000001050d28c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c26714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104c6d7c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caede8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x0000000104c619c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x000000010509e278 cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x00000001050a150c cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x000000010507fa64 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x00000001050a1d94 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x0000000105070d58 cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x00000001050c1d60 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x00000001050c1eec cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x00000001050d2514 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 20:09:36,848 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104b86654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x0000000104b7e8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x00000001046d2714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x00000001047197c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x000000010475ade8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x000000010470d9c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x0000000104b4a278 cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x0000000104b4d50c cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x0000000104b2ba64 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x0000000104b4dd94 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x0000000104b1cd58 cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x0000000104b6dd60 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x0000000104b6deec cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x0000000104b7e514 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 20:57:07,470 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000102fae654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x0000000102fa68c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000102afa714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000102b417c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000102b82de8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x0000000102b359c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x0000000102f72278 cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x0000000102f7550c cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x0000000102f53a64 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x0000000102f75d94 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x0000000102f44d58 cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x0000000102f95d60 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x0000000102f95eec cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x0000000102fa6514 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 20:59:14,258 - ERROR - Lỗi khi thu thập danh sách bạn bè: Không tìm thấy danh sách bạn bè, có thể do trang chưa tải hoặc bị hạn chế
+2025-06-05 21:11:26,044 - ERROR - Lỗi khi thu thập danh sách bạn bè: Không tìm thấy danh sách bạn bè, có thể do trang chưa tải hoặc bị hạn chế
+2025-06-05 21:11:38,616 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:38,634 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:38,652 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:38,670 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:38,689 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:43,750 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:43,769 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:43,787 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:43,825 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:43,842 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:48,884 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:48,901 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:48,918 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:48,935 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:11:48,952 - ERROR - Lỗi khi xử lý bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"span[dir='auto']"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000105122654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010511a8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104c6e714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000104cb57c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000104caaf94 cxxbridge1$string$len + 338364
+5   chromedriver                        0x0000000104cf6de8 cxxbridge1$string$len + 649232
+6   chromedriver                        0x0000000104ca99c8 cxxbridge1$string$len + 332784
+7   chromedriver                        0x00000001050e6278 cxxbridge1$str$ptr + 2476360
+8   chromedriver                        0x00000001050e950c cxxbridge1$str$ptr + 2489308
+9   chromedriver                        0x00000001050c7a64 cxxbridge1$str$ptr + 2351412
+10  chromedriver                        0x00000001050e9d94 cxxbridge1$str$ptr + 2491492
+11  chromedriver                        0x00000001050b8d58 cxxbridge1$str$ptr + 2290728
+12  chromedriver                        0x0000000105109d60 cxxbridge1$str$ptr + 2622512
+13  chromedriver                        0x0000000105109eec cxxbridge1$str$ptr + 2622908
+14  chromedriver                        0x000000010511a514 cxxbridge1$str$ptr + 2690020
+15  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+16  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-05 21:13:17,738 - ERROR - Lỗi khi thu thập danh sách bạn bè: 'NoneType' object has no attribute 'find_elements'
+2025-06-05 21:13:45,733 - ERROR - Lỗi khi thu thập danh sách bạn bè: Message: no such element: Unable to locate element: {"method":"css selector","selector":"div.xyamay9.x1pi30zi.x1l90r2v.x1swvt13"}
+  (Session info: chrome=137.0.7151.68); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000104666654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010465e8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x00000001041b2714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x00000001041f97c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x000000010423ade8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x00000001041ed9c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x000000010462a278 cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x000000010462d50c cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x000000010460ba64 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x000000010462dd94 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x00000001045fcd58 cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x000000010464dd60 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x000000010464deec cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x000000010465e514 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+

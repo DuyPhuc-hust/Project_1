@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sơ đồ kết nối bạn bè</title>
+  <script src="https://visjs.github.io/vis-network/standalone/umd/vis-network.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    #mynetwork {
+      width: 100%;
+      height: 100vh;
+      border: 1px solid lightgray;
+    }
+    
+    #custom-tooltip {
+      position: absolute;
+      display: none;
+      padding: 10px;
+      background-color: white;
+      border-radius: 4px;
+      border: 1px solid #d3d3d3;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10000;
+      max-width: 300px;
+      pointer-events: auto; 
+    }
+    
+    .node-tooltip {
+      padding: 10px;
+      background-color: #ffffff;
+      border-radius: 4px;
+    }
+    
+    .node-tooltip-header {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 8px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #eaeaea;
+    }
+    
+    .node-tooltip-row {
+      margin-bottom: 4px;
+    }
+    
+    .node-tooltip-label {
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    
+    #controls {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    
+    #controls button {
+      margin: 2px;
+      padding: 5px 10px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    #controls button:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div id="mynetwork"></div>
+  <div id="custom-tooltip"></div>
+  
+  <script src="./data.js"></script>
+  <script>
+    function extractUserInfo(node) {
+      const info = {
+        name: node.username,
+        id: node.id,
+        hometown: "Không có thông tin",
+        currentLocation: "Không có thông tin", 
+        major: "Không có thông tin",
+        school: "Không có thông tin",
+        friends: node.friends_count || "0",
+        followers: node.followers_count || "0",
+        relationship: node.relationship_mark || "Không có thông tin",
+        profile_url: node.profile_url || "#",
+        instagram: "Không có thông tin",
+        birthDate: "Không có thông tin",
+        gender: "Không có thông tin",
+        workplace: "Không có thông tin"
+      };
+
+      // Ánh xạ các tháng từ tiếng Việt sang số
+      const monthMap = {
+        "tháng 1": "01",
+        "tháng 2": "02",
+        "tháng 3": "03",
+        "tháng 4": "04",
+        "tháng 5": "05",
+        "tháng 6": "06",
+        "tháng 7": "07",
+        "tháng 8": "08",
+        "tháng 9": "09",
+        "tháng 10": "10",
+        "tháng 11": "11",
+        "tháng 12": "12"
+      };
+
+      if (node.about_info && node.about_info.about && node.about_info.about.content && node.about_info.about.content.general) {
+        const general = node.about_info.about.content.general;
+        const hometownIndex = general.findIndex(item => item.includes("Đến từ"));
+        if (hometownIndex !== -1) {
+          info.hometown = general[hometownIndex].replace("Đến từ", "").trim();
+        }
+
+        // Lấy thông tin "Sống tại"
+        const currentLocationIndex = general.findIndex(item => item.includes("Sống tại"));
+        if (currentLocationIndex !== -1) {
+          info.currentLocation = general[currentLocationIndex].replace("Sống tại", "").trim();
+        }
+
+        // Tách thông tin ngành học và trường học
+        const educationIndex = general.findIndex(item => 
+          item.includes("Học tại") || item.includes("Từng học tại") || item.includes("Đã học tại") || item.includes("Học"));
+        if (educationIndex !== -1) {
+          let educationText = general[educationIndex];
+          // Loại bỏ các từ khóa "Học tại", "Từng học tại", "Đã học tại"
+          educationText = educationText.replace(/Học tại|Từng học tại|Đã học tại|Học/g, "").trim();
+          
+          // Tách ngành học và trường học nếu có từ khóa "tại"
+          const educationParts = educationText.split(" tại ");
+          if (educationParts.length > 1) {
+            // Có ngành học và trường học (ví dụ: "Information of Technology (IT) tại Học viện Công nghệ Bưu chính Viễn thông - PTIT")
+            info.major = educationParts[0].trim();
+            school = educationParts[1].trim();
+            if (school.startsWith("viện")){
+              school = "Học " + school;
+            }
+            info.school = school;
+          } else {
+            // Chỉ có trường học (ví dụ: "NEU - Đại học Kinh tế Quốc dân")
+            school = educationText.trim();
+            if (school.startsWith("viện")){
+              school = "Học " + school;
+            }
+            info.school = school;
+
+          }
+        }
+
+        const workIndex = general.findIndex(item => item.includes("Làm việc tại"));
+        if (workIndex !== -1) {
+          info.workplace = general[workIndex].replace("Làm việc tại", "").trim();
+        }
+      }
+
+      if (node.about_info && node.about_info.about_contact_and_basic_info && 
+          node.about_info.about_contact_and_basic_info.content && 
+          node.about_info.about_contact_and_basic_info.content.general) {
+        const contactInfo = node.about_info.about_contact_and_basic_info.content.general;
+        const instagramIndex = contactInfo.findIndex(item => item === "Instagram");
+        if (instagramIndex !== -1 && instagramIndex > 0) {
+          info.instagram = contactInfo[instagramIndex - 1];
+          if (info.instagram !== "Không có liên kết để hiển thị") {
+            info.instagram = `<a href="https://www.instagram.com/${info.instagram}" target="_blank">${info.instagram}</a>`;
+          } else {
+            info.instagram = "Không có thông tin";
+          }
+        }
+
+        // Lấy ngày sinh và năm sinh, rồi gộp lại
+        let dayMonth = "";
+        let year = "";
+        const birthdayIndex = contactInfo.findIndex(item => item === "Ngày sinh");
+        if (birthdayIndex !== -1 && birthdayIndex > 0) {
+          const rawDayMonth = contactInfo[birthdayIndex - 1];
+          const [day, monthText] = rawDayMonth.split(" tháng ");
+          dayMonth = `${day}/${monthMap[`tháng ${monthText}`]}`;
+        }
+        const birthYearIndex = contactInfo.findIndex(item => item === "Năm sinh");
+        if (birthYearIndex !== -1 && birthYearIndex > 0) {
+          year = contactInfo[birthYearIndex - 1];
+        }
+        if (dayMonth && year) {
+          info.birthDate = `${dayMonth}/${year}`;
+        } else if (dayMonth) {
+          info.birthDate = dayMonth;
+        } else if (year) {
+          info.birthDate = year;
+        }
+
+        const genderIndex = contactInfo.findIndex(item => item === "Giới tính");
+        if (genderIndex !== -1 && genderIndex > 0) {
+          info.gender = contactInfo[genderIndex - 1];
+        }
+      }
+      return info;
+    }
+
+    function extractNodesAndEdges(tree) {
+      const nodes = [];
+      const edges = [];
+      const seenIds = new Set();
+      const tooltips = {};
+      const relationships = {};
+
+      function collectRelationships(node, parentIds = []) {
+        if (!relationships[node.id]) {
+          relationships[node.id] = new Set();
+        }
+        
+        if (node.relationship_mark && parentIds.length > 0) {
+          relationships[node.id].add(`${parentIds[0]}: ${node.relationship_mark}`);
+        }
+        
+        node.children.forEach(child => {
+          if (child.relationship_mark) {
+            if (!relationships[child.id]) {
+              relationships[child.id] = new Set();
+            }
+            relationships[child.id].add(`${node.id}: ${child.relationship_mark}`);
+          }
+          collectRelationships(child, [node.id, ...parentIds]);
+        });
+      }
+      
+      collectRelationships(tree);
+      
+      function traverse(node) {
+        if (!seenIds.has(node.id)) {
+          const userInfo = extractUserInfo(node);
+          
+          if (relationships[node.id] && relationships[node.id].size > 0) {
+            userInfo.relationship = Array.from(relationships[node.id]).join(", ");
+          }
+          
+          tooltips[node.id] = `
+            <div class="node-tooltip">
+              <div class="node-tooltip-header">${userInfo.name}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Id:</span> ${userInfo.id}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Quê quán:</span> ${userInfo.hometown}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Sống tại:</span> ${userInfo.currentLocation}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Ngành học:</span> ${userInfo.major}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Trường học:</span> ${userInfo.school}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Bạn bè:</span> ${userInfo.friends}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Người theo dõi:</span> ${userInfo.followers}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Mối quan hệ:</span> ${userInfo.relationship}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Instagram:</span> ${userInfo.instagram}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Ngày sinh:</span> ${userInfo.birthDate}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Giới tính:</span> ${userInfo.gender}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Nơi làm việc:</span> ${userInfo.workplace}</div>
+              <div class="node-tooltip-row"><span class="node-tooltip-label">Trang cá nhân:</span> <a href="${userInfo.profile_url}" target="_blank">Mở liên kết</a></div>
+            </div>
+          `;
+          nodes.push({
+            id: node.id,
+            label: node.username || node.id,
+            color: {
+              background: node.id === jsonData.root_user ? '#e74c3c' : '#3498db',
+              border: node.id === jsonData.root_user ? '#c0392b' : '#2980b9',
+              highlight: {
+                background: node.id === jsonData.root_user ? '#ff6b6b' : '#5dade2',
+                border: node.id === jsonData.root_user ? '#e74c3c' : '#3498db'
+              }
+            },
+            shape: 'dot',
+            size: node.id === jsonData.root_user ? 25 : 
+                  node.layer === 1 ? 20 : 
+                  node.layer === 2 ? 15 : 12,
+            borderWidth: 2,
+            shadow: true
+          });
+          seenIds.add(node.id);
+        }
+        node.children.forEach(child => {
+          if (!seenIds.has(child.id)) {
+            const userInfo = extractUserInfo(child);
+            
+            if (relationships[child.id] && relationships[child.id].size > 0) {
+              userInfo.relationship = Array.from(relationships[child.id]).join(", ");
+            }
+            
+            tooltips[child.id] = `
+              <div class="node-tooltip">
+                <div class="node-tooltip-header">${userInfo.name}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Id:</span> ${userInfo.id}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Quê quán:</span> ${userInfo.hometown}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Sống tại:</span> ${userInfo.currentLocation}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Ngành học:</span> ${userInfo.major}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Trường học:</span> ${userInfo.school}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Bạn bè:</span> ${userInfo.friends}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Người theo dõi:</span> ${userInfo.followers}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Mối quan hệ:</span> ${userInfo.relationship}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Instagram:</span> ${userInfo.instagram}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Ngày sinh:</span> ${userInfo.birthDate}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Giới tính:</span> ${userInfo.gender}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Nơi làm việc:</span> ${userInfo.workplace}</div>
+                <div class="node-tooltip-row"><span class="node-tooltip-label">Trang cá nhân:</span> <a href="${userInfo.profile_url}" target="_blank">Mở liên kết</a></div>
+              </div>
+            `;
+            nodes.push({
+              id: child.id,
+              label: child.username || child.id,
+              color: {
+                background: '#3498db',
+                border: '#2980b9',
+                highlight: {
+                  background: '#5dade2',
+                  border: '#3498db'
+                }
+              },
+              shape: 'dot',
+              size: child.layer === 1 ? 20 : 
+                    child.layer === 2 ? 15 : 12,
+              borderWidth: 2,
+              shadow: true
+            });
+            seenIds.add(child.id);
+          }
+          edges.push({ 
+            from: node.id, 
+            to: child.id,
+            width: 2,
+            color: {
+              color: '#848484',
+              highlight: '#848484',
+              hover: '#848484'
+            },
+            smooth: {
+              type: 'curvedCW',
+              roundness: 0.2
+            }
+          });
+          traverse(child);
+        });
+      }
+      traverse(tree);
+      return { nodes, edges, tooltips };
+    }
+
+    const { nodes, edges, tooltips } = extractNodesAndEdges(jsonData.tree_data);
+    const container = document.getElementById('mynetwork');
+    const data = {
+      nodes: new vis.DataSet(nodes),
+      edges: new vis.DataSet(edges)
+    };
+    
+    const options = {
+      nodes: {
+        font: { 
+          size: 14,
+          face: 'Arial',
+          color: '#333333'
+        },
+        borderWidth: 2,
+        shadow: true
+      },
+      edges: {
+        width: 2,
+        shadow: true,
+        smooth: {
+          type: 'curvedCW',
+          roundness: 0.2
+        }
+      },
+      interaction: {
+        hover: true,
+        hideEdgesOnDrag: true,
+        multiselect: true
+      },
+      physics: {
+        enabled: true,
+        barnesHut: {
+          gravitationalConstant: -2000,
+          centralGravity: 0.3,
+          springLength: 150,
+          springConstant: 0.04,
+          damping: 0.09
+        },
+        stabilization: {
+          iterations: 1000,
+          updateInterval: 100
+        }
+      },
+      layout: {
+        improvedLayout: true,
+        hierarchical: {
+          enabled: false
+        }
+      }
+    };
+    
+    const network = new vis.Network(container, data, options);
+    const tooltipDiv = document.getElementById('custom-tooltip');
+    
+    network.on("hoverNode", function(params) {
+      const nodeId = params.node;
+      if (tooltips[nodeId]) {
+        tooltipDiv.innerHTML = tooltips[nodeId];
+        tooltipDiv.style.display = 'block';
+        tooltipDiv.style.left = (params.event.clientX + 10) + 'px';
+        tooltipDiv.style.top = (params.event.clientY + 10) + 'px';
+      }
+    });
+
+    network.on("blurNode", function(params) {
+      tooltipDiv.style.display = 'none';
+    });
+
+    document.body.insertAdjacentHTML('beforeend', `
+      <div id="controls">
+        <button id="zoom-in">+</button>
+        <button id="zoom-out">-</button>
+        <button id="fit">Fit</button>
+        <button id="toggle-physics">Tắt/Bật Physics</button>
+        <button id="toggle-hierarchical">Chế độ phân cấp</button>
+      </div>
+    `);
+
+    document.getElementById('zoom-in').addEventListener('click', function() {
+      network.zoomIn(0.2);
+    });
+
+    document.getElementById('zoom-out').addEventListener('click', function() {
+      network.zoomOut(0.2);
+    });
+
+    document.getElementById('fit').addEventListener('click', function() {
+      network.fit();
+    });
+
+    document.getElementById('toggle-physics').addEventListener('click', function() {
+      options.physics.enabled = !options.physics.enabled;
+      network.setOptions({ physics: { enabled: options.physics.enabled } });
+    });
+
+    document.getElementById('toggle-hierarchical').addEventListener('click', function() {
+      options.layout.hierarchical.enabled = !options.layout.hierarchical.enabled;
+      network.setOptions({ 
+        layout: { 
+          hierarchical: {
+            enabled: options.layout.hierarchical.enabled,
+            direction: 'UD',
+            sortMethod: 'directed',
+            nodeSpacing: 150,
+            levelSeparation: 150
+          } 
+        }
+      });
+    });
+
+    network.on("click", function(params) {
+      if (params.nodes.length > 0) {
+        const nodeId = params.nodes[0];
+        const node = findNodeInData(nodeId, jsonData.tree_data);
+        if (node) {
+          alert(`ID: ${node.id}\nUsername: ${node.username || 'N/A'}\nLayer: ${node.layer}\nFriends: ${node.friends_count || 'N/A'}`);
+        }
+      }
+    });
+
+    function findNodeInData(id, node) {
+      if (node.id === id) return node;
+      for (const child of node.children || []) {
+        const found = findNodeInData(id, child);
+        if (found) return found;
+      }
+      return null;
+    }
+  </script>
+</body>
+</html>
