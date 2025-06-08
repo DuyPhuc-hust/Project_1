@@ -2,12 +2,12 @@ const jsonData = {
   "root_user": "phuc.duy.980944",
   "max_layers": 2,
   "friends_per_node_per_layer": [
-    2,
-    2,
-    2
+    1,
+    1,
+    1
   ],
-  "crawled_at": "2025-06-05 21:35:35",
-  "total_accounts": 15,
+  "crawled_at": "2025-06-03 21:39:33",
+  "total_accounts": 4,
   "tree_data": {
     "id": "phuc.duy.980944",
     "profile_url": "https://www.facebook.com/phuc.duy.980944",
@@ -26,103 +26,39 @@ const jsonData = {
             "layer": 2,
             "children": [
               {
-                "id": "frenkie.truong",
-                "username": "Frenkie Trương",
-                "profile_url": "https://www.facebook.com/frenkie.truong",
-                "layer": 3,
-                "children": [],
-                "profile_picture": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=110&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan2-4.fna&oh=00_AfPvQklsbO3jKCv2UIR55njHyDrrmpWYTlZLhoyLJaMKcQ&oe=6869207A",
-                "cover_photo": null,
-                "followers_count": "0",
-                "friends_count": "107 người bạn",
-                "bio": "",
-                "about_info": {
-                  "about": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about",
-                    "content": {}
-                  },
-                  "about_work_and_education": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_work_and_education",
-                    "content": {}
-                  },
-                  "about_places": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_places",
-                    "content": {}
-                  },
-                  "about_contact_and_basic_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_contact_and_basic_info",
-                    "content": {}
-                  },
-                  "about_privacy_and_legal_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_privacy_and_legal_info",
-                    "content": {}
-                  },
-                  "about_profile_transparency": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_profile_transparency",
-                    "content": {}
-                  },
-                  "about_family_and_relationships": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_family_and_relationships",
-                    "content": {}
-                  },
-                  "about_details": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_details",
-                    "content": {}
-                  },
-                  "about_life_events": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_life_events",
-                    "content": {
-                      "general": [
-                        "Không có sự kiện trong đời để hiển thị"
-                      ]
-                    }
-                  }
-                },
-                "relationship_mark": "root"
-              },
-              {
-                "id": "hungquang.oo5",
-                "username": "Quang Nguyễn",
-                "profile_url": "https://www.facebook.com/hungquang.oo5",
+                "id": "havy.pham.75248795",
+                "username": "Hà Vy",
+                "profile_url": "https://www.facebook.com/havy.pham.75248795",
                 "layer": 3,
                 "children": [],
                 "profile_picture": "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan20-1.fna&oh=00_AfPn9V6PCfgbL2zHK-947ZX3czPraPI6k9PSuxY-o9Oa8g&oe=6869207A",
-                "cover_photo": "https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/474184155_1305591007342938_7207068433854061900_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=TsY3-sKXvzoQ7kNvwE6iLd4&_nc_oc=Adlkyjrl7H7ZVtHN7_7GFW1EA877Mi_qZaV7vrM1NhmOc0M6PLyx4o6YeTPsKDbyMctPIcrwSeeQ7F0kV6tDWi9m&_nc_zt=23&_nc_ht=scontent.fhan2-4.fna&_nc_gid=BlXsr50a6gec4rm2aD4P9w&oh=00_AfMpRoTcm5sETYxIWAh_2Fu0gU-Btgy0lp3gkEMKW-a5aw&oe=68476E53",
-                "followers_count": "0",
-                "friends_count": "232 người bạn",
+                "cover_photo": null,
+                "followers_count": "Có 1.259 người theo dõi",
+                "friends_count": "468 người bạn",
                 "bio": "",
                 "about_info": {
                   "about": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about",
                     "content": {
                       "general": [
                         "Không có nơi làm việc để hiển thị",
-                        "Học Cyber Security tại \nTrường Công nghệ Thông tin và Truyền thông - ĐH Bách khoa Hà Nội",
-                        "Sống tại \nQuỳ Châu",
-                        "Đến từ \nVin, Nghệ An, Vietnam",
-                        "Không có thông tin mối quan hệ nào để hiển thị"
+                        "Học tại \nNEU - Đại học Kinh tế Quốc dân",
+                        "Không có địa điểm nào để hiển thị",
+                        "Độc thân"
                       ]
                     }
                   },
                   "about_work_and_education": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_work_and_education",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about_work_and_education",
                     "content": {
                       "general": [
                         "Công việc",
                         "Không có nơi làm việc để hiển thị",
                         "Đại học",
-                        "Học Cyber Security tại \nTrường Công nghệ Thông tin và Truyền thông - ĐH Bách khoa Hà Nội",
+                        "Học tại \nNEU - Đại học Kinh tế Quốc dân",
+                        "��",
                         "Trường trung học",
                         "Không có trường học nào để hiển thị"
                       ]
@@ -130,28 +66,27 @@ const jsonData = {
                   },
                   "about_places": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_places",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about_places",
                     "content": {
                       "general": [
                         "Nơi từng sống",
-                        "Quỳ Châu",
-                        "Vin, Nghệ An, Vietnam"
+                        "Không có địa điểm nào để hiển thị"
                       ]
                     }
                   },
                   "about_contact_and_basic_info": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_contact_and_basic_info",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about_contact_and_basic_info",
                     "content": {
                       "general": [
                         "Thông tin liên hệ",
                         "Không có thông tin liên hệ nào để hiển thị",
                         "Các trang web và liên kết mạng xã hội",
-                        "Hquang_oo5",
+                        "hvydangiu_",
                         "Instagram",
                         "Instagram",
                         "Thông tin cơ bản",
-                        "Nam",
+                        "Nữ",
                         "Giới tính",
                         "Giới tính"
                       ]
@@ -159,21 +94,21 @@ const jsonData = {
                   },
                   "about_privacy_and_legal_info": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_privacy_and_legal_info",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about_privacy_and_legal_info",
                     "content": {}
                   },
                   "about_profile_transparency": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_profile_transparency",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about_profile_transparency",
                     "content": {}
                   },
                   "about_family_and_relationships": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_family_and_relationships",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about_family_and_relationships",
                     "content": {
                       "general": [
                         "Mối quan hệ",
-                        "Không có thông tin mối quan hệ nào để hiển thị",
+                        "Độc thân",
                         "Thành viên trong gia đình",
                         "Không có thành viên gia đình nào để hiển thị"
                       ]
@@ -181,15 +116,15 @@ const jsonData = {
                   },
                   "about_details": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_details",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about_details",
                     "content": {
                       "general": [
-                        "Giới thiệu về Nguyễn",
+                        "Giới thiệu về Vy",
                         "Không có chi tiết nào khác để hiển thị",
                         "Cách đọc tên",
                         "Không có cách đọc tên để hiển thị",
                         "Các tên khác",
-                        "Bi",
+                        "Không có tên khác để hiển thị",
                         "Trích dẫn yêu thích",
                         "Không có trích dẫn yêu thích nào để hiển thị"
                       ]
@@ -197,7 +132,7 @@ const jsonData = {
                   },
                   "about_life_events": {
                     "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_life_events",
+                    "url": "https://www.facebook.com/havy.pham.75248795/about_life_events",
                     "content": {
                       "general": [
                         "Không có sự kiện trong đời để hiển thị"
@@ -320,378 +255,6 @@ const jsonData = {
               "about_life_events": {
                 "title": "",
                 "url": "https://www.facebook.com/duy.phuc.849518/about_life_events",
-                "content": {
-                  "general": [
-                    "Không có sự kiện trong đời để hiển thị"
-                  ]
-                }
-              }
-            },
-            "relationship_mark": "root"
-          },
-          {
-            "id": "havy.pham.75248795",
-            "username": "Hà Vy",
-            "profile_url": "https://www.facebook.com/havy.pham.75248795",
-            "layer": 2,
-            "children": [
-              {
-                "id": "Thudey4",
-                "username": "Dương Thu  (Cá Thu)",
-                "profile_url": "https://www.facebook.com/Thudey4",
-                "layer": 3,
-                "children": [],
-                "profile_picture": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=110&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan2-4.fna&oh=00_AfPvQklsbO3jKCv2UIR55njHyDrrmpWYTlZLhoyLJaMKcQ&oe=6869207A",
-                "cover_photo": "https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/484325097_122122371224631387_7029372802036538814_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=5G880ngwsjUQ7kNvwGJx5Fn&_nc_oc=AdkoDl7VvSkZcEIxWDst6lZNUrFTUCuftlsnFJS1t79ncNl2tKqfwGKGNhDJSZKfbnMk1YwVHFY-YO1JYW0P7YSP&_nc_zt=23&_nc_ht=scontent.fhan2-4.fna&_nc_gid=FnlCnViRwcBkZWz4bycAgg&oh=00_AfPwzBtA5P78Ovx8_RZjMPWzh8RdBu186t2FTiFvF0QNNg&oe=68479043",
-                "followers_count": "0",
-                "friends_count": "230 người bạn",
-                "bio": "",
-                "about_info": {
-                  "about": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about",
-                    "content": {
-                      "general": [
-                        "Không có nơi làm việc để hiển thị",
-                        "Không có trường học nào để hiển thị",
-                        "Đến từ \nHưng Yên",
-                        "Không có thông tin mối quan hệ nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_work_and_education": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about_work_and_education",
-                    "content": {
-                      "general": [
-                        "Công việc",
-                        "Không có nơi làm việc để hiển thị",
-                        "Đại học",
-                        "Không có trường học nào để hiển thị",
-                        "Trường trung học",
-                        "Không có trường học nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_places": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about_places",
-                    "content": {
-                      "general": [
-                        "Nơi từng sống",
-                        "Hưng Yên"
-                      ]
-                    }
-                  },
-                  "about_contact_and_basic_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about_contact_and_basic_info",
-                    "content": {
-                      "general": [
-                        "Thông tin liên hệ",
-                        "Không có thông tin liên hệ nào để hiển thị",
-                        "Các trang web và liên kết mạng xã hội",
-                        "_td.14th8_",
-                        "TikTok",
-                        "TikTok",
-                        "Thông tin cơ bản",
-                        "14 tháng 8",
-                        "Ngày sinh",
-                        "Ngày sinh"
-                      ]
-                    }
-                  },
-                  "about_privacy_and_legal_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about_privacy_and_legal_info",
-                    "content": {}
-                  },
-                  "about_profile_transparency": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about_profile_transparency",
-                    "content": {}
-                  },
-                  "about_family_and_relationships": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about_family_and_relationships",
-                    "content": {
-                      "general": [
-                        "Mối quan hệ",
-                        "Không có thông tin mối quan hệ nào để hiển thị",
-                        "Thành viên trong gia đình",
-                        "Nắng ヾ",
-                        "Đại Điền"
-                      ]
-                    }
-                  },
-                  "about_details": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about_details",
-                    "content": {
-                      "general": [
-                        "Giới thiệu về Dương",
-                        "Không có chi tiết nào khác để hiển thị",
-                        "Cách đọc tên",
-                        "Không có cách đọc tên để hiển thị",
-                        "Các tên khác",
-                        "Cá Thu",
-                        "Trích dẫn yêu thích",
-                        "Không có trích dẫn yêu thích nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_life_events": {
-                    "title": "",
-                    "url": "https://www.facebook.com/Thudey4/about_life_events",
-                    "content": {
-                      "general": [
-                        "Không có sự kiện trong đời để hiển thị"
-                      ]
-                    }
-                  }
-                },
-                "relationship_mark": "root"
-              },
-              {
-                "id": "jisanghuk",
-                "username": "Lê Đức  (Netflix)",
-                "profile_url": "https://www.facebook.com/jisanghuk",
-                "layer": 3,
-                "children": [],
-                "profile_picture": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=110&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan2-4.fna&oh=00_AfPvQklsbO3jKCv2UIR55njHyDrrmpWYTlZLhoyLJaMKcQ&oe=6869207A",
-                "cover_photo": null,
-                "followers_count": "1,5K người theo dõi",
-                "friends_count": "0",
-                "bio": "",
-                "about_info": {
-                  "about": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about",
-                    "content": {
-                      "general": [
-                        "Không có nơi làm việc để hiển thị",
-                        "Học tại \nTrường Đại học Thương mại",
-                        "Không có địa điểm nào để hiển thị",
-                        "Không có thông tin mối quan hệ nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_work_and_education": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about_work_and_education",
-                    "content": {
-                      "general": [
-                        "Công việc",
-                        "Không có nơi làm việc để hiển thị",
-                        "Đại học",
-                        "Học tại \nTrường Đại học Thương mại",
-                        "Chào",
-                        "Trường trung học",
-                        "Không có trường học nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_places": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about_places",
-                    "content": {
-                      "general": [
-                        "Nơi từng sống",
-                        "Không có địa điểm nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_contact_and_basic_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about_contact_and_basic_info",
-                    "content": {
-                      "general": [
-                        "Thông tin liên hệ",
-                        "Không có thông tin liên hệ nào để hiển thị",
-                        "Các trang web và liên kết mạng xã hội",
-                        "leduccc_",
-                        "Instagram",
-                        "Instagram",
-                        "Thông tin cơ bản",
-                        "13 tháng 10",
-                        "Ngày sinh",
-                        "Ngày sinh",
-                        "2003",
-                        "Năm sinh",
-                        "Năm sinh",
-                        "Hạng mục",
-                        "Người sáng tạo nội dung số"
-                      ]
-                    }
-                  },
-                  "about_privacy_and_legal_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about_privacy_and_legal_info",
-                    "content": {
-                      "general": [
-                        "Thông tin pháp lý và quyền riêng tư"
-                      ]
-                    }
-                  },
-                  "about_profile_transparency": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about_profile_transparency",
-                    "content": {
-                      "general": [
-                        "Tính minh bạch của trang cá nhân",
-                        "Facebook hiển thị thông tin để bạn hiểu rõ mục đích của trang này.",
-                        "15 tháng 9, 2019",
-                        "Trang cá nhân này hiện không chạy quảng cáo.",
-                        "Xem tất cả",
-                        "Xem tất cả"
-                      ]
-                    }
-                  },
-                  "about_family_and_relationships": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about_family_and_relationships",
-                    "content": {
-                      "general": [
-                        "Mối quan hệ",
-                        "Không có thông tin mối quan hệ nào để hiển thị",
-                        "Thành viên trong gia đình",
-                        "Không có thành viên gia đình nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_details": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about_details",
-                    "content": {
-                      "general": [
-                        "Giới thiệu về Đức",
-                        "Không có chi tiết nào khác để hiển thị",
-                        "Cách đọc tên",
-                        "Không có cách đọc tên để hiển thị",
-                        "Các tên khác",
-                        "Netflix",
-                        "Đức chó điên",
-                        "Trích dẫn yêu thích",
-                        "Không có trích dẫn yêu thích nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_life_events": {
-                    "title": "",
-                    "url": "https://www.facebook.com/jisanghuk/about_life_events",
-                    "content": {
-                      "general": [
-                        "2021",
-                        "Bắt đầu học tại Trường Đại học Thương mại"
-                      ]
-                    }
-                  }
-                },
-                "relationship_mark": "root"
-              }
-            ],
-            "profile_picture": "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan20-1.fna&oh=00_AfPn9V6PCfgbL2zHK-947ZX3czPraPI6k9PSuxY-o9Oa8g&oe=6869207A",
-            "cover_photo": null,
-            "followers_count": "Có 1.259 người theo dõi",
-            "friends_count": "468 người bạn",
-            "bio": "",
-            "about_info": {
-              "about": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about",
-                "content": {
-                  "general": [
-                    "Không có nơi làm việc để hiển thị",
-                    "Học tại \nNEU - Đại học Kinh tế Quốc dân",
-                    "Không có địa điểm nào để hiển thị",
-                    "Độc thân"
-                  ]
-                }
-              },
-              "about_work_and_education": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about_work_and_education",
-                "content": {
-                  "general": [
-                    "Công việc",
-                    "Không có nơi làm việc để hiển thị",
-                    "Đại học",
-                    "Học tại \nNEU - Đại học Kinh tế Quốc dân",
-                    "��",
-                    "Trường trung học",
-                    "Không có trường học nào để hiển thị"
-                  ]
-                }
-              },
-              "about_places": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about_places",
-                "content": {
-                  "general": [
-                    "Nơi từng sống",
-                    "Không có địa điểm nào để hiển thị"
-                  ]
-                }
-              },
-              "about_contact_and_basic_info": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about_contact_and_basic_info",
-                "content": {
-                  "general": [
-                    "Thông tin liên hệ",
-                    "Không có thông tin liên hệ nào để hiển thị",
-                    "Các trang web và liên kết mạng xã hội",
-                    "hvydangiu_",
-                    "Instagram",
-                    "Instagram",
-                    "Thông tin cơ bản",
-                    "Nữ",
-                    "Giới tính",
-                    "Giới tính"
-                  ]
-                }
-              },
-              "about_privacy_and_legal_info": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about_privacy_and_legal_info",
-                "content": {}
-              },
-              "about_profile_transparency": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about_profile_transparency",
-                "content": {}
-              },
-              "about_family_and_relationships": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about_family_and_relationships",
-                "content": {
-                  "general": [
-                    "Mối quan hệ",
-                    "Độc thân",
-                    "Thành viên trong gia đình",
-                    "Không có thành viên gia đình nào để hiển thị"
-                  ]
-                }
-              },
-              "about_details": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about_details",
-                "content": {
-                  "general": [
-                    "Giới thiệu về Vy",
-                    "Không có chi tiết nào khác để hiển thị",
-                    "Cách đọc tên",
-                    "Không có cách đọc tên để hiển thị",
-                    "Các tên khác",
-                    "Không có tên khác để hiển thị",
-                    "Trích dẫn yêu thích",
-                    "Không có trích dẫn yêu thích nào để hiển thị"
-                  ]
-                }
-              },
-              "about_life_events": {
-                "title": "",
-                "url": "https://www.facebook.com/havy.pham.75248795/about_life_events",
                 "content": {
                   "general": [
                     "Không có sự kiện trong đời để hiển thị"
@@ -771,14 +334,7 @@ const jsonData = {
           "about_family_and_relationships": {
             "title": "",
             "url": "https://www.facebook.com/le.huynh.2222/about_family_and_relationships",
-            "content": {
-              "general": [
-                "Mối quan hệ",
-                "Độc thân",
-                "Thành viên trong gia đình",
-                "Không có thành viên gia đình nào để hiển thị"
-              ]
-            }
+            "content": {}
           },
           "about_details": {
             "title": "",
@@ -799,774 +355,6 @@ const jsonData = {
           "about_life_events": {
             "title": "",
             "url": "https://www.facebook.com/le.huynh.2222/about_life_events",
-            "content": {
-              "general": [
-                "Không có sự kiện trong đời để hiển thị"
-              ]
-            }
-          }
-        },
-        "relationship_mark": "root"
-      },
-      {
-        "id": "hoang.quangduy.54",
-        "username": "Hoàng Duy Quang",
-        "profile_url": "https://www.facebook.com/hoang.quangduy.54",
-        "layer": 1,
-        "children": [
-          {
-            "id": "duy.phuc.849518",
-            "username": "Duy Phúc",
-            "profile_url": "https://www.facebook.com/duy.phuc.849518",
-            "layer": 2,
-            "children": [
-              {
-                "id": "frenkie.truong",
-                "username": "Frenkie Trương",
-                "profile_url": "https://www.facebook.com/frenkie.truong",
-                "layer": 3,
-                "children": [],
-                "profile_picture": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=110&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan2-4.fna&oh=00_AfPvQklsbO3jKCv2UIR55njHyDrrmpWYTlZLhoyLJaMKcQ&oe=6869207A",
-                "cover_photo": null,
-                "followers_count": "0",
-                "friends_count": "107 người bạn",
-                "bio": "",
-                "about_info": {
-                  "about": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about",
-                    "content": {}
-                  },
-                  "about_work_and_education": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_work_and_education",
-                    "content": {}
-                  },
-                  "about_places": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_places",
-                    "content": {}
-                  },
-                  "about_contact_and_basic_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_contact_and_basic_info",
-                    "content": {}
-                  },
-                  "about_privacy_and_legal_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_privacy_and_legal_info",
-                    "content": {}
-                  },
-                  "about_profile_transparency": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_profile_transparency",
-                    "content": {}
-                  },
-                  "about_family_and_relationships": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_family_and_relationships",
-                    "content": {}
-                  },
-                  "about_details": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_details",
-                    "content": {}
-                  },
-                  "about_life_events": {
-                    "title": "",
-                    "url": "https://www.facebook.com/frenkie.truong/about_life_events",
-                    "content": {
-                      "general": [
-                        "Không có sự kiện trong đời để hiển thị"
-                      ]
-                    }
-                  }
-                },
-                "relationship_mark": "root"
-              },
-              {
-                "id": "hungquang.oo5",
-                "username": "Quang Nguyễn",
-                "profile_url": "https://www.facebook.com/hungquang.oo5",
-                "layer": 3,
-                "children": [],
-                "profile_picture": "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan20-1.fna&oh=00_AfPn9V6PCfgbL2zHK-947ZX3czPraPI6k9PSuxY-o9Oa8g&oe=6869207A",
-                "cover_photo": "https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/474184155_1305591007342938_7207068433854061900_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=TsY3-sKXvzoQ7kNvwE6iLd4&_nc_oc=Adlkyjrl7H7ZVtHN7_7GFW1EA877Mi_qZaV7vrM1NhmOc0M6PLyx4o6YeTPsKDbyMctPIcrwSeeQ7F0kV6tDWi9m&_nc_zt=23&_nc_ht=scontent.fhan2-4.fna&_nc_gid=BlXsr50a6gec4rm2aD4P9w&oh=00_AfMpRoTcm5sETYxIWAh_2Fu0gU-Btgy0lp3gkEMKW-a5aw&oe=68476E53",
-                "followers_count": "0",
-                "friends_count": "232 người bạn",
-                "bio": "",
-                "about_info": {
-                  "about": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about",
-                    "content": {
-                      "general": [
-                        "Không có nơi làm việc để hiển thị",
-                        "Học Cyber Security tại \nTrường Công nghệ Thông tin và Truyền thông - ĐH Bách khoa Hà Nội",
-                        "Sống tại \nQuỳ Châu",
-                        "Đến từ \nVin, Nghệ An, Vietnam",
-                        "Không có thông tin mối quan hệ nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_work_and_education": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_work_and_education",
-                    "content": {
-                      "general": [
-                        "Công việc",
-                        "Không có nơi làm việc để hiển thị",
-                        "Đại học",
-                        "Học Cyber Security tại \nTrường Công nghệ Thông tin và Truyền thông - ĐH Bách khoa Hà Nội",
-                        "Trường trung học",
-                        "Không có trường học nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_places": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_places",
-                    "content": {
-                      "general": [
-                        "Nơi từng sống",
-                        "Quỳ Châu",
-                        "Vin, Nghệ An, Vietnam"
-                      ]
-                    }
-                  },
-                  "about_contact_and_basic_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_contact_and_basic_info",
-                    "content": {
-                      "general": [
-                        "Thông tin liên hệ",
-                        "Không có thông tin liên hệ nào để hiển thị",
-                        "Các trang web và liên kết mạng xã hội",
-                        "Hquang_oo5",
-                        "Instagram",
-                        "Instagram",
-                        "Thông tin cơ bản",
-                        "Nam",
-                        "Giới tính",
-                        "Giới tính"
-                      ]
-                    }
-                  },
-                  "about_privacy_and_legal_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_privacy_and_legal_info",
-                    "content": {}
-                  },
-                  "about_profile_transparency": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_profile_transparency",
-                    "content": {}
-                  },
-                  "about_family_and_relationships": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_family_and_relationships",
-                    "content": {
-                      "general": [
-                        "Mối quan hệ",
-                        "Không có thông tin mối quan hệ nào để hiển thị",
-                        "Thành viên trong gia đình",
-                        "Không có thành viên gia đình nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_details": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_details",
-                    "content": {
-                      "general": [
-                        "Giới thiệu về Nguyễn",
-                        "Không có chi tiết nào khác để hiển thị",
-                        "Cách đọc tên",
-                        "Không có cách đọc tên để hiển thị",
-                        "Các tên khác",
-                        "Bi",
-                        "Trích dẫn yêu thích",
-                        "Không có trích dẫn yêu thích nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_life_events": {
-                    "title": "",
-                    "url": "https://www.facebook.com/hungquang.oo5/about_life_events",
-                    "content": {
-                      "general": [
-                        "Không có sự kiện trong đời để hiển thị"
-                      ]
-                    }
-                  }
-                },
-                "relationship_mark": "root"
-              }
-            ],
-            "profile_picture": "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan20-1.fna&oh=00_AfPn9V6PCfgbL2zHK-947ZX3czPraPI6k9PSuxY-o9Oa8g&oe=6869207A",
-            "cover_photo": null,
-            "followers_count": "0",
-            "friends_count": "308 người bạn",
-            "bio": "",
-            "about_info": {
-              "about": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about",
-                "content": {
-                  "general": [
-                    "Không có nơi làm việc để hiển thị",
-                    "Học tại \nĐại học Bách khoa Hà Nội - Hanoi University of Science and Technology",
-                    "Sống tại \nThái Hòa, Nghệ An",
-                    "Không có thông tin mối quan hệ nào để hiển thị",
-                    "098 674 43 76"
-                  ]
-                }
-              },
-              "about_work_and_education": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about_work_and_education",
-                "content": {
-                  "general": [
-                    "Công việc",
-                    "Không có nơi làm việc để hiển thị",
-                    "Đại học",
-                    "Học tại \nĐại học Bách khoa Hà Nội - Hanoi University of Science and Technology",
-                    "Từng học tại \nTrường THPT Thái Hòa - Thị Xã Thái Hòa - Tỉnh Nghệ An",
-                    "Trường trung học",
-                    "Đã học tại Trường THCS Hòa Hiếu 2"
-                  ]
-                }
-              },
-              "about_places": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about_places",
-                "content": {
-                  "general": [
-                    "Nơi từng sống",
-                    "Thái Hòa, Nghệ An"
-                  ]
-                }
-              },
-              "about_contact_and_basic_info": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about_contact_and_basic_info",
-                "content": {
-                  "general": [
-                    "Thông tin liên hệ",
-                    "098 674 43 76",
-                    "Di động",
-                    "Di động",
-                    "duyphucc1011@gmail.com",
-                    "Email",
-                    "Email",
-                    "Các trang web và liên kết mạng xã hội",
-                    "Không có liên kết để hiển thị",
-                    "Thông tin cơ bản",
-                    "Nam",
-                    "Giới tính",
-                    "Giới tính",
-                    "10 tháng 11",
-                    "Ngày sinh",
-                    "Ngày sinh",
-                    "2005",
-                    "Năm sinh",
-                    "Năm sinh"
-                  ]
-                }
-              },
-              "about_privacy_and_legal_info": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about_privacy_and_legal_info",
-                "content": {}
-              },
-              "about_profile_transparency": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about_profile_transparency",
-                "content": {}
-              },
-              "about_family_and_relationships": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about_family_and_relationships",
-                "content": {
-                  "general": [
-                    "Mối quan hệ",
-                    "Không có thông tin mối quan hệ nào để hiển thị",
-                    "Thành viên trong gia đình",
-                    "Không có thành viên gia đình nào để hiển thị"
-                  ]
-                }
-              },
-              "about_details": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about_details",
-                "content": {
-                  "general": [
-                    "Giới thiệu về Phúc",
-                    "Không có chi tiết nào khác để hiển thị",
-                    "Cách đọc tên",
-                    "Không có cách đọc tên để hiển thị",
-                    "Các tên khác",
-                    "Không có tên khác để hiển thị",
-                    "Trích dẫn yêu thích",
-                    "Không có trích dẫn yêu thích nào để hiển thị"
-                  ]
-                }
-              },
-              "about_life_events": {
-                "title": "",
-                "url": "https://www.facebook.com/duy.phuc.849518/about_life_events",
-                "content": {
-                  "general": [
-                    "Không có sự kiện trong đời để hiển thị"
-                  ]
-                }
-              }
-            },
-            "relationship_mark": "root"
-          },
-          {
-            "id": "frenkie.truong",
-            "username": "Frenkie Trương",
-            "profile_url": "https://www.facebook.com/frenkie.truong",
-            "layer": 3,
-            "children": [
-              {
-                "id": "tung.nguyen.hoang.512448",
-                "username": "Tung Nguyen Hoang",
-                "profile_url": "https://www.facebook.com/tung.nguyen.hoang.512448",
-                "layer": 3,
-                "children": [],
-                "profile_picture": "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan20-1.fna&oh=00_AfPn9V6PCfgbL2zHK-947ZX3czPraPI6k9PSuxY-o9Oa8g&oe=6869207A",
-                "cover_photo": "https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/481103535_651077444077125_1887629176518106062_n.png?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=C9Xwta8pz_MQ7kNvwEucvgi&_nc_oc=AdnIUge2J6FVYaEuRxAWkhFjl6Gcx1_a-HvFfVWJ41pE9jR7mEq0jsfBrbDXVo3jRFVDgBsO-rWs9fduAgFj6azp&_nc_zt=23&_nc_ht=scontent.fhan2-5.fna&_nc_gid=Pdx7qxc9x6q8wvc3VpFhLg&oh=00_AfPK9B663qdEMaXsAME_wo7e2AhOfPVteARCTlJQrhqPUA&oe=6847883D",
-                "followers_count": "20 người theo dõi",
-                "friends_count": "0",
-                "bio": "",
-                "about_info": {
-                  "about": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about",
-                    "content": {
-                      "general": [
-                        "Không có nơi làm việc để hiển thị",
-                        "Không có trường học nào để hiển thị",
-                        "Sống tại \nManaus, Brazil",
-                        "Đến từ \nLe Mas-d'Azil",
-                        "Không có thông tin mối quan hệ nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_work_and_education": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about_work_and_education",
-                    "content": {
-                      "general": [
-                        "Công việc",
-                        "Không có nơi làm việc để hiển thị",
-                        "Đại học",
-                        "Không có trường học nào để hiển thị",
-                        "Trường trung học",
-                        "Không có trường học nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_places": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about_places",
-                    "content": {
-                      "general": [
-                        "Nơi từng sống",
-                        "Manaus, Brazil",
-                        "Le Mas-d'Azil"
-                      ]
-                    }
-                  },
-                  "about_contact_and_basic_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about_contact_and_basic_info",
-                    "content": {
-                      "general": [
-                        "Thông tin liên hệ",
-                        "Không có thông tin liên hệ nào để hiển thị",
-                        "Các trang web và liên kết mạng xã hội",
-                        "Không có liên kết để hiển thị",
-                        "Thông tin cơ bản",
-                        "Không có thông tin cơ bản nào để hiển thị",
-                        "Hạng mục",
-                        "Người sáng tạo nội dung số"
-                      ]
-                    }
-                  },
-                  "about_privacy_and_legal_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about_privacy_and_legal_info",
-                    "content": {
-                      "general": [
-                        "Thông tin pháp lý và quyền riêng tư"
-                      ]
-                    }
-                  },
-                  "about_profile_transparency": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about_profile_transparency",
-                    "content": {
-                      "general": [
-                        "Tính minh bạch của trang cá nhân",
-                        "Facebook hiển thị thông tin để bạn hiểu rõ mục đích của trang này.",
-                        "30 tháng 11, 2021",
-                        "Trang cá nhân này hiện không chạy quảng cáo.",
-                        "Xem tất cả",
-                        "Xem tất cả"
-                      ]
-                    }
-                  },
-                  "about_family_and_relationships": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about_family_and_relationships",
-                    "content": {
-                      "general": [
-                        "Mối quan hệ",
-                        "Không có thông tin mối quan hệ nào để hiển thị",
-                        "Thành viên trong gia đình",
-                        "Không có thành viên gia đình nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_details": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about_details",
-                    "content": {
-                      "general": [
-                        "Giới thiệu về Hoang",
-                        "Không có chi tiết nào khác để hiển thị",
-                        "Cách đọc tên",
-                        "Không có cách đọc tên để hiển thị",
-                        "Các tên khác",
-                        "Không có tên khác để hiển thị",
-                        "Trích dẫn yêu thích",
-                        "Không có trích dẫn yêu thích nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_life_events": {
-                    "title": "",
-                    "url": "https://www.facebook.com/tung.nguyen.hoang.512448/about_life_events",
-                    "content": {
-                      "general": [
-                        "Không có sự kiện trong đời để hiển thị"
-                      ]
-                    }
-                  }
-                },
-                "relationship_mark": "root"
-              },
-              {
-                "id": "thanhbangduyduong",
-                "username": "Vương Bằng",
-                "profile_url": "https://www.facebook.com/thanhbangduyduong",
-                "layer": 3,
-                "children": [],
-                "profile_picture": "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan20-1.fna&oh=00_AfPn9V6PCfgbL2zHK-947ZX3czPraPI6k9PSuxY-o9Oa8g&oe=6869207A",
-                "cover_photo": "https://scontent.fhan2-5.fna.fbcdn.net/v/t39.30808-6/491231313_10234445195367590_625519612938004558_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=Fh4c8bLUxZYQ7kNvwGcgn63&_nc_oc=Adl48ompVF-5OPrEMOclmVH3msrKwqNArkvgBxOkKTtbi9ocbFwtwkFbSkhp66jPMWZFA7P2ctbU5SelqXZ3a48T&_nc_zt=23&_nc_ht=scontent.fhan2-5.fna&_nc_gid=bACwxuD3XBPf_LlwFFyp9Q&oh=00_AfOKKOYDsVftk6yE40rBrHp6UbBhXSDVO-v8PjGLkim90w&oe=68477A7E",
-                "followers_count": "5,5K người theo dõi",
-                "friends_count": "0",
-                "bio": "",
-                "about_info": {
-                  "about": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about",
-                    "content": {
-                      "general": [
-                        "Founder tại \nTư vấn Du lịch 24/7",
-                        "Học Tiếng anh tại \nTrường Đại học Hà Nội",
-                        "Sống tại \nVinh",
-                        "Đến từ \nYên Thành",
-                        "Không có thông tin mối quan hệ nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_work_and_education": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about_work_and_education",
-                    "content": {
-                      "general": [
-                        "Công việc",
-                        "Founder tại \nTư vấn Du lịch 24/7",
-                        "·",
-                        "Tư vấn hỗ trợ khách du lịch 24/7! Đặt vé máy may, xe du lịch. Dịch thuật và công chứng...",
-                        "Đã làm việc tại Sở Văn Hóa, Thể Thao và Du lịch Nghệ An",
-                        "·",
-                        "Xúc tiến Du lịch",
-                        "Đại học",
-                        "Học Tiếng anh tại \nTrường Đại học Hà Nội",
-                        "Học Văn Hóa Du Lịch tại \nĐại Học Văn Hóa",
-                        "Trường trung học",
-                        "Đã học tại Trường THPT Phan Đăng Lưu"
-                      ]
-                    }
-                  },
-                  "about_places": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about_places",
-                    "content": {
-                      "general": [
-                        "Nơi từng sống",
-                        "Vinh",
-                        "Yên Thành"
-                      ]
-                    }
-                  },
-                  "about_contact_and_basic_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about_contact_and_basic_info",
-                    "content": {
-                      "general": [
-                        "Thông tin liên hệ",
-                        "Không có thông tin liên hệ nào để hiển thị",
-                        "Các trang web và liên kết mạng xã hội",
-                        "http://tuvandulich247.com/",
-                        "Trang web",
-                        "Trang web",
-                        "Thông tin cơ bản",
-                        "Không có thông tin cơ bản nào để hiển thị",
-                        "Hạng mục",
-                        "Người sáng tạo nội dung số"
-                      ]
-                    }
-                  },
-                  "about_privacy_and_legal_info": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about_privacy_and_legal_info",
-                    "content": {
-                      "general": [
-                        "Thông tin pháp lý và quyền riêng tư"
-                      ]
-                    }
-                  },
-                  "about_profile_transparency": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about_profile_transparency",
-                    "content": {
-                      "general": [
-                        "Tính minh bạch của trang cá nhân",
-                        "Facebook hiển thị thông tin để bạn hiểu rõ mục đích của trang này.",
-                        "11 tháng 2, 2008",
-                        "Trang cá nhân này hiện không chạy quảng cáo.",
-                        "Xem tất cả",
-                        "Xem tất cả"
-                      ]
-                    }
-                  },
-                  "about_family_and_relationships": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about_family_and_relationships",
-                    "content": {
-                      "general": [
-                        "Mối quan hệ",
-                        "Không có thông tin mối quan hệ nào để hiển thị",
-                        "Thành viên trong gia đình",
-                        "Không có thành viên gia đình nào để hiển thị"
-                      ]
-                    }
-                  },
-                  "about_details": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about_details",
-                    "content": {
-                      "general": [
-                        "Giới thiệu về Vương",
-                        "Không có chi tiết nào khác để hiển thị",
-                        "Cách đọc tên",
-                        "Không có cách đọc tên để hiển thị",
-                        "Các tên khác",
-                        "Bang is my name",
-                        "Trích dẫn yêu thích",
-                        "Tôi không muốn đến đích vì không thích phải dừng lại. Vì chỉ khi đi đây đi đó, chúng ta mới tiếp tục học hỏi được điều hay, điều lạ từ cuộc sống."
-                      ]
-                    }
-                  },
-                  "about_life_events": {
-                    "title": "",
-                    "url": "https://www.facebook.com/thanhbangduyduong/about_life_events",
-                    "content": {
-                      "general": [
-                        "2018",
-                        "Bắt đầu công việc mới tại Tư vấn Du lịch 24/7",
-                        "2012",
-                        "Thôi việc ở Sở Văn Hóa, Thể Thao và Du lịch Nghệ An",
-                        "2010",
-                        "Bắt đầu công việc mới tại Sở Văn Hóa, Thể Thao và Du lịch Nghệ An",
-                        "2008",
-                        "Tốt nghiệp Trường Đại học Hà Nội",
-                        "2007",
-                        "Tốt nghiệp Đại Học Văn Hóa",
-                        "2003",
-                        "Bắt đầu học tại Đại Học Văn Hóa",
-                        "Tốt nghiệp Trường THPT Phan Đăng Lưu"
-                      ]
-                    }
-                  }
-                },
-                "relationship_mark": "root"
-              }
-            ],
-            "profile_picture": "https://scontent.fhan2-4.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=110&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan2-4.fna&oh=00_AfPvQklsbO3jKCv2UIR55njHyDrrmpWYTlZLhoyLJaMKcQ&oe=6869207A",
-            "cover_photo": null,
-            "followers_count": "0",
-            "friends_count": "107 người bạn",
-            "bio": "",
-            "about_info": {
-              "about": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about",
-                "content": {}
-              },
-              "about_work_and_education": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about_work_and_education",
-                "content": {}
-              },
-              "about_places": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about_places",
-                "content": {}
-              },
-              "about_contact_and_basic_info": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about_contact_and_basic_info",
-                "content": {}
-              },
-              "about_privacy_and_legal_info": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about_privacy_and_legal_info",
-                "content": {}
-              },
-              "about_profile_transparency": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about_profile_transparency",
-                "content": {}
-              },
-              "about_family_and_relationships": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about_family_and_relationships",
-                "content": {}
-              },
-              "about_details": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about_details",
-                "content": {}
-              },
-              "about_life_events": {
-                "title": "",
-                "url": "https://www.facebook.com/frenkie.truong/about_life_events",
-                "content": {
-                  "general": [
-                    "Không có sự kiện trong đời để hiển thị"
-                  ]
-                }
-              }
-            },
-            "relationship_mark": "root"
-          }
-        ],
-        "profile_picture": "https://scontent.fhan20-1.fna.fbcdn.net/v/t1.30497-1/453178253_471506465671661_2781666950760530985_n.png?stp=cp0_dst-png_s80x80&_nc_cat=1&ccb=1-7&_nc_sid=136b72&_nc_ohc=ofqwNqiIaM8Q7kNvwHloBiP&_nc_oc=Adm7f_vwVOXBbXlvTGeWo_9IVtAMavCVc_EMVLxs2a8jLal3V868XoZk_xaCoWL_BR-W0heruRBi9jAwkNLGuePz&_nc_zt=24&_nc_ht=scontent.fhan20-1.fna&oh=00_AfPn9V6PCfgbL2zHK-947ZX3czPraPI6k9PSuxY-o9Oa8g&oe=6869207A",
-        "cover_photo": null,
-        "followers_count": "0",
-        "friends_count": "122 người bạn",
-        "bio": "",
-        "about_info": {
-          "about": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about",
-            "content": {
-              "general": [
-                "Không có nơi làm việc để hiển thị",
-                "Không có trường học nào để hiển thị",
-                "Đến từ \nNghi Lộc",
-                "Không có thông tin mối quan hệ nào để hiển thị"
-              ]
-            }
-          },
-          "about_work_and_education": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about_work_and_education",
-            "content": {
-              "general": [
-                "Công việc",
-                "Không có nơi làm việc để hiển thị",
-                "Đại học",
-                "Không có trường học nào để hiển thị",
-                "Trường trung học",
-                "Không có trường học nào để hiển thị"
-              ]
-            }
-          },
-          "about_places": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about_places",
-            "content": {
-              "general": [
-                "Nơi từng sống",
-                "Nghi Lộc"
-              ]
-            }
-          },
-          "about_contact_and_basic_info": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about_contact_and_basic_info",
-            "content": {
-              "general": [
-                "Thông tin liên hệ",
-                "Không có thông tin liên hệ nào để hiển thị",
-                "Các trang web và liên kết mạng xã hội",
-                "Không có liên kết để hiển thị",
-                "Thông tin cơ bản",
-                "Nam",
-                "Giới tính",
-                "Giới tính"
-              ]
-            }
-          },
-          "about_privacy_and_legal_info": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about_privacy_and_legal_info",
-            "content": {}
-          },
-          "about_profile_transparency": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about_profile_transparency",
-            "content": {}
-          },
-          "about_family_and_relationships": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about_family_and_relationships",
-            "content": {
-              "general": [
-                "Mối quan hệ",
-                "Không có thông tin mối quan hệ nào để hiển thị",
-                "Thành viên trong gia đình",
-                "Không có thành viên gia đình nào để hiển thị"
-              ]
-            }
-          },
-          "about_details": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about_details",
-            "content": {
-              "general": [
-                "Giới thiệu về Quang",
-                "Không có chi tiết nào khác để hiển thị",
-                "Cách đọc tên",
-                "Không có cách đọc tên để hiển thị",
-                "Các tên khác",
-                "Không có tên khác để hiển thị",
-                "Trích dẫn yêu thích",
-                "Không có trích dẫn yêu thích nào để hiển thị"
-              ]
-            }
-          },
-          "about_life_events": {
-            "title": "",
-            "url": "https://www.facebook.com/hoang.quangduy.54/about_life_events",
             "content": {
               "general": [
                 "Không có sự kiện trong đời để hiển thị"
