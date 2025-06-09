@@ -66,11 +66,7 @@ class AccountBasic(BaseFacebookScraper):
             for entry in work_entries:
                 owner_element = entry.find_element(By.XPATH, ".//span[@dir='auto']")
                 owner = owner_element.text.strip()
-
-                if owner.startswith("http") or owner.startswith("www"):
-                    work_entry_data = {"name": owner}
-                else:
-                    work_entry_data = {"name": owner}
+                work_entry_data = {"name": owner}
 
                 extracted_work_data.append(work_entry_data)
 
