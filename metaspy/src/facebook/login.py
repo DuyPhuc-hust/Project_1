@@ -23,7 +23,6 @@ class FacebookLogIn(Scraper):
         super().__init__()
         self._base_url = "https://www.facebook.com/"
         self._driver = webdriver.Chrome(options=self._chrome_driver_configuration())
-        self._driver = self._driver
         self._driver.get(self._base_url)
         self._cookie_term_css_selector = "._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"
         self._input_text_css_selector = "//input[@type='text']"
