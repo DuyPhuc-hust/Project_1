@@ -8,12 +8,10 @@ import webbrowser
 
 def main():
     # Tìm các file checkin_data_*.json trong checkin_src/user_data
-    data_files = glob.glob(os.path.join("checkin_src", "user_data", "checkin_data_*.json"))
-    
+    data_files = glob.glob(os.path.join("checkin_src", "user_data", "checkin_data_*.json"))   
     if not data_files:
         rprint("❌ Không tìm thấy file nào có định dạng checkin_data_*.json trong checkin_src/user_data")
-        return
-    
+        return    
     rprint("[bold]Danh sách file checkin_data_*.json:[/bold]")
     for i, file_path in enumerate(data_files, 1):
         try:
