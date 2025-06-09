@@ -51,6 +51,28 @@
         #stats-panel li {
             margin-bottom: 5px;
         }
+        #legend-panel {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: 00d0ff(255, 255, 255, 0.9);
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 1000;
+            font: 12px/1.5 Verdana, Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        .legend-entry {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            display: inline-block;
+        }
         .simplemaps_popup {
             position: absolute;
             background: white;
@@ -69,6 +91,9 @@
     <div id="stats-panel">
         <h3>Thống kê người dùng</h3>
         <div id="stats-content"></div>
+    </div>
+    <div id="legend-panel">
+        <div id="legend-content"></div>
     </div>
 
     <script src="mapinfo.js"></script>
@@ -812,392 +837,383 @@
 
         const stateBbox = simplemaps_countrymap_mapinfo.state_bbox_array;
 
-    // Tính tổng số người dùng duy nhất và tìm maxLayer
-    const allUsers = new Set();
-    let maxLayer = 0;
-    function countTotalUsersAndMaxLayer(node, currentLayer = 0) {
-        if (node.username) {
-            allUsers.add(node.username);
-            if (node.layer > maxLayer) {
-                maxLayer = node.layer;
+        // Tính tổng số người dùng duy nhất và tìm maxLayer
+        const allUsers = new Set();
+        let maxLayer = 0;
+        function countTotalUsersAndMaxLayer(node, currentLayer = 0) {
+            if (node.username) {
+                allUsers.add(node.username);
+                if (node.layer > maxLayer) {
+                    maxLayer = node.layer;
+                }
+            }
+            if (node.children) {
+                node.children.forEach(child => countTotalUsersAndMaxLayer(child, currentLayer + 1));
             }
         }
-        if (node.children) {
-            node.children.forEach(child => countTotalUsersAndMaxLayer(child, currentLayer + 1));
-        }
-    }
-    countTotalUsersAndMaxLayer(jsonData.tree_data);
-    const totalUsers = allUsers.size;
-    console.log(`Số tầng tối đa: ${maxLayer}`);
+        countTotalUsersAndMaxLayer(jsonData.tree_data);
+        const totalUsers = allUsers.size;
+        console.log(`Số tầng tối đa: ${maxLayer}`);
 
-    // Xử lý dữ liệu người dùng
-    const usersByProvince = {};
-    const usersAbroad = new Set();
-    const identifiedUsersSet = new Set();
-    const usersWithLocation = new Set();
-    const userLocations = new Map(); // Lưu vị trí theo username
+        // Xử lý dữ liệu người dùng
+        const usersByProvince = {};
+        const usersAbroad = new Set();
+        const identifiedUsersSet = new Set();
+        const usersWithLocation = new Set();
+        const userLocations = new Map(); // Lưu vị trí theo username
 
-    function traverseTree(node) {
-        if (!node || !node.username) {
-            console.log(`Bỏ qua nút không hợp lệ: ${node?.id || "không xác định"}`);
-            return;
-        }
-        console.log(`Xử lý nút: ${node.id}, username: ${node.username}, layer: ${node.layer || 0}`);
+        function traverseTree(node) {
+            if (!node || !node.username) {
+                console.log(`Bỏ qua nút không hợp lệ: ${node?.id || "không xác định"}`);
+                return;
+            }
+            console.log(`Xử lý nút: ${node.id}, username: ${node.username}, layer: ${node.layer || 0}`);
 
-        let place = "Không xác định";
-        if (node.about_info?.about?.content?.general) {
-            const aboutItems = node.about_info.about.content.general;
-            const livingAtIndex = aboutItems.findIndex(item => item.includes("Sống tại"));
-            if (livingAtIndex !== -1) {
-                const livingAt = aboutItems[livingAtIndex];
-                console.log(`Chuỗi Sống tại gốc: ${livingAt} (ASCII: ${[...livingAt].map(c => c.charCodeAt(0)).join(",")})`);
-                place = livingAt
-                    .replace("Sống tại", "")
-                    .replace(/\u00A0/g, " ")
-                    .replace(/\s+/g, " ")
-                    .trim();
-                console.log(`Tìm thấy vị trí cho ${node.username}: ${livingAt}`);
-                console.log(`Chuỗi vị trí đã xử lý: ${place}`);
-                usersWithLocation.add(node.username);
+            let place = "Không xác định";
+            if (node.about_info?.about?.content?.general) {
+                const aboutItems = node.about_info.about.content.general;
+                const livingAtIndex = aboutItems.findIndex(item => item.includes("Sống tại"));
+                if (livingAtIndex !== -1) {
+                    const livingAt = aboutItems[livingAtIndex];
+                    console.log(`Chuỗi Sống tại gốc: ${livingAt} (ASCII: ${[...livingAt].map(c => c.charCodeAt(0)).join(",")})`);
+                    place = livingAt
+                        .replace("Sống tại", "")
+                        .replace(/\u00A0/g, " ")
+                        .replace(/\s+/g, " ")
+                        .trim();
+                    console.log(`Tìm thấy vị trí cho ${node.username}: ${livingAt}`);
+                    console.log(`Chuỗi vị trí đã xử lý: ${place}`);
+                    usersWithLocation.add(node.username);
+                } else {
+                    console.log(`Không có "Sống tại" cho ${node.username}`);
+                }
             } else {
-                console.log(`Không có "Sống tại" cho ${node.username}`);
-            }
-        } else {
-            console.log(`Không có about_info cho ${node.username}`);
-        }
-
-        // Tách chuỗi vị trí thành các phần
-        const parts = place.split(",").map(part => part.trim());
-        console.log(`Các phần vị trí: ${JSON.stringify(parts)}`);
-
-        let province = null;
-        for (let part of parts) {
-            if (part === "Vietnam") continue;
-
-            province = provinces.find(p => p.name === part);
-            if (province) {
-                console.log(`Tìm thấy tỉnh trong phần: ${province.name} (${province.code})`);
-                break;
+                console.log(`Không có about_info cho ${node.username}`);
             }
 
-            if (districtToProvince[part]) {
-                province = provinces.find(p => p.name === districtToProvince[part]);
+            // Tách chuỗi vị trí thành các phần
+            const parts = place.split(",").map(part => part.trim());
+            console.log(`Các phần vị trí: ${JSON.stringify(parts)}`);
+
+            let province = null;
+            for (let part of parts) {
+                if (part === "Vietnam") continue;
+
+                province = provinces.find(p => p.name === part);
                 if (province) {
-                    console.log(`Ánh xạ ${part} tới tỉnh: ${province.name} (${province.code})`);
+                    console.log(`Tìm thấy tỉnh trong phần: ${province.name} (${province.code})`);
                     break;
                 }
-            }
-        }
 
-        if (!province && place !== "Không xác định") {
-            province = provinces.find(p => p.name === place);
-            if (province) {
-                console.log(`Tìm thấy tỉnh trong chuỗi dự phòng: ${province.name} (${province.code})`);
-            } else if (districtToProvince[place]) {
-                province = provinces.find(p => p.name === districtToProvince[place]);
-                if (province) {
-                    console.log(`Ánh xạ dự phòng ${place} tới tỉnh: ${province.name} (${province.code})`);
+                if (districtToProvince[part]) {
+                    province = provinces.find(p => p.name === districtToProvince[part]);
+                    if (province) {
+                        console.log(`Ánh xạ ${part} tới tỉnh: ${province.name} (${province.code})`);
+                        break;
+                    }
                 }
             }
-        }
 
-        // Lưu thông tin vị trí theo username (ghi đè nếu trùng)
-        if (province) {
-            if (!usersByProvince[province.code]) usersByProvince[province.code] = new Set();
-            usersByProvince[province.code].add(node.username);
-            identifiedUsersSet.add(node.username);
-            userLocations.set(node.username, { province });
-        } else if (place !== "Không xác định") {
-            console.log(`Không xác định vị trí: ${place}`);
-            const isAbroad = parts.some(part =>
-                part.trim() !== "Vietnam" &&
-                !provinces.some(p => p.name === part.trim()) &&
-                !Object.keys(districtToProvince).includes(part.trim())
-            );
-            if (isAbroad) {
-                console.log(`Đánh dấu ở nước ngoài: ${place}`);
-                usersAbroad.add(node.username);
-                userLocations.set(node.username, { place: "Abroad" });
+            if (!province && place !== "Không xác định") {
+                province = provinces.find(p => p.name === place);
+                if (province) {
+                    console.log(`Tìm thấy tỉnh trong chuỗi dự phòng: ${province.name} (${province.code})`);
+                } else if (districtToProvince[place]) {
+                    province = provinces.find(p => p.name === districtToProvince[place]);
+                    if (province) {
+                        console.log(`Ánh xạ dự phòng ${place} tới tỉnh: ${province.name} (${province.code})`);
+                    }
+                }
+            }
+
+            // Lưu thông tin vị trí theo username (ghi đè nếu trùng)
+            if (province) {
+                if (!usersByProvince[province.code]) usersByProvince[province.code] = new Set();
+                usersByProvince[province.code].add(node.username);
+                identifiedUsersSet.add(node.username);
+                userLocations.set(node.username, { province });
+            } else if (place !== "Không xác định") {
+                console.log(`Không xác định vị trí: ${place}`);
+                const isAbroad = parts.some(part =>
+                    part.trim() !== "Vietnam" &&
+                    !provinces.some(p => p.name === part.trim()) &&
+                    !Object.keys(districtToProvince).includes(part.trim())
+                );
+                if (isAbroad) {
+                    console.log(`Đánh dấu ở nước ngoài: ${place}`);
+                    usersAbroad.add(node.username);
+                    userLocations.set(node.username, { place: "Abroad" });
+                } else {
+                    userLocations.set(node.username, { place: "Không xác định" });
+                }
             } else {
                 userLocations.set(node.username, { place: "Không xác định" });
             }
-        } else {
-            userLocations.set(node.username, { place: "Không xác định" });
-        }
 
-        if (node.children) {
-            node.children.forEach(child => traverseTree(child));
-        }
-    }
-    traverseTree(jsonData.tree_data);
-
-    // Tạo danh sách người dùng không xác định
-    const unidentifiedUsersSet = new Set([...allUsers].filter(username => !identifiedUsersSet.has(username) && !usersAbroad.has(username)));
-
-    // Log để kiểm tra
-    console.log("Users by Province:", usersByProvince);
-    console.log("Users Abroad:", Array.from(usersAbroad));
-    console.log("Unidentified Users:", Array.from(unidentifiedUsersSet));
-
-    // Chuyển Set thành mảng
-    for (const stateCode in usersByProvince) {
-        usersByProvince[stateCode] = Array.from(usersByProvince[stateCode]);
-    }
-
-    // Khởi tạo state_specific
-    provinces.forEach(prov => {
-        if (!simplemaps_countrymap_mapdata.state_specific[prov.code]) {
-            console.warn(`Khởi tạo state_specific cho ${prov.code}`);
-            simplemaps_countrymap_mapdata.state_specific[prov.code] = {
-                name: prov.name,
-                description: "Không có thông tin",
-                color: "#D3D3D3"
-            };
-        } else {
-            if (!simplemaps_countrymap_mapdata.state_specific[prov.code].description || simplemaps_countrymap_mapdata.state_specific[prov.code].description.trim() === "") {
-                simplemaps_countrymap_mapdata.state_specific[prov.code].description = "Không có thông tin";
+            if (node.children) {
+                node.children.forEach(child => traverseTree(child));
             }
         }
-    });
+        traverseTree(jsonData.tree_data);
 
-    // Cập nhật cấu hình bản đồ
-    for (const stateCode in usersByProvince) {
-        const users = usersByProvince[stateCode].filter(user => user);
-        simplemaps_countrymap_mapdata.state_specific[stateCode].color = "#ebe834";
-        simplemaps_countrymap_mapdata.state_specific[stateCode].description = users.length > 0 ? `Người dùng: ${users.join(", ")}` : "Không có thông tin";
-    }
+        // Tạo danh sách người dùng không xác định
+        const unidentifiedUsersSet = new Set([...allUsers].filter(username => !identifiedUsersSet.has(username) && !usersAbroad.has(username)));
 
-    // Tính số người dùng
-    const usersWithLocationCount = usersWithLocation.size;
-    const identifiedUsersCount = identifiedUsersSet.size;
-    const usersAbroadCount = usersAbroad.size;
-    const unidentifiedUsers = totalUsers - identifiedUsersCount - usersAbroadCount;
+        // Log để kiểm tra
+        console.log("Users by Province:", usersByProvince);
+        console.log("Users Abroad:", Array.from(usersAbroad));
+        console.log("Unidentified Users:", Array.from(unidentifiedUsersSet));
 
-    // Hiển thị thống kê với tên người dùng
-    const statsContent = document.getElementById("stats-content");
-    let statsHTML = "<ul>";
-    for (const stateCode in usersByProvince) {
-        const provinceName = provinces.find(p => p.code === stateCode).name;
-        const userCount = usersByProvince[stateCode].length;
-        const userList = usersByProvince[stateCode].join(", ");
-        statsHTML += `<li>${provinceName}: ${userCount} người dùng${userCount > 0 ? ` (${userList})` : ""}</li>`;
-    }
-    statsHTML += `<li>Ở nước ngoài: ${usersAbroadCount} người dùng${usersAbroadCount > 0 ? ` (${Array.from(usersAbroad).join(", ")})` : ""}</li>`;
-    statsHTML += `<li>Không xác định: ${unidentifiedUsers} người dùng${unidentifiedUsers > 0 ? ` (${Array.from(unidentifiedUsersSet).join(", ")})` : ""}</li>`;
-    statsHTML += "</ul>";
-    statsContent.innerHTML = statsHTML;
-
-    // Cập nhật legend
-    simplemaps_countrymap_mapdata.legend.entries = [
-        { name: "Có người dùng", color: "#ebe834" },
-        { name: "Không có người dùng", color: "#D3D3D3" }
-    ];
-
-    const provincePaths = simplemaps_countrymap_mapinfo.paths;
-
-    provinces.forEach((prov) => {
-        const bbox = stateBbox[prov.code];
-        if (bbox) {
-            const { x, y, x2, y2, cx, cy } = bbox;
-            simplemaps.states[prov.code] = {
-                name: prov.name,
-                path: provincePaths[prov.code] || `M${x},${y} L${x2},${y} L${x2},${y2} L${x},${y2} Z`,
-                centroid: [cx, cy]
-            };
-        } else {
-            console.warn(`Không có bbox cho tỉnh ${prov.code}`);
-        }
-    });
-
-    function simplemaps_countrymap() {
-        const mapDiv = document.getElementById(simplemaps_countrymap_mapdata.main_settings.div);
-        if (!mapDiv) {
-            console.error("Không tìm thấy div #map");
-            return;
+        // Chuyển Set thành mảng
+        for (const stateCode in usersByProvince) {
+            usersByProvince[stateCode] = Array.from(usersByProvince[stateCode]);
         }
 
-        const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        svg.setAttribute("width", "100%");
-        svg.setAttribute("height", "1000");
-        const initialViewBox = { x: 0, y: 0, width: 1000, height: 1000 };
-        svg.setAttribute("viewBox", `${initialViewBox.x} ${initialViewBox.y} ${initialViewBox.width} ${initialViewBox.height}`);
-        mapDiv.appendChild(svg);
-
-        let isDragging = false;
-        let startX, startY;
-        let viewBox = { ...initialViewBox };
-
-        svg.addEventListener("mousedown", function(e) {
-            isDragging = true;
-            startX = e.clientX;
-            startY = e.clientY;
-        });
-
-        svg.addEventListener("mousemove", function(e) {
-            if (!isDragging) return;
-            const dx = (e.clientX - startX) * (viewBox.width / svg.clientWidth);
-            const dy = (e.clientY - startY) * (viewBox.height / svg.clientHeight);
-            viewBox.x -= dx;
-            viewBox.y -= dy;
-            svg.setAttribute("viewBox", `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
-            startX = e.clientX;
-            startY = e.clientY;
-        });
-
-        svg.addEventListener("mouseup", function() {
-            isDragging = false;
-        });
-        svg.addEventListener("mouseleave", function() {
-            isDragging = false;
-        });
-
-        svg.addEventListener("wheel", function(e) {
-            e.preventDefault();
-            const zoomFactor = 0.1;
-            const minWidth = 200;
-            const maxWidth = 2000;
-            const oldWidth = viewBox.width;
-            const oldHeight = viewBox.height;
-            let newWidth = oldWidth;
-            let newHeight = oldHeight;
-
-            if (e.deltaY < 0) {
-                newWidth = oldWidth * (1 - zoomFactor);
-                newHeight = oldHeight * (1 - zoomFactor);
+        // Khởi tạo state_specific
+        provinces.forEach(prov => {
+            if (!simplemaps_countrymap_mapdata.state_specific[prov.code]) {
+                console.warn(`Khởi tạo state_specific cho ${prov.code}`);
+                simplemaps_countrymap_mapdata.state_specific[prov.code] = {
+                    name: prov.name,
+                    description: "Không có thông tin",
+                    color: "#D3D3D3"
+                };
             } else {
-                newWidth = oldWidth * (1 + zoomFactor);
-                newHeight = oldHeight * (1 + zoomFactor);
+                if (!simplemaps_countrymap_mapdata.state_specific[prov.code].description || simplemaps_countrymap_mapdata.state_specific[prov.code].description.trim() === "") {
+                    simplemaps_countrymap_mapdata.state_specific[prov.code].description = "Không có thông tin";
+                }
             }
-
-            if (newWidth < minWidth) {
-                newWidth = minWidth;
-                newHeight = minWidth * (initialViewBox.height / initialViewBox.width);
-            }
-            if (newWidth > maxWidth) {
-                newWidth = maxWidth;
-                newHeight = maxWidth * (initialViewBox.height / initialViewBox.width);
-            }
-
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
-            const rect = svg.getBoundingClientRect();
-            const mouseSvgX = ((mouseX - rect.left) / rect.width) * oldWidth + viewBox.x;
-            const mouseSvgY = ((mouseY - rect.top) / rect.height) * oldHeight + viewBox.y;
-            const newMouseSvgX = ((mouseX - rect.left) / rect.width) * newWidth + viewBox.x;
-            const newMouseSvgY = ((mouseY - rect.top) / rect.height) * newHeight + viewBox.y;
-
-            viewBox.x += (mouseSvgX - newMouseSvgX);
-            viewBox.y += (mouseSvgY - newMouseSvgY);
-            viewBox.width = newWidth;
-            viewBox.height = newHeight;
-
-            svg.setAttribute("viewBox", `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
         });
 
-        for (const stateCode in simplemaps.states) {
-            const state = simplemaps.states[stateCode];
-            const stateConfig = simplemaps_countrymap_mapdata.state_specific[stateCode] || {};
-            const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-            path.setAttribute("d", state.path);
-            path.setAttribute("fill", stateConfig.color || "#D3D3D3");
-            path.setAttribute("stroke", simplemaps_countrymap_mapdata.main_settings.border_color);
-            path.setAttribute("stroke-width", simplemaps_countrymap_mapdata.main_settings.border_size);
-
-            path.addEventListener("mouseover", function(e) {
-                this.setAttribute("fill", stateConfig.hover_color || "#A9A9A9");
-                const popup = document.createElement("div");
-                popup.className = "simplemaps_popup";
-                popup.style.position = "absolute";
-                popup.style.background = simplemaps_countrymap_mapdata.main_settings.popup_color;
-                popup.style.opacity = simplemaps_countrymap_mapdata.main_settings.popup_opacity;
-                popup.style.padding = "5px";
-                popup.style.borderRadius = simplemaps_countrymap_mapdata.main_settings.popup_corners + "px";
-                popup.style.font = simplemaps_countrymap_mapdata.main_settings.popup_font;
-                const description = (stateConfig.description && stateConfig.description.trim() !== "" && stateConfig.description !== "Không có thông tin") ? stateConfig.description : "Không có thông tin";
-                popup.innerHTML = description;
-                popup.style.left = e.pageX + 30 + "px";
-                popup.style.top = e.pageY + 10 + "px";
-                document.body.appendChild(popup);
-            });
-
-            path.addEventListener("mouseout", function() {
-                this.setAttribute("fill", stateConfig.color || "#D3D3D3");
-                const popups = document.getElementsByClassName("simplemaps_popup");
-                while (popups[0]) popups[0].parentNode.removeChild(popups[0]);
-            });
-
-            svg.appendChild(path);
-
-            const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            text.setAttribute("x", state.centroid[0]);
-            text.setAttribute("y", state.centroid[1]);
-            text.setAttribute("text-anchor", "middle");
-            text.setAttribute("font-size", "10px");
-            text.setAttribute("fill", simplemaps_countrymap_mapdata.main_settings.label_color);
-            text.textContent = state.name;
-            svg.appendChild(text);
+        // Cập nhật cấu hình bản đồ
+        for (const stateCode in usersByProvince) {
+            const users = usersByProvince[stateCode].filter(user => user);
+            simplemaps_countrymap_mapdata.state_specific[stateCode].color = "#ebe834";
+            simplemaps_countrymap_mapdata.state_specific[stateCode].description = users.length > 0 ? `Người dùng: ${users.join(", ")}` : "Không có thông tin";
         }
 
-        simplemaps.locations.forEach(loc => {
-            const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            circle.setAttribute("cx", loc.x);
-            circle.setAttribute("cy", loc.y);
-            circle.setAttribute("r", simplemaps_countrymap_mapdata.main_settings.location_size / 5);
-            circle.setAttribute("fill", simplemaps_countrymap_mapdata.main_settings.location_color);
-            circle.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_opacity);
-            circle.setAttribute("stroke", simplemaps_countrymap_mapdata.main_settings.location_border_color);
-            circle.setAttribute("stroke-width", simplemaps_countrymap_mapdata.main_settings.location_border);
+        // Tính số người dùng
+        const usersWithLocationCount = usersWithLocation.size;
+        const identifiedUsersCount = identifiedUsersSet.size;
+        const usersAbroadCount = usersAbroad.size;
+        const unidentifiedUsers = totalUsers - identifiedUsersCount - usersAbroadCount;
 
-            circle.addEventListener("mouseover", function(e) {
-                this.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_hover_opacity);
-                const popup = document.createElement("div");
-                popup.className = "simplemaps_popup";
-                popup.style.position = "absolute";
-                popup.style.background = simplemaps_countrymap_mapdata.main_settings.popup_color;
-                popup.style.opacity = simplemaps_countrymap_mapdata.main_settings.popup_opacity;
-                popup.style.padding = "5px";
-                popup.style.borderRadius = simplemaps_countrymap_mapdata.main_settings.popup_corners + "px";
-                popup.style.font = simplemaps_countrymap_mapdata.main_settings.popup_font;
-                popup.innerHTML = loc.description || loc.name;
-                popup.style.left = e.pageX + 30 + "px";
-                popup.style.top = e.pageY + 10 + "px";
-                document.body.appendChild(popup);
-            });
+        // Hiển thị thống kê với tên người dùng
+        const statsContent = document.getElementById("stats-content");
+        let statsHTML = "<ul>";
+        for (const stateCode in usersByProvince) {
+            const provinceName = provinces.find(p => p.code === stateCode).name;
+            const userCount = usersByProvince[stateCode].length;
+            const userList = usersByProvince[stateCode].join(", ");
+            statsHTML += `<li>${provinceName}: ${userCount} người dùng${userCount > 0 ? ` (${userList})` : ""}</li>`;
+        }
+        statsHTML += `<li>Ở nước ngoài: ${usersAbroadCount} người dùng${usersAbroadCount > 0 ? ` (${Array.from(usersAbroad).join(", ")})` : ""}</li>`;
+        statsHTML += `<li>Không xác định: ${unidentifiedUsers} người dùng${unidentifiedUsers > 0 ? ` (${Array.from(unidentifiedUsersSet).join(", ")})` : ""}</li>`;
+        statsHTML += "</ul>";
+        statsContent.innerHTML = statsHTML;
 
-            circle.addEventListener("mouseout", function() {
-                this.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_opacity);
-                const popups = document.getElementsByClassName("simplemaps_popup");
-                while (popups[0]) popups[0].parentNode.removeChild(popups[0]);
-            });
+        // Cập nhật legend
+        simplemaps_countrymap_mapdata.legend.entries = [
+            { name: "Có người dùng", color: "#ebe834" },
+            { name: "Không có người dùng", color: "#D3D3D3" }
+        ];
 
-            svg.appendChild(circle);
+        const provincePaths = simplemaps_countrymap_mapinfo.paths;
+
+        provinces.forEach((prov) => {
+            const bbox = stateBbox[prov.code];
+            if (bbox) {
+                const { x, y, x2, y2, cx, cy } = bbox;
+                simplemaps.states[prov.code] = {
+                    name: prov.name,
+                    path: provincePaths[prov.code] || `M${x},${y} L${x2},${y} L${x2},${y2} L${x},${y2} Z`,
+                    centroid: [cx, cy]
+                };
+            } else {
+                console.warn(`Không có bbox cho tỉnh ${prov.code}`);
+            }
         });
 
-        const legend = simplemaps_countrymap_mapdata.legend.entries;
-        let yOffset = 20;
-        legend.forEach(entry => {
-            const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
-            const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-            rect.setAttribute("x", "20");
-            rect.setAttribute("y", yOffset.toString());
-            rect.setAttribute("width", "15");
-            rect.setAttribute("height", "15");
-            rect.setAttribute("fill", entry.color);
-            group.appendChild(rect);
+        function simplemaps_countrymap() {
+            const mapDiv = document.getElementById(simplemaps_countrymap_mapdata.main_settings.div);
+            if (!mapDiv) {
+                console.error("Không tìm thấy div #map");
+                return;
+            }
 
-            const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            text.setAttribute("x", "40");
-            text.setAttribute("y", (yOffset + 12).toString());
-            text.setAttribute("font-size", "12px");
-            text.textContent = entry.name;
-            group.appendChild(text);
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.setAttribute("width", "100%");
+            svg.setAttribute("height", "1000");
+            const initialViewBox = { x: 0, y: 0, width: 1000, height: 1000 };
+            svg.setAttribute("viewBox", `${initialViewBox.x} ${initialViewBox.y} ${initialViewBox.width} ${initialViewBox.height}`);
+            mapDiv.appendChild(svg);
 
-            svg.appendChild(group);
-            yOffset += 20;
-        });
-    }
+            let isDragging = false;
+            let startX, startY;
+            let viewBox = { ...initialViewBox };
 
-    simplemaps_countrymap();
-</script>
+            svg.addEventListener("mousedown", function(e) {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+
+            svg.addEventListener("mousemove", function(e) {
+                if (!isDragging) return;
+                const dx = (e.clientX - startX) * (viewBox.width / svg.clientWidth);
+                const dy = (e.clientY - startY) * (viewBox.height / svg.clientHeight);
+                viewBox.x -= dx;
+                viewBox.y -= dy;
+                svg.setAttribute("viewBox", `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+
+            svg.addEventListener("mouseup", function() {
+                isDragging = false;
+            });
+            svg.addEventListener("mouseleave", function() {
+                isDragging = false;
+            });
+
+            svg.addEventListener("wheel", function(e) {
+                e.preventDefault();
+                const zoomFactor = 0.1;
+                const minWidth = 200;
+                const maxWidth = 2000;
+                const oldWidth = viewBox.width;
+                const oldHeight = viewBox.height;
+                let newWidth = oldWidth;
+                let newHeight = oldHeight;
+
+                if (e.deltaY < 0) {
+                    newWidth = oldWidth * (1 - zoomFactor);
+                    newHeight = oldHeight * (1 - zoomFactor);
+                } else {
+                    newWidth = oldWidth * (1 + zoomFactor);
+                    newHeight = oldHeight * (1 + zoomFactor);
+                }
+
+                if (newWidth < minWidth) {
+                    newWidth = minWidth;
+                    newHeight = minWidth * (initialViewBox.height / initialViewBox.width);
+                }
+                if (newWidth > maxWidth) {
+                    newWidth = maxWidth;
+                    newHeight = maxWidth * (initialViewBox.height / initialViewBox.width);
+                }
+
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                const rect = svg.getBoundingClientRect();
+                const mouseSvgX = ((mouseX - rect.left) / rect.width) * oldWidth + viewBox.x;
+                const mouseSvgY = ((mouseY - rect.top) / rect.height) * oldHeight + viewBox.y;
+                const newMouseSvgX = ((mouseX - rect.left) / rect.width) * newWidth + viewBox.x;
+                const newMouseSvgY = ((mouseY - rect.top) / rect.height) * newHeight + viewBox.y;
+
+                viewBox.x += (mouseSvgX - newMouseSvgX);
+                viewBox.y += (mouseSvgY - newMouseSvgY);
+                viewBox.width = newWidth;
+                viewBox.height = newHeight;
+
+                svg.setAttribute("viewBox", `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`);
+            });
+
+            for (const stateCode in simplemaps.states) {
+                const state = simplemaps.states[stateCode];
+                const stateConfig = simplemaps_countrymap_mapdata.state_specific[stateCode] || {};
+                const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+                path.setAttribute("d", state.path);
+                path.setAttribute("fill", stateConfig.color || "#D3D3D3");
+                path.setAttribute("stroke", simplemaps_countrymap_mapdata.main_settings.border_color);
+                path.setAttribute("stroke-width", simplemaps_countrymap_mapdata.main_settings.border_size);
+
+                path.addEventListener("mouseover", function(e) {
+                    this.setAttribute("fill", stateConfig.hover_color || "#A9A9A9");
+                    const popup = document.createElement("div");
+                    popup.className = "simplemaps_popup";
+                    popup.style.position = "absolute";
+                    popup.style.background = simplemaps_countrymap_mapdata.main_settings.popup_color;
+                    popup.style.opacity = simplemaps_countrymap_mapdata.main_settings.popup_opacity;
+                    popup.style.padding = "5px";
+                    popup.style.borderRadius = simplemaps_countrymap_mapdata.main_settings.popup_corners + "px";
+                    popup.style.font = simplemaps_countrymap_mapdata.main_settings.popup_font;
+                    const description = (stateConfig.description && stateConfig.description.trim() !== "" && stateConfig.description !== "Không có thông tin") ? stateConfig.description : "Không có thông tin";
+                    popup.innerHTML = description;
+                    popup.style.left = e.pageX + 30 + "px";
+                    popup.style.top = e.pageY + 10 + "px";
+                    document.body.appendChild(popup);
+                });
+
+                path.addEventListener("mouseout", function() {
+                    this.setAttribute("fill", stateConfig.color || "#D3D3D3");
+                    const popups = document.getElementsByClassName("simplemaps_popup");
+                    while (popups[0]) popups[0].parentNode.removeChild(popups[0]);
+                });
+
+                svg.appendChild(path);
+
+                const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                text.setAttribute("x", state.centroid[0]);
+                text.setAttribute("y", state.centroid[1]);
+                text.setAttribute("text-anchor", "middle");
+                text.setAttribute("font-size", "10px");
+                text.setAttribute("fill", simplemaps_countrymap_mapdata.main_settings.label_color);
+                text.textContent = state.name;
+                svg.appendChild(text);
+            }
+
+            simplemaps.locations.forEach(loc => {
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                circle.setAttribute("cx", loc.x);
+                circle.setAttribute("cy", loc.y);
+                circle.setAttribute("r", simplemaps_countrymap_mapdata.main_settings.location_size / 5);
+                circle.setAttribute("fill", simplemaps_countrymap_mapdata.main_settings.location_color);
+                circle.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_opacity);
+                circle.setAttribute("stroke", simplemaps_countrymap_mapdata.main_settings.location_border_color);
+                circle.setAttribute("stroke-width", simplemaps_countrymap_mapdata.main_settings.location_border);
+
+                circle.addEventListener("mouseover", function(e) {
+                    this.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_hover_opacity);
+                    const popup = document.createElement("div");
+                    popup.className = "simplemaps_popup";
+                    popup.style.position = "absolute";
+                    popup.style.background = simplemaps_countrymap_mapdata.main_settings.popup_color;
+                    popup.style.opacity = simplemaps_countrymap_mapdata.main_settings.popup_opacity;
+                    popup.style.padding = "5px";
+                    popup.style.borderRadius = simplemaps_countrymap_mapdata.main_settings.popup_corners + "px";
+                    popup.style.font = simplemaps_countrymap_mapdata.main_settings.popup_font;
+                    popup.innerHTML = loc.description || loc.name;
+                    popup.style.left = e.pageX + 30 + "px";
+                    popup.style.top = e.pageY + 10 + "px";
+                    document.body.appendChild(popup);
+                });
+
+                circle.addEventListener("mouseout", function() {
+                    this.setAttribute("opacity", simplemaps_countrymap_mapdata.main_settings.location_opacity);
+                    const popups = document.getElementsByClassName("simplemaps_popup");
+                    while (popups[0]) popups[0].parentNode.removeChild(popups[0]);
+                });
+
+                svg.appendChild(circle);
+            });
+
+            // Hiển thị chú thích trong div cố định
+            const legend = simplemaps_countrymap_mapdata.legend.entries;
+            const legendContent = document.getElementById("legend-content");
+            let legendHTML = "";
+            legend.forEach(entry => {
+                legendHTML += `
+                    <div class="legend-entry">
+                        <span class="legend-color" style="background-color: ${entry.color};"></span>
+                        ${entry.name}
+                    </div>
+                `;
+            });
+            legendContent.innerHTML = legendHTML;
+        }
+
+        simplemaps_countrymap();
+    </script>
 </body>
 </html>
