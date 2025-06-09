@@ -110,8 +110,6 @@ class FacebookProfileCrawler(CustomBaseFacebookScraper):
                 if username and username != "Thông báo" and 2 <= len(username) <= 50:
                     rprint(f"[green]✓ Đã lấy được tên người dùng: {username}[/green]")
                     return username
-                else:
-                    rprint(f"[yellow]H1 #{idx+1} bị loại: '{username}'[/yellow]")
 
             rprint("[red]✘ Không tìm thấy tên người dùng hợp lệ[/red]")
             return ""
