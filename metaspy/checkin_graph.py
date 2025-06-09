@@ -17,7 +17,8 @@ def main():
         try:
             creation_time = os.path.getctime(file_path)
             time_str = datetime.fromtimestamp(creation_time).strftime("%d/%m/%Y %H:%M:%S")
-        except:
+        except ValueError as e:
+            rprint(f"❌ Lỗi khi định dạng thời gian cho file {file_path}: {e}")
             time_str = "Không xác định"
         rprint(f"{i}. [bold]{file_path}[/bold] (tạo lúc {time_str})")
     
