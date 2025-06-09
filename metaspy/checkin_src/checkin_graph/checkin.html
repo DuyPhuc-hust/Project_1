@@ -1,154 +1,191 @@
 <!DOCTYPE html>
-<html lang="vi"></html>
+<html lang="vi">
 <head>
-  <title>Biểu đồ Check-in</title>
-  <script src="https://visjs.github.io/vis-network/standalone/umd/vis-network.min.js"></script>
-  <style>
-    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    #mynetwork { width: 100%; height: 100vh; border: 1px solid lightgray; }
-    #custom-tooltip { position: absolute; display: none; padding: 10px; background-color: white; border-radius: 4px; border: 1px solid #d3d3d3; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); z-index: 10000; max-width: 300px; pointer-events: auto; }
-    .node-tooltip { padding: 10px; background-color: #ffffff; border-radius: 4px; }
-    .node-tooltip-header { font-weight: bold; font-size: 16px; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1px solid #eaeaea; }
-    .node-tooltip-row { margin-bottom: 4px; }
-    .node-tooltip-label { font-weight: bold; display: inline-block; margin-right: 5px; }
-    #controls { position: absolute; top: 20px; right: 20px; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 1000; }
-    #controls button { margin: 2px; padding: 5px 10px; background: #28a745; color: white; border: none; border-radius: 3px; cursor: pointer; }
-    #controls button:hover { background: #218838; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biểu đồ Check-in</title>
+    <script src="https://visjs.github.io/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        #mynetwork { width: 100%; height: 100vh; border: 1px solid lightgray; }
+        #custom-tooltip { 
+            position: absolute; 
+            display: none; 
+            padding: 10px; 
+            background-color: white; 
+            border-radius: 4px; 
+            border: 1px solid #d3d3d3; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            z-index: 10000; 
+            max-width: 300px; 
+            pointer-events: auto; 
+        }
+        .node-tooltip { padding: 10px; background-color: #ffffff; border-radius: 4px; }
+        .node-tooltip-header { font-weight: bold; font-size: 16px; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1px solid #eaeaea; }
+        .node-tooltip-row { margin-bottom: 4px; }
+        .node-tooltip-label { font-weight: bold; display: inline-block; margin-right: 5px; }
+        #controls { 
+            position: absolute; 
+            top: 20px; 
+            right: 20px; 
+            background: white; 
+            padding: 10px; 
+            border-radius: 5px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+            z-index: 1000; 
+        }
+        #controls button { 
+            margin: 2px; 
+            padding: 5px 10px; 
+            background: #28a745; 
+            color: white; 
+            border: none; 
+            border-radius: 3px; 
+            cursor: pointer; 
+        }
+        #controls button:hover { background: #218838; }
+    </style>
 </head>
 <body>
-  <div id="mynetwork"></div>
-  <div id="custom-tooltip"></div>
-  
-  <script src="checkin_data.js"></script>
-  <script>
-    function extractNodesAndEdges(checkins) {
-      const nodes = [];
-      const edges = [];
-      const tooltips = {};
+    <div id="mynetwork"></div>
+    <div id="custom-tooltip"></div>
 
-      // Sắp xếp check-ins theo thời gian
-      checkins.sort((a, b) => {
-        const timeA = a.time.match(/(\d{1,2}) Tháng (\d{1,2}), (\d{4}) lúc (\d{1,2}):(\d{2})/);
-        const timeB = b.time.match(/(\d{1,2}) Tháng (\d{1,2}), (\d{4}) lúc (\d{1,2}):(\d{2})/);
-        if (timeA && timeB) {
-          const [, dayA, monthA, yearA, hourA, minuteA] = timeA;
-          const [, dayB, monthB, yearB, hourB, minuteB] = timeB;
-          return new Date(`${yearA}-${monthA.padStart(2, '0')}-${dayA.padStart(2, '0')}T${hourA.padStart(2, '0')}:${minuteA}:00`) - 
-                 new Date(`${yearB}-${monthB.padStart(2, '0')}-${dayB.padStart(2, '0')}T${hourB.padStart(2, '0')}:${minuteB}:00`);
+    <script src="checkin_data.js"></script>
+    <script>
+        function extractNodesAndEdges(checkins) {
+            const nodes = [];
+            const edges = [];
+            const tooltips = {};
+
+            // Sắp xếp check-ins theo thời gian
+            checkins.sort((a, b) => {
+                const timeA = a.time.match(/(\d{1,2}) Tháng (\d{1,2}), (\d{4}) lúc (\d{1,2}):(\d{2})/);
+                const timeB = b.time.match(/(\d{1,2}) Tháng (\d{1,2}), (\d{4}) lúc (\d{1,2}):(\d{2})/);
+                if (timeA && timeB) {
+                    const [, dayA, monthA, yearA, hourA, minuteA] = timeA;
+                    const [, dayB, monthB, yearB, hourB, minuteB] = timeB;
+                    return new Date(`${yearA}-${monthA.padStart(2, '0')}-${dayA.padStart(2, '0')}T${hourA.padStart(2, '0')}:${minuteA}:00`) -
+                           new Date(`${yearB}-${monthB.padStart(2, '0')}-${dayB.padStart(2, '0')}T${hourB.padStart(2, '0')}:${minuteB}:00`);
+                }
+                return 0;
+            });
+
+            // Tạo node và edge
+            checkins.forEach((checkin, index) => {
+                const nodeId = `checkin_${index}`;
+                const shortName = checkin.nameLocal.split(",")[0];
+                nodes.push({
+                    id: nodeId,
+                    label: shortName || "Không xác định",
+                    color: { background: '#007bff', border: '#0056b3', highlight: { background: '#3399ff', border: '#007bff' } },
+                    shape: 'dot',
+                    size: 20,
+                    borderWidth: 2,
+                    shadow: true
+                });
+
+                // Trích xuất thời gian
+                const timeMatch = checkin.time.match(/(\d{1,2}) Tháng (\d{1,2}), (\d{4}) lúc (\d{1,2}):(\d{2})/);
+                let formattedTime = "Không xác định";
+                if (timeMatch) {
+                    const [, day, month, year, hour, minute] = timeMatch;
+                    formattedTime = `${day}/${month}/${year} ${hour}:${minute}`;
+                }
+
+                // Tạo tooltip
+                tooltips[nodeId] = `
+                    <div class="node-tooltip">
+                        <div class="node-tooltip-header">${checkin.nameLocal || "Không xác định"}</div>
+                        <div class="node-tooltip-row"><span class="node-tooltip-label">Thời gian:</span> ${formattedTime}</div>
+                        <div class="node-tooltip-row"><span class="node-tooltip-label">Link bài viết:</span> <a href="${checkin.link || '#'}" target="_blank">Mở liên kết</a></div>
+                    </div>
+                `;
+
+                // Tạo edge
+                if (index > 0) {
+                    edges.push({
+                        from: `checkin_${index - 1}`,
+                        to: nodeId,
+                        width: 2,
+                        color: { color: '#848484', highlight: '#848484', hover: '#848484' },
+                        smooth: { type: 'curvedCW', roundness: 0.2 },
+                        arrows: { to: { enabled: true, scaleFactor: 0.5 } }
+                    });
+                }
+            });
+
+            return { nodes, edges, tooltips };
         }
-        return 0;
-      });
 
-      // Tạo node và edge
-      checkins.forEach((checkin, index) => {
-        const nodeId = `checkin_${index}`;
-        const shortName = checkin.nameLocal.split(",")[0];
-        nodes.push({
-          id: nodeId,
-          label: shortName,
-          color: { background: '#007bff', border: '#0056b3', highlight: { background: '#3399ff', border: '#007bff' } },
-          shape: 'dot',
-          size: 20,
-          borderWidth: 2,
-          shadow: true
-        });
+        // Khởi tạo mạng chỉ khi checkinData tồn tại
+        if (typeof checkinData !== 'undefined' && checkinData && checkinData.length > 0) {
+            const { nodes, edges, tooltips } = extractNodesAndEdges(checkinData);
+            const container = document.getElementById('mynetwork');
+            const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
+            
+            const options = {
+                nodes: { font: { size: 14, face: 'Arial', color: '#333333' }, borderWidth: 2, shadow: true },
+                edges: { width: 2, shadow: true, smooth: { type: 'curvedCW', roundness: 0.2 } },
+                interaction: { hover: true, hideEdgesOnDrag: true, multiselect: true },
+                physics: { enabled: true, barnesHut: { gravitationalConstant: -2000, centralGravity: 0.3, springLength: 150, springConstant: 0.04, damping: 0.09 }, stabilization: { iterations: 1000, updateInterval: 100 } },
+                layout: { improvedLayout: true, hierarchical: { enabled: false } }
+            };
+            
+            const network = new vis.Network(container, data, options);
+            const tooltipDiv = document.getElementById('custom-tooltip');
+            
+            network.on("hoverNode", function(params) {
+                const nodeId = params.node;
+                if (tooltips[nodeId]) {
+                    tooltipDiv.innerHTML = tooltips[nodeId];
+                    tooltipDiv.style.display = 'block';
+                    tooltipDiv.style.left = (params.event.clientX + 10) + 'px';
+                    tooltipDiv.style.top = (params.event.clientY + 10) + 'px';
+                }
+            });
 
-        // Trích xuất thời gian
-        const timeMatch = checkin.time.match(/(\d{1,2}) Tháng (\d{1,2}), (\d{4}) lúc (\d{1,2}):(\d{2})/);
-        let formattedTime = "Không xác định";
-        if (timeMatch) {
-          const [, day, month, year, hour, minute] = timeMatch;
-          formattedTime = `${day}/${month}/${year} ${hour}:${minute}`;
+            network.on("blurNode", function(params) { tooltipDiv.style.display = 'none'; });
+
+            document.body.insertAdjacentHTML('beforeend', `
+                <div id="controls">
+                    <button id="zoom-in">+</button>
+                    <button id="zoom-out">-</button>
+                    <button id="fit">Fit</button>
+                    <button id="toggle-physics">Tắt/Bật Physics</button>
+                    <button id="toggle-hierarchical">Chế độ phân cấp</button>
+                </div>
+            `);
+
+            document.getElementById('zoom-in').addEventListener('click', function() { network.zoomIn(0.2); });
+            document.getElementById('zoom-out').addEventListener('click', function() { network.zoomOut(0.2); });
+            document.getElementById('fit').addEventListener('click', function() { network.fit(); });
+            document.getElementById('toggle-physics').addEventListener('click', function() {
+                options.physics.enabled = !options.physics.enabled;
+                network.setOptions({ physics: { enabled: options.physics.enabled } });
+            });
+            document.getElementById('toggle-hierarchical').addEventListener('click', function() {
+                options.layout.hierarchical.enabled = !options.layout.hierarchical.enabled;
+                network.setOptions({ 
+                    layout: { 
+                        hierarchical: { enabled: options.layout.hierarchical.enabled, direction: 'UD', sortMethod: 'directed', nodeSpacing: 150, levelSeparation: 150 } 
+                    }
+                });
+            });
+
+            network.on("click", function(params) {
+                if (params.nodes.length > 0) {
+                    const nodeId = params.nodes[0];
+                    const index = parseInt(nodeId.split('_')[1]);
+                    if (checkinData[index]) {
+                        const checkin = checkinData[index];
+                        alert(`Địa điểm: ${checkin.nameLocal}\nThời gian: ${new Date(checkin.time).toLocaleString('vi-VN')}\nLink: ${checkin.link}`);
+                    }
+                }
+            });
+        } else {
+            document.getElementById('mynetwork').innerHTML = "<p>Không có dữ liệu check-in để hiển thị.</p>";
+            console.error("checkinData không được định nghĩa, rỗng hoặc không hợp lệ");
         }
-
-        // Tạo tooltip
-        tooltips[nodeId] = `
-          <div class="node-tooltip">
-            <div class="node-tooltip-header">${checkin.nameLocal}</div>
-            <div class="node-tooltip-row"><span class="node-tooltip-label">Thời gian:</span> ${formattedTime}</div>
-            <div class="node-tooltip-row"><span class="node-tooltip-label">Link bài viết:</span> <a href="${checkin.link}" target="_blank">Mở liên kết</a></div>
-          </div>
-        `;
-
-        // Tạo edge
-        if (index > 0) {
-          edges.push({
-            from: `checkin_${index - 1}`,
-            to: nodeId,
-            width: 2,
-            color: { color: '#848484', highlight: '#848484', hover: '#848484' },
-            smooth: { type: 'curvedCW', roundness: 0.2 },
-            arrows: { to: { enabled: true, scaleFactor: 0.5 } }
-          });
-        }
-      });
-
-      return { nodes, edges, tooltips };
-    }
-
-    const { nodes, edges, tooltips } = extractNodesAndEdges(checkinData);
-    const container = document.getElementById('mynetwork');
-    const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
-    
-    const options = {
-      nodes: { font: { size: 14, face: 'Arial', color: '#333333' }, borderWidth: 2, shadow: true },
-      edges: { width: 2, shadow: true, smooth: { type: 'curvedCW', roundness: 0.2 } },
-      interaction: { hover: true, hideEdgesOnDrag: true, multiselect: true },
-      physics: { enabled: true, barnesHut: { gravitationalConstant: -2000, centralGravity: 0.3, springLength: 150, springConstant: 0.04, damping: 0.09 }, stabilization: { iterations: 1000, updateInterval: 100 } },
-      layout: { improvedLayout: true, hierarchical: { enabled: false } }
-    };
-    
-    const network = new vis.Network(container, data, options);
-    const tooltipDiv = document.getElementById('custom-tooltip');
-    
-    network.on("hoverNode", function(params) {
-      const nodeId = params.node;
-      if (tooltips[nodeId]) {
-        tooltipDiv.innerHTML = tooltips[nodeId];
-        tooltipDiv.style.display = 'block';
-        tooltipDiv.style.left = (params.event.clientX + 10) + 'px';
-        tooltipDiv.style.top = (params.event.clientY + 10) + 'px';
-      }
-    });
-
-    network.on("blurNode", function(params) { tooltipDiv.style.display = 'none'; });
-
-    document.body.insertAdjacentHTML('beforeend', `
-      <div id="controls">
-        <button id="zoom-in">+</button>
-        <button id="zoom-out">-</button>
-        <button id="fit">Fit</button>
-        <button id="toggle-physics">Tắt/Bật Physics</button>
-        <button id="toggle-hierarchical">Chế độ phân cấp</button>
-      </div>
-    `);
-
-    document.getElementById('zoom-in').addEventListener('click', function() { network.zoomIn(0.2); });
-    document.getElementById('zoom-out').addEventListener('click', function() { network.zoomOut(0.2); });
-    document.getElementById('fit').addEventListener('click', function() { network.fit(); });
-    document.getElementById('toggle-physics').addEventListener('click', function() {
-      options.physics.enabled = !options.physics.enabled;
-      network.setOptions({ physics: { enabled: options.physics.enabled } });
-    });
-    document.getElementById('toggle-hierarchical').addEventListener('click', function() {
-      options.layout.hierarchical.enabled = !options.layout.hierarchical.enabled;
-      network.setOptions({ 
-        layout: { 
-          hierarchical: { enabled: options.layout.hierarchical.enabled, direction: 'UD', sortMethod: 'directed', nodeSpacing: 150, levelSeparation: 150 } 
-        }
-      });
-    });
-
-    network.on("click", function(params) {
-      if (params.nodes.length > 0) {
-        const nodeId = params.nodes[0];
-        const checkin = checkinData[parseInt(nodeId.split('_')[1])];
-        if (checkin) {
-          alert(`Địa điểm: ${checkin.nameLocal}\nThời gian: ${new Date(checkin.time).toLocaleString('vi-VN')}\nLink: ${checkin.link}`);
-        }
-      }
-    });
-  </script>
+    </script>
 </body>
 </html>
