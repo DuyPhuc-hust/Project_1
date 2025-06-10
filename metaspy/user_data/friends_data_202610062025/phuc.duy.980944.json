@@ -1,0 +1,32 @@
+{
+    "root_user": "phuc.duy.980944",
+    "max_layers": 1,
+    "friends_per_node_per_layer": [
+        1,
+        1
+    ],
+    "crawled_at": "2025-06-10 20:27:20",
+    "total_accounts": 3,
+    "tree_data": {
+        "id": "phuc.duy.980944",
+        "profile_url": "https://www.facebook.com/phuc.duy.980944",
+        "layer": 0,
+        "children": [
+            {
+                "id": "le.huynh.2222",
+                "username": "le.huynh.2222",
+                "profile_url": "https://www.facebook.com/le.huynh.2222",
+                "layer": 1,
+                "children": [
+                    {
+                        "id": "duy.phuc.849518",
+                        "username": "duy.phuc.849518",
+                        "profile_url": "https://www.facebook.com/duy.phuc.849518",
+                        "layer": 2,
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

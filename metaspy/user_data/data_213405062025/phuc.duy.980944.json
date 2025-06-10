@@ -1,4 +1,4 @@
-const jsonData = {
+{
   "root_user": "phuc.duy.980944",
   "max_layers": 2,
   "friends_per_node_per_layer": [
@@ -1698,4 +1698,4 @@ const jsonData = {
     },
     "relationship_mark": "root"
   }
-};
+}

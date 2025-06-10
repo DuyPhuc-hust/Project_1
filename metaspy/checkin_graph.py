@@ -20,7 +20,7 @@ def main():
         except ValueError as e:
             rprint(f"❌ Lỗi khi định dạng thời gian cho file {file_path}: {e}")
             time_str = "Không xác định"
-        rprint(f"{i}. [bold]{file_path}[/bold] (tạo lúc {time_str})")
+        rprint(f"{i}. [bold]{file_path}[/bold]")
     
     choice = typer.prompt("Chọn số thứ tự file để xuất dữ liệu", type=int)
     

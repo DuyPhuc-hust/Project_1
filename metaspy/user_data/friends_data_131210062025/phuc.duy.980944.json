@@ -1,0 +1,299 @@
+{
+    "root_user": "phuc.duy.980944",
+    "max_layers": 2,
+    "friends_per_node_per_layer": [
+        4,
+        3,
+        2
+    ],
+    "crawled_at": "2025-06-10 13:17:29",
+    "total_accounts": 39,
+    "tree_data": {
+        "id": "phuc.duy.980944",
+        "profile_url": "https://www.facebook.com/phuc.duy.980944",
+        "layer": 0,
+        "children": [
+            {
+                "id": "le.huynh.2222",
+                "username": "le.huynh.2222",
+                "profile_url": "https://www.facebook.com/le.huynh.2222",
+                "layer": 1,
+                "children": [
+                    {
+                        "id": "duy.phuc.849518",
+                        "username": "duy.phuc.849518",
+                        "profile_url": "https://www.facebook.com/duy.phuc.849518",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "havy.pham.75248795",
+                                "username": "havy.pham.75248795",
+                                "profile_url": "https://www.facebook.com/havy.pham.75248795",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "hungquang.oo5",
+                                "username": "hungquang.oo5",
+                                "profile_url": "https://www.facebook.com/hungquang.oo5",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "havy.pham.75248795",
+                        "username": "havy.pham.75248795",
+                        "profile_url": "https://www.facebook.com/havy.pham.75248795",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "Thudey4",
+                                "username": "Thudey4",
+                                "profile_url": "https://www.facebook.com/Thudey4",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "jisanghuk",
+                                "username": "jisanghuk",
+                                "profile_url": "https://www.facebook.com/jisanghuk",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "ty.dy.870715",
+                        "username": "ty.dy.870715",
+                        "profile_url": "https://www.facebook.com/ty.dy.870715",
+                        "layer": 2,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "hoang.quangduy.54",
+                "username": "hoang.quangduy.54",
+                "profile_url": "https://www.facebook.com/hoang.quangduy.54",
+                "layer": 1,
+                "children": [
+                    {
+                        "id": "duy.phuc.849518",
+                        "username": "duy.phuc.849518",
+                        "profile_url": "https://www.facebook.com/duy.phuc.849518",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "havy.pham.75248795",
+                                "username": "havy.pham.75248795",
+                                "profile_url": "https://www.facebook.com/havy.pham.75248795",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "hungquang.oo5",
+                                "username": "hungquang.oo5",
+                                "profile_url": "https://www.facebook.com/hungquang.oo5",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "phuc.duy.980944",
+                        "username": "phuc.duy.980944",
+                        "profile_url": "https://www.facebook.com/phuc.duy.980944",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "le.huynh.2222",
+                                "username": "le.huynh.2222",
+                                "profile_url": "https://www.facebook.com/le.huynh.2222",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "hoang.quangduy.54",
+                                "username": "hoang.quangduy.54",
+                                "profile_url": "https://www.facebook.com/hoang.quangduy.54",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "frenkie.truong",
+                        "username": "frenkie.truong",
+                        "profile_url": "https://www.facebook.com/frenkie.truong",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "tung.nguyen.hoang.512448",
+                                "username": "tung.nguyen.hoang.512448",
+                                "profile_url": "https://www.facebook.com/tung.nguyen.hoang.512448",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "thanhbangduyduong",
+                                "username": "thanhbangduyduong",
+                                "profile_url": "https://www.facebook.com/thanhbangduyduong",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "trung.buiquoc.3154",
+                "username": "trung.buiquoc.3154",
+                "profile_url": "https://www.facebook.com/trung.buiquoc.3154",
+                "layer": 1,
+                "children": [
+                    {
+                        "id": "duy.phuc.849518",
+                        "username": "duy.phuc.849518",
+                        "profile_url": "https://www.facebook.com/duy.phuc.849518",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "havy.pham.75248795",
+                                "username": "havy.pham.75248795",
+                                "profile_url": "https://www.facebook.com/havy.pham.75248795",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "hungquang.oo5",
+                                "username": "hungquang.oo5",
+                                "profile_url": "https://www.facebook.com/hungquang.oo5",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "le.huynh.2222",
+                        "username": "le.huynh.2222",
+                        "profile_url": "https://www.facebook.com/le.huynh.2222",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "duy.phuc.849518",
+                                "username": "duy.phuc.849518",
+                                "profile_url": "https://www.facebook.com/duy.phuc.849518",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "havy.pham.75248795",
+                                "username": "havy.pham.75248795",
+                                "profile_url": "https://www.facebook.com/havy.pham.75248795",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "phuc.duy.980944",
+                        "username": "phuc.duy.980944",
+                        "profile_url": "https://www.facebook.com/phuc.duy.980944",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "le.huynh.2222",
+                                "username": "le.huynh.2222",
+                                "profile_url": "https://www.facebook.com/le.huynh.2222",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "hoang.quangduy.54",
+                                "username": "hoang.quangduy.54",
+                                "profile_url": "https://www.facebook.com/hoang.quangduy.54",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "ngoctrong.0911",
+                "username": "ngoctrong.0911",
+                "profile_url": "https://www.facebook.com/ngoctrong.0911",
+                "layer": 1,
+                "children": [
+                    {
+                        "id": "duy.phuc.849518",
+                        "username": "duy.phuc.849518",
+                        "profile_url": "https://www.facebook.com/duy.phuc.849518",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "havy.pham.75248795",
+                                "username": "havy.pham.75248795",
+                                "profile_url": "https://www.facebook.com/havy.pham.75248795",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "hungquang.oo5",
+                                "username": "hungquang.oo5",
+                                "profile_url": "https://www.facebook.com/hungquang.oo5",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "havy.pham.75248795",
+                        "username": "havy.pham.75248795",
+                        "profile_url": "https://www.facebook.com/havy.pham.75248795",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "Thudey4",
+                                "username": "Thudey4",
+                                "profile_url": "https://www.facebook.com/Thudey4",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "jisanghuk",
+                                "username": "jisanghuk",
+                                "profile_url": "https://www.facebook.com/jisanghuk",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "tien.nguyenduy.9809672",
+                        "username": "tien.nguyenduy.9809672",
+                        "profile_url": "https://www.facebook.com/tien.nguyenduy.9809672",
+                        "layer": 2,
+                        "children": [
+                            {
+                                "id": "61577006347348",
+                                "username": "",
+                                "profile_url": "https://www.facebook.com/profile.php?id=61577006347348",
+                                "layer": 3,
+                                "children": []
+                            },
+                            {
+                                "id": "huy.nguyen.241639",
+                                "username": "huy.nguyen.241639",
+                                "profile_url": "https://www.facebook.com/huy.nguyen.241639",
+                                "layer": 3,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

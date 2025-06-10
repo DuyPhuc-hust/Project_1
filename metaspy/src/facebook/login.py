@@ -1,11 +1,11 @@
 import pickle
-
 from rich import print as rprint
 from rich.prompt import Prompt
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.chrome.options import Options
 
 from .scraper import Scraper
 from ..config import Config
@@ -19,10 +19,12 @@ class FacebookLogIn(Scraper):
     Log in to Facebook using email and password
     """
 
-    def __init__(self) -> None:
+    def __init__(self, custom_options: Options = None) -> None:
         super().__init__()
         self._base_url = "https://www.facebook.com/"
-        self._driver = webdriver.Chrome(options=self._chrome_driver_configuration())
+        # Sử dụng custom_options nếu được cung cấp, nếu không dùng cấu hình mặc định
+        options = custom_options if custom_options else self._chrome_driver_configuration()
+        self._driver = webdriver.Chrome(options=options)
         self._driver.get(self._base_url)
         self._cookie_term_css_selector = "._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"
         self._input_text_css_selector = "//input[@type='text']"

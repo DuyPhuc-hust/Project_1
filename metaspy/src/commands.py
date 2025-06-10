@@ -18,6 +18,7 @@ from .scripts.urlid import get_account_id
 from typing_extensions import Annotated
 from .facebook.account.account_friend_layer import AccountFriendLayer
 from .analytics.graph import create_relationship_graph
+from selenium.webdriver.chrome.options import Options
 
 load_dotenv()
 logs = Logs()
@@ -255,7 +256,27 @@ def clear_queue() -> None:
 
 @app.command()
 def login_2_step() -> None:
-    facebook = FacebookLogIn()
+    # Tạo ChromeOptions luôn non-headless
+    options = Options()
+    options.add_argument("--start-maximized")  # Phóng to cửa sổ
+    options.add_argument("--disable-notifications")  # Tắt thông báo
+    options.add_argument("--disable-extensions")  # Tương tự Scraper
+    options.add_argument("--disable-popup-blocking")
+    options.add_argument("--disable-default-apps")
+    options.add_argument("--disable-infobars")
+    options.add_argument("--disable-web-security")
+    options.add_argument(
+        "--disable-features=IsolateOrigins,site-per-process"
+    )
+    options.add_argument(
+        "--enable-features=NetworkService,NetworkServiceInProcess"
+    )
+    options.add_argument("--profile-directory=Default")
+    options.add_experimental_option("excludeSwitches", ["enable-logging"])
+    # Không thêm --headless để luôn hiển thị giao diện
+
+    # Khởi tạo FacebookLogIn với custom_options
+    facebook = FacebookLogIn(custom_options=options)
 
     time_start = time()
     facebook.login_2_step_pipeline()
