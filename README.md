@@ -108,3 +108,36 @@ pip install -r requirements.txt
 ```bash
 cd metaspy
 ```
+
+# Login
+
+1. Fill account information in .env file
+2. Run 
+```bash
+python main.py login-2-step
+```
+OR
+
+```bash
+python main.py login
+```
+
+# Start tools
+1. Run 
+```bash
+python build_demo.py
+```
+2. Fill the information you want
+
+# ⚠️Note
+Due to recent updates made by Facebook, some parts of this tool may no longer function as expected.
+
+Facebook has changed the structure of elements within their HTML pages to prevent automated data scraping. As a result, certain scraping features in this project — such as collecting friend lists or profile data — may fail or return incomplete results.
+
+This project is maintained primarily for **educational and research purposes**, especially for studying:
+
+- OSINT techniques
+- Web scraping challenges
+- Social network analysis
+
+Future updates may be required to adapt the scraper to the new page structure.
