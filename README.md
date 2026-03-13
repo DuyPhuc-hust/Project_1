@@ -5,6 +5,7 @@
 # Meta Spy
 
 Meta Spy is a lightweight **Python-based OSINT tool** designed to collect and analyze **Facebook friendship data**.
+</div>
 
 The tool allows users to:
 
@@ -12,7 +13,7 @@ The tool allows users to:
 - Scrape a user's friend list
 - Build a **graph of connections** based on collected friendship data
 
-</div>
+
 
 ---
 
