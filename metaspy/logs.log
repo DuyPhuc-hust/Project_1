@@ -2185,3 +2185,42 @@ Stacktrace:
 14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
 15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
 
+2025-06-11 09:57:37,288 - ERROR - An error occurred while closing cookie term Message: no such element: Unable to locate element: {"method":"css selector","selector":"._42ft._4jy0._al65._4jy3._4jy1.selected._51sy"}
+  (Session info: chrome=137.0.7151.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+0   chromedriver                        0x0000000101326668 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010131e8dc cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000100e72714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000100eb97c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000100efade8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x0000000100ead9c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x00000001012ea28c cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x00000001012ed520 cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x00000001012cba78 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x00000001012edda8 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x00000001012bcd6c cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x000000010130dd74 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x000000010130df00 cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x000000010131e528 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
+2025-06-11 09:57:47,828 - ERROR - An Error occurred while logging in: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000101326668 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010131e8dc cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000100e72714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x0000000100eb97c0 cxxbridge1$string$len + 381416
+4   chromedriver                        0x0000000100efade8 cxxbridge1$string$len + 649232
+5   chromedriver                        0x0000000100ead9c8 cxxbridge1$string$len + 332784
+6   chromedriver                        0x00000001012ea28c cxxbridge1$str$ptr + 2476360
+7   chromedriver                        0x00000001012ed520 cxxbridge1$str$ptr + 2489308
+8   chromedriver                        0x00000001012cba78 cxxbridge1$str$ptr + 2351412
+9   chromedriver                        0x00000001012edda8 cxxbridge1$str$ptr + 2491492
+10  chromedriver                        0x00000001012bcd6c cxxbridge1$str$ptr + 2290728
+11  chromedriver                        0x000000010130dd74 cxxbridge1$str$ptr + 2622512
+12  chromedriver                        0x000000010130df00 cxxbridge1$str$ptr + 2622908
+13  chromedriver                        0x000000010131e528 cxxbridge1$str$ptr + 2690020
+14  libsystem_pthread.dylib             0x0000000192e7dc0c _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000192e78b80 thread_start + 8
+
