@@ -92,7 +92,7 @@ Visualization
 
 1. Clone git repository
 ```bash
-git clone https://github.com/DEENUU1/meta-spy.git
+git clone https://github.com/DuyPhuc-hust/Meta-spy.git
 ```
 
 2. Create dotenv file and add required data
@@ -142,3 +142,8 @@ This project is maintained primarily for **educational and research purposes**, 
 - Social network analysis
 
 Future updates may be required to adapt the scraper to the new page structure.
+
+# References
+This project was inspired by and partially based on the following project:
+
+- https://github.com/DEENUU1/meta-spy
